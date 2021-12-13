@@ -792,6 +792,7 @@
 
 		&-banner{
 			padding-top: 0;
+			min-height: auto;
 			&:before {
 			    background-size: cover;
 			}
