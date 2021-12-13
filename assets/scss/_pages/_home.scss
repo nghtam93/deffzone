@@ -98,16 +98,6 @@
 		    margin-left: -1920px;
 		  }
 		}
-
-
-		// @keyframes wave2 {
-		//   0% {
-		//     margin-left: 0;
-		//   }
-		//   100% {
-		//     margin-left: -1557px;
-		//   }
-		// }
 		.col--left{
 			position: relative;
 			width: 180px;
@@ -162,19 +152,15 @@
 				}
 			}
 			&__item{
-				&__date{
-					font-weight: normal;
-					font-size: 12px;
-					line-height: 15px;
-					text-transform: uppercase;
-					color: #FFFFFF;
-					margin-bottom: 4px;
-				}
 				&__title{
 					font-weight: bold;
 					font-size: 14px;
 					line-height: 20px;
 					color: #FFFFFF;
+					transition: all .5s;
+					&:hover{
+						color: #f36912;
+					}
 				}
 			}
 			&__slider{
