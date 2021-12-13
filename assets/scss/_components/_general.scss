@@ -19,24 +19,13 @@
 
     }
     @media (max-width: 1199px){
-        &__title {
-            font-size: 38px;
-            line-height: 54px;
-        }
+
     }
     @media (max-width: 991px){
-        &__title {
-            font-size: 32px;
-            line-height: 50px;
-        }
+
     }
     @media (max-width: 575px){
-        margin: 0 auto 24px;
-
-        &__title {
-            font-size: 30px;
-            line-height: 36px;
-        }
+        margin: 0 auto 36px;
     }
 
 }
