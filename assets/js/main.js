@@ -23,14 +23,15 @@ $(document).ready(function(){
                 }
             ]
         });
-
-        $('.home-team__slider').slick({
+        $('.slider-nav').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             arrows: true,
             dots: false,
-            // centerMode: true,
-            // variableWidth: true,
+            centerMode: true,
+            variableWidth: true,
+            asNavFor: '.slider-for',
+            focusOnSelect: true,
             responsive: [
                 {
                   breakpoint: 1599,
@@ -47,6 +48,15 @@ $(document).ready(function(){
                 }
             ]
         });
+
+        $('.slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          // fade: true,
+          asNavFor: '.slider-nav'
+        });
+
     }
 
     /*----Get Header Stick ---*/

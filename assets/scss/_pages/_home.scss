@@ -70,32 +70,33 @@
 		    background-size: 100% 100%;
 		    pointer-events: none;
 		}
-		// .ocean{
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  // 			transform: translate3d(0, 0, 0);
-		// 	}
-		// .wave {
-		//   background: url(../img/home-new-line.png) repeat-x;
-		//   position: absolute;
-		//   top: -198px;
-		//   width: 7680px;
-		//   height: 170px;
-		//   // animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-		//   transform: translate3d(0, 0, 0);
-		// }
-		// @keyframes wave {
-		//   0% {
-		//     margin-left: 0;
-		//   }
-		//   100% {
-		//     margin-left: -1600px;
-		//   }
-		// }
+		.ocean{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  			transform: translate3d(0, 0, 0);
+			}
+		.wave {
+		  background: url(../img/wave-1.svg) repeat-x;
+
+		  position: absolute;
+		  top: -198px;
+		  width: 6152px;
+		  height: 91px;
+		  // animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+		  transform: translate3d(0, 0, 0);
+		}
+		@keyframes wave {
+		  0% {
+		    margin-left: 0;
+		  }
+		  100% {
+		    margin-left: -1600px;
+		  }
+		}
 		.col--left{
 			position: relative;
 			width: 180px;
@@ -357,7 +358,7 @@
 			    height: 348px;
 			    background: url(../img/home-ecosytem-ic-bottom-left.png) no-repeat;
 			    background-size: contain;
-			    // animation: Mousex 3s linear infinite;
+			    animation: Mousex 3s linear infinite;
 		    }
 		}
 		.-ic-bottom{
@@ -369,7 +370,7 @@
 		    background: url(../img/home-ecosytem-ic-bottom-right.png) no-repeat;
 		    background-size: contain;
 		    pointer-events: none;
-		    // animation: Mousex 3s linear infinite;
+		    animation: Mousex 3s linear infinite;
 		}
 	}
 
@@ -389,7 +390,7 @@
 		}
 		.sc__header__thumb{
 			margin-top: -150px;
-			animation: Mousex 3s linear infinite;
+			animation: lightAnimation 1s ease-in-out infinite;
 		}
 		.el{
 			&__box{
@@ -554,16 +555,16 @@
 		background:url(../img/home-team-bg.png) no-repeat;
 		background-size: cover;
 		background-position: center;
-		&:before{
-			content: '';
-		    position: absolute;
-		    top: 37%;
-		    left: 0;
-		    width: 100%;
-		    height: 174px;
-		    background: url(../img/home-new-line.png) repeat-x;
-		    background-size: 100% 100%;
-		}
+		// &:before{
+		// 	content: '';
+		//     position: absolute;
+		//     top: 37%;
+		//     left: 0;
+		//     width: 100%;
+		//     height: 174px;
+		//     background: url(../img/home-new-line.png) repeat-x;
+		//     background-size: 100% 100%;
+		// }
 		.el{
 			&__box{
 				margin-top: 12px;
@@ -581,12 +582,14 @@
 				}
 			}
 			&__item{
+				width: 300px;
 				padding: 48px;
 				border: 2px solid #494E7E;
 				background: rgba(255, 255, 255, 0.06);
 				backdrop-filter: blur(20px);
 				border-radius: 20px;
 				text-align: center;
+				transition: all .5s;
 				.dnfix__thumb{
 					width: 100%;
 					max-width: 205px;
@@ -613,18 +616,18 @@
 			}
 		}
 		&__slider{
-			padding: 50px 8%;
+			position: relative;
+			padding: 0 8%;
 			--arrow: 32px;
-		}
-		.slick-active{
-			+.slick-active{
-				// background: red;
+			z-index: 99999;
+			.el__item__wrap{
+				padding: 50px 0
 			}
-			&:nth-child(2n){
-				// background: red;
-				// .el__item{
-				// 	border: 2px solid #494E7E;
-				// }
+		}
+		.slick-center{
+			.el__item{
+				border: 2px solid #FFA143;
+				transform: translateY(-50px)!important;
 			}
 		}
 		.slick-arrow{
