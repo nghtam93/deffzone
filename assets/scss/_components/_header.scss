@@ -41,7 +41,7 @@
     display:inline-block;
     margin-left: 20px;
     img, span{display:inline-block;vertical-align:middle;}
-    img{width:36px;height:24px;}
+    img{width:24px;height:12px;}
     span{margin-left:7px;}
     &__label{
         position: relative;
@@ -62,7 +62,7 @@
 		    color: #7B87A3;
 		    top: 5px;
 		    right: 5px;
-		    font-size: 6px;
+		    font-size: 5px;
 		    transition: all .5s;
 	    }
         // &:hover{background-color:#ededed;}
