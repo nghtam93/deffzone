@@ -395,6 +395,11 @@
 		    background: url(../img/home-work-bg.png) no-repeat;
 		    background-size: cover;
 		    pointer-events: none;
+		    z-index: -1;
+		}
+		.container{
+			position: relative;
+			z-index: 1;
 		}
 		.sc__header__thumb{
 			max-width: 360px;
