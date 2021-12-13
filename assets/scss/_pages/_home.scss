@@ -76,7 +76,7 @@
 			width: 7680px;
 			height: 82px;
 			transform: translate3d(0, 0, 0);
-			animation: wave 20s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+			animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 			transform: translate3d(0, 0, 0);
 		}
 		.wave2 {
@@ -86,11 +86,9 @@
 			width: 7680px;
 			height: 82px;
 			transform: translate3d(0, 0, 0);
-			animation: wave 15s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+			animation: wave 2s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 			transform: translate3d(0, 0, 0);
 			animation-delay: -5s;
-			animation-duration: 20s;
-
 		}
 		@keyframes wave {
 		  0% {
