@@ -50,6 +50,8 @@ $(document).ready(function(){
                 {
                   breakpoint: 575,
                   settings: {
+                    centerMode: false,
+                    variableWidth: false,
                     slidesToShow: 1,
                   }
                 }

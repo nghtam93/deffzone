@@ -949,11 +949,17 @@
 			}
 		}
 		&-team{
+			.el__item{
+				margin: 0 auto;
+			}
 			&__slider {
 			    --arrow: 15px;
+			    &:before, &:after{
+			    	display: none;
+			    }
 			}
 			.slick-arrow {
-			    top: calc(50% - 50px);
+
 			}
 			.el__box {
 			    margin-top: 0;
@@ -963,6 +969,8 @@
 		&-work{
 			padding: 170px 0 20px;
 			.el__box{
+				background: #13173f;
+    			backdrop-filter: blur(0);
 				padding: 0 24px 60px;
 			}
 		}
