@@ -36,13 +36,12 @@ $(document).ready(function(){
                 {
                   breakpoint: 1599,
                   settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                   }
                 },
                 {
                   breakpoint: 575,
                   settings: {
-                    arrows: false,
                     slidesToShow: 1,
                   }
                 }
@@ -53,7 +52,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          // fade: true,
+          fade: true,
           asNavFor: '.slider-nav'
         });
 
