@@ -832,13 +832,8 @@
 
 		&-ecosystem {
 		    padding: 40px 0;
-		    &:before{
-		    	display: none;
-		    }
-		    .-ic-bottom-left:before{
-		    	display: none;
-		    }
-		    .-ic-bottom{
+
+		    &:before, .-ic-top:before, .-ic-bottom-left:before, .-ic-bottom{
 		    	display: none;
 		    }
 		    .el__item{
