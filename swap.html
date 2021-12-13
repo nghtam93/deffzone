@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | Swap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item"><a href="swap.html">Swap</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.01951</span>
+          </div>
+
+          <a href="#" class="btn -wallet d-none d-lg-inline-block"><span>Connect wallet</span></a>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="wallet-detail">
+        <div class="container">
+          <div class="wl__wrap mx-auto">
+            <header class="wl__header d-flex align-items-center justify-content-between">
+              <h2 class="wl__header__title me-3">Swap</h2>
+              <div class="wl__header__sub">Swap tokens in an instant</div>
+            </header>
+            <form action="#" method="post" class="wl__form">
+              <div class="form-group wl__token d-flex justify-content-between">
+                <div class="wl__item">
+                  <div class="-txt">From</div>
+                  <div class="-token d-flex align-items-center">
+                    <div class="-square d-flex flex-column align-items-center justify-content-center">
+                      <div class="-icon"><img src="./assets/img/pages/logo-trx.png" alt=""></div>
+                      <div class="-sym">DEF</div>
+                    </div>
+                    <div class="-name">Tron Network</div>
+                  </div>
+                </div><!-- end wl__item -->
+                <div class="-arrow"><i class="icon-arrow-right"></i></div>
+                <div class="wl__item">
+                  <div class="-txt">To</div>
+                  <div class="-token d-flex align-items-center">
+                    <div class="-square d-flex flex-column align-items-center justify-content-center">
+                      <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <div class="-sym">BNB</div>
+                    </div>
+                    <div class="-name">Binance Smart Chain Network</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div>
+                </div><!-- end wl__item -->
+              </div><!-- end form-group -->
+              <div class="form-group mb-3">
+                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
+                <div class="-input position-relative">
+                  <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
+                  <span class="-txt position-absolute top-50 translate-middle-y">DEF</span>
+                </div>
+                <div class="-info text-end">Total reward: 000</div>
+              </div><!-- end form-group -->
+              <div class="form-group mb-5">
+                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Wallet Address</label>
+                <div class="-input position-relative">
+                  <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
+                  <span class="-txt -highlight position-absolute top-50 translate-middle-y">BSC</span>
+                </div>
+              </div><!-- end form-group -->
+              <button class="btn -submit" type="submit"><span>Continue</span></button>
+              <div class="-note text-center">Connect your wallet to proceed.</div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal choose item -->
+      <div class="modal fade wl__modal" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalCenteredScrollableTitle">Choose token</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <div class="-search position-relative">
+                    <input type="email" class="form-control" id="wl__amount" placeholder="Search token" />
+                    <span class="-txt -highlight position-absolute top-50 translate-middle-y"><i class="icon-search"></i></span>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="form-group">
+                  <ul class="token-list">
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__eth" class="-check">
+                      <label for="tk__eth" class="-name">ETH</label>
+                      <div class="-logo d-flex align-items-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__bnb" class="-check">
+                      <label for="tk__bnb" class="-name">BNB</label>
+                      <div class="-logo d-flex align-items-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__metamask" class="-check">
+                      <label for="tk__metamask" class="-name">Metamask</label>
+                      <div class="-logo d-flex align-items-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__usdt" class="-check">
+                      <label for="tk__usdt" class="-name">USDT</label>
+                      <div class="-logo d-flex align-items-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -submit" type="submit"><span>OK</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal choose item -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <a href="mailto:support@deffZone.com">Support@deffZone.com.</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="mailto:support@deffZone.com">Support@deffZone.com.</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+          <div class="nav__mobile__content">
+            <ul class="nav__mobile--ul">
+              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item"><a href="swap.html">Swap</a></li>
+            </ul>
+            <div class="languages ms-0 mt-3 mb-3">
+              <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+              <div class="languages__content">
+                <p class="languages__text">Select language</p>
+                <ul class="">
+                  <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                  <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                </ul>
+              </div>
+            </div> <!-- .languages -->
+
+            <a href="#" class="btn -wallet w-100"><span>Connect wallet</span></a>
+          </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
