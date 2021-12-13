@@ -1,11 +1,10 @@
+$('body').addClass('modal-open')
 $(document).ready(function(){
 
-    $('body').addClass('modal-open')
-    $( document ).ready(function() {
-      $('.loading-page__logo').fadeOut();
-      $('.loading-page').delay(350).fadeOut('slow');
-      $('body').removeClass('modal-open')
-    })
+    $('.loading-page__logo').fadeOut();
+    $('.loading-page').delay(350).fadeOut('slow');
+    $('body').removeClass('modal-open')
+
 
     if($('body').hasClass('home')){
 
