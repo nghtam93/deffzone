@@ -1,7 +1,16 @@
 $(document).ready(function(){
 
+    $('body').addClass('modal-open')
+    $( document ).ready(function() {
+      $('.loading-page__logo').fadeOut();
+      $('.loading-page').delay(350).fadeOut('slow');
+      $('body').removeClass('modal-open')
+    })
+
     if($('body').hasClass('home')){
-        new WOW().init();
+
+        setTimeout(function(){ new WOW().init(); }, 400);
+
 
         $('.home-new .el__slider').slick({
             slidesToShow: 3,
