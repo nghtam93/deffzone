@@ -15,20 +15,7 @@
 }
 .loading-page__logo{
   position:relative;
-  &:before{
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: -115px;
-    left: -41px;
-    width: 240px;
-    height: 240px;
-    border: 8px solid currentColor;
-    border-right-color: transparent;
-    border-radius: 50%;
-    -webkit-animation: 0.75s linear infinite spinner-border;
-    animation: 2s linear infinite spinner-border;
-  }
+
   img{
     max-width: 154px;
   }
