@@ -29,6 +29,11 @@
 			margin-right: 8px;
 		}
 	}
+	@media (max-width: 575px){
+		.header__price {
+		    margin-right: 18px;
+		}
+	}
 }
 /*Languages*/
 .languages{
