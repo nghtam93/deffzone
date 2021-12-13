@@ -14,6 +14,7 @@
 			background-size: 100% 100%;
 			background-position: top;
 			pointer-events: none;
+			z-index: -1;
 		}
 		&__wrap{
 			position: absolute;
@@ -466,6 +467,7 @@
 			background-size: cover;
 			background-position: center;
 			pointer-events: none;
+			z-index: -1;
 		}
 
 		.col--left{
