@@ -32,7 +32,7 @@ $(document).ready(function(){
             ]
         });
         $('.slider-nav').slick({
-            slidesToShow: 5,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
             dots: false,
@@ -44,7 +44,7 @@ $(document).ready(function(){
                 {
                   breakpoint: 1599,
                   settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                   }
                 },
                 {
