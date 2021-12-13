@@ -35,6 +35,9 @@ body {
   line-height: 22px;
   position: relative;
   --header-height:90px;
+  @media (max-width: 991px){
+    --header-height:77.8px;
+  }
 }
 
 a, a:hover {
