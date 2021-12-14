@@ -49,10 +49,10 @@
 
           <nav class="main__nav d-none d-lg-block">
             <ul class="el__menu">
-              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="index.html">Home</a></li>
               <li class="menu-item"><a href="staking.html">Staking</a></li>
               <li class="menu-item"><a href="farming.html">Farming</a></li>
-              <li class="menu-item"><a href="swap.html">Swap</a></li>
+              <li class="menu-item active"><a href="swap.html">Swap</a></li>
             </ul>
           </nav>
 
@@ -87,10 +87,10 @@
                   <div class="-txt">From</div>
                   <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
                     <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-trx.png" alt=""></div>
-                      <div class="-sym">DEF</div>
+                      <div class="-icon"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                      <div class="-sym">DEFF</div>
                     </div>
-                    <div class="-name">Tron Network</div>
+                    <div class="-name">DeffZone</div>
                   </div>
                 </div><!-- end wl__item -->
                 <div class="-arrow"><i class="icon-arrow-right"></i></div>
@@ -112,7 +112,7 @@
                 <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
                 <div class="-input position-relative">
                   <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
-                  <span class="-txt position-absolute top-50 translate-middle-y">DEF</span>
+                  <span class="-txt position-absolute top-50 translate-middle-y">DEFF</span>
                 </div>
                 <div class="-info text-end">Total reward: 000</div>
               </div><!-- end form-group -->
@@ -133,7 +133,7 @@
       </section>
 
       <!-- modal connect wallet -->
-      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+      <div class="modal fade wl__modal -connect" id="connectWallet11" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header -border -border__bottom">
@@ -146,23 +146,23 @@
                   <ul class="wallet-list d-flex flex-wrap justify-content-between">
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
-                      <label for="wl__metamask" class="-name order-last order-md-first">Metamask</label>
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
-                      <label for="wl__bnb" class="-name order-last order-md-first">Binance Smart Chain</label>
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
-                      <label for="wl__eth" class="-name order-last order-md-first">Ethereum</label>
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
-                      <label for="wl__usdt" class="-name order-last order-md-first">Tron</label>
-                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-trx-light.png" alt=""></div>
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
                     </li><!-- end tk__item -->
                   </ul>
                 </div><!-- end form-group -->
@@ -174,6 +174,24 @@
         </div>
       </div>
       <!-- end modal connect wallet -->
+
+      <!-- modal connect wallet success -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-body">
+              In publishing and graphic design, Lorem ipsum is a placeholder text commonly
+            </div>
+          </div>
+          <div class="modal-content">
+            <div class="modal-body -txt-large">
+              <div class="nt__icon"><i class="icon-wallet"></i></div>
+              <div class="nt__txt">In publishing and graphic design, Lorem ipsum is a placeholder text commonly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet success -->
 
       <!-- modal choose item -->
       <div class="modal fade wl__modal" id="chooseToken" tabindex="-1" aria-labelledby="chooseTokenTitle" aria-hidden="true">
@@ -195,22 +213,22 @@
                   <ul class="token-list">
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__eth" class="-check">
-                      <label for="tk__eth" class="-name pe-4 pe-md-0">ETH</label>
+                      <label for="tk__eth" class="-name pe-4 pe-md-0"><span>ETH</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__bnb" class="-check">
-                      <label for="tk__bnb" class="-name pe-4 pe-md-0">BNB</label>
+                      <label for="tk__bnb" class="-name pe-4 pe-md-0"><span>BNB</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__metamask" class="-check">
-                      <label for="tk__metamask" class="-name pe-4 pe-md-0">Metamask</label>
+                      <label for="tk__metamask" class="-name pe-4 pe-md-0"><span>Metamask</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__usdt" class="-check">
-                      <label for="tk__usdt" class="-name pe-4 pe-md-0">USDT</label>
+                      <label for="tk__usdt" class="-name pe-4 pe-md-0"><span>USDT</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
                     </li><!-- end tk__item -->
                   </ul>
@@ -289,10 +307,10 @@
       <nav id="menu__mobile" class="nav__mobile">
           <div class="nav__mobile__content">
             <ul class="nav__mobile--ul">
-              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="index.html">Home</a></li>
               <li class="menu-item"><a href="staking.html">Staking</a></li>
               <li class="menu-item"><a href="farming.html">Farming</a></li>
-              <li class="menu-item"><a href="swap.html">Swap</a></li>
+              <li class="menu-item active"><a href="swap.html">Swap</a></li>
             </ul>
             <div class="languages ms-0 mt-3 mb-3">
               <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>

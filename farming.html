@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>DeffZone | Swap</title>
+    <title>DeffZone | Farming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/favicon.png" />
     <meta property="og:image" content="images/image-featured.jpg">
@@ -49,9 +49,9 @@
 
           <nav class="main__nav d-none d-lg-block">
             <ul class="el__menu">
-              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="index.html">Home</a></li>
               <li class="menu-item"><a href="staking.html">Staking</a></li>
-              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item active"><a href="farming.html">Farming</a></li>
               <li class="menu-item"><a href="swap.html">Swap</a></li>
             </ul>
           </nav>
@@ -84,7 +84,7 @@
           <div class="wl__wrap mx-auto">
             <header class="wl__header d-flex align-items-center justify-content-between">
               <h2 class="wl__header__title me-5">Farming</h2>
-              <div class="wl__header__sub">Exchange for interest or more DEF</div>
+              <div class="wl__header__sub">Exchange for interest or more DEFF</div>
             </header>
             <form action="#" method="post" class="wl__form">
               <div class="form-group wl__token d-flex justify-content-between">
@@ -92,7 +92,7 @@
                   <div class="-txt">To</div>
                   <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
                     <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <div class="-icon d-flex justify-content-center align-items-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
                       <div class="-sym">BNB</div>
                     </div>
                     <div class="-name">Binance Smart Chain Network</div>
@@ -106,14 +106,14 @@
                   <div class="-txt">From</div>
                   <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
                     <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-trx.png" alt=""></div>
-                      <div class="-sym">DEF</div>
+                      <div class="-icon d-flex justify-content-center align-items-center"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                      <div class="-sym">DEFF</div>
                     </div>
-                    <div class="-name">Tron Network</div>
+                    <div class="-name">DeffZone</div>
                   </div>
                 </div><!-- end wl__item -->
               </div><!-- end form-group -->
-              <div class="form-group mb-3 mb-sm-0">
+              <div class="form-group mb-3 mb-sm-4">
                 <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
                 <div class="-input position-relative">
                   <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
@@ -121,7 +121,7 @@
                 </div>
                 <div class="-price -red">Min $100 - Max $50,000</div>
               </div><!-- end form-group -->
-              <div class="form-group -border -border__bottom mb-3 mb-sm-0">
+              <div class="form-group -border -border__bottom mb-3 mb-sm-4">
                 <div class="row">
                   <div class="col-md-6 mb-3 mb-sm-0">
                     <label for="wl__plan" class="form-label mb-3">Choose plan</label>
@@ -147,7 +147,7 @@
                 <label for="wl__amount" class="form-label mb-3">Total reward</label>
                 <div class="-input position-relative">
                   <input type="email" class="form-control" id="wl__amount" placeholder="Choose your plan first" />
-                  <span class="-txt -identical position-absolute top-50 translate-middle-y">DEF</span>
+                  <span class="-txt -identical position-absolute top-50 translate-middle-y">DEFF</span>
                 </div>
               </div><!-- end form-group -->
               <button class="btn -submit" type="submit"><span>Continue</span></button>
@@ -171,23 +171,23 @@
                   <ul class="wallet-list d-flex flex-wrap justify-content-between">
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
-                      <label for="wl__metamask" class="-name order-last order-md-first">Metamask</label>
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
-                      <label for="wl__bnb" class="-name order-last order-md-first">Binance Smart Chain</label>
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
-                      <label for="wl__eth" class="-name order-last order-md-first">Ethereum</label>
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
                       <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
                       <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
-                      <label for="wl__usdt" class="-name order-last order-md-first">Tron</label>
-                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-trx-light.png" alt=""></div>
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
                     </li><!-- end tk__item -->
                   </ul>
                 </div><!-- end form-group -->
@@ -220,22 +220,22 @@
                   <ul class="token-list">
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__eth" class="-check">
-                      <label for="tk__eth" class="-name pe-4 pe-md-0">ETH</label>
+                      <label for="tk__eth" class="-name pe-4 pe-md-0"><span>ETH</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__bnb" class="-check">
-                      <label for="tk__bnb" class="-name pe-4 pe-md-0">BNB</label>
+                      <label for="tk__bnb" class="-name pe-4 pe-md-0"><span>BNB</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__metamask" class="-check">
-                      <label for="tk__metamask" class="-name pe-4 pe-md-0">Metamask</label>
+                      <label for="tk__metamask" class="-name pe-4 pe-md-0"><span>Metamask</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__usdt" class="-check">
-                      <label for="tk__usdt" class="-name pe-4 pe-md-0">USDT</label>
+                      <label for="tk__usdt" class="-name pe-4 pe-md-0"><span>USDT</span></label>
                       <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
                     </li><!-- end tk__item -->
                   </ul>
@@ -314,9 +314,9 @@
       <nav id="menu__mobile" class="nav__mobile">
           <div class="nav__mobile__content">
             <ul class="nav__mobile--ul">
-              <li class="menu-item active"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="index.html">Home</a></li>
               <li class="menu-item"><a href="staking.html">Staking</a></li>
-              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item active"><a href="farming.html">Farming</a></li>
               <li class="menu-item"><a href="swap.html">Swap</a></li>
             </ul>
             <div class="languages ms-0 mt-3 mb-3">
