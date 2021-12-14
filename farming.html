@@ -75,25 +75,19 @@
       </header>
 
       <section class="wallet-detail">
+        <nav class="wallet-tabs d-none d-sm-block">
+          <a href="farming.html" class="is-active">Farming</a>
+          <a href="harvest.html">Harvest</a>
+        </nav>
+
         <div class="container">
           <div class="wl__wrap mx-auto">
             <header class="wl__header d-flex align-items-center justify-content-between">
-              <h2 class="wl__header__title me-5">Swap</h2>
-              <div class="wl__header__sub">Swap tokens in an instant</div>
+              <h2 class="wl__header__title me-5">Farming</h2>
+              <div class="wl__header__sub">Exchange for interest or more DEF</div>
             </header>
             <form action="#" method="post" class="wl__form">
               <div class="form-group wl__token d-flex justify-content-between">
-                <div class="wl__item">
-                  <div class="-txt">From</div>
-                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
-                    <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-trx.png" alt=""></div>
-                      <div class="-sym">DEF</div>
-                    </div>
-                    <div class="-name">Tron Network</div>
-                  </div>
-                </div><!-- end wl__item -->
-                <div class="-arrow"><i class="icon-arrow-right"></i></div>
                 <div class="wl__item">
                   <div class="-txt">To</div>
                   <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
@@ -107,22 +101,53 @@
                     </button>
                   </div>
                 </div><!-- end wl__item -->
+                <div class="-arrow"><i class="icon-arrow-right"></i></div>
+                <div class="wl__item">
+                  <div class="-txt">From</div>
+                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
+                    <div class="-square d-flex flex-column align-items-center justify-content-center">
+                      <div class="-icon"><img src="./assets/img/pages/logo-trx.png" alt=""></div>
+                      <div class="-sym">DEF</div>
+                    </div>
+                    <div class="-name">Tron Network</div>
+                  </div>
+                </div><!-- end wl__item -->
               </div><!-- end form-group -->
-              <div class="form-group mb-3">
+              <div class="form-group mb-3 mb-sm-0">
                 <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
                 <div class="-input position-relative">
                   <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
-                  <span class="-txt position-absolute top-50 translate-middle-y">DEF</span>
+                  <span class="-txt -identical position-absolute top-50 translate-middle-y">BNB</span>
                 </div>
-                <div class="-info text-end">Total reward: 000</div>
+                <div class="-price -red">Min $100 - Max $50,000</div>
+              </div><!-- end form-group -->
+              <div class="form-group -border -border__bottom mb-3 mb-sm-0">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-sm-0">
+                    <label for="wl__plan" class="form-label mb-3">Choose plan</label>
+                    <div class="js-dropdown">
+                      <div class="js-dropdown-selected">
+                        <a href="#" class="form-control d-flex align-items-center"><span>Choose a plan</span></a>
+                        <i class="-arrow icon-arrow-down"></i>
+                      </div>
+                      <ul class="js-dropdown-list list-unstyled">
+                        <li><a href="#">Choose plan 1</a></li>
+                        <li><a href="#">Choose plan 2</a></li>
+                        <li><a href="#">Choose plan 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="wl__amount" class="form-label mb-3">Farm/APR</label>
+                    <input type="email" class="form-control" id="wl__amount" placeholder="00%" />
+                  </div>
+                </div>
               </div><!-- end form-group -->
               <div class="form-group mb-5">
-                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Wallet Address</label>
+                <label for="wl__amount" class="form-label mb-3">Total reward</label>
                 <div class="-input position-relative">
-                  <div class="form-control d-flex align-items-center tk__key">
-                    <span>0xaaAf9d487A2B550C56822...cbA2B550C56822cbA2B5502cbCdC</span>
-                  </div>
-                  <span class="-txt -highlight position-absolute top-50 translate-middle-y">BSC</span>
+                  <input type="email" class="form-control" id="wl__amount" placeholder="Choose your plan first" />
+                  <span class="-txt -identical position-absolute top-50 translate-middle-y">DEF</span>
                 </div>
               </div><!-- end form-group -->
               <button class="btn -submit" type="submit"><span>Continue</span></button>

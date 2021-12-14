@@ -115,6 +115,61 @@ $(document).ready(function(){
         }
     });
 
+    // check checkbox checked enable button
+    function checkDisableButton() {
+      $('.js-attr-disable').each(function() {
+        let checkBox = $(this).find('.js-attr-checkbox')
+        let btn = $(this).find('.js-attr-button')
+        checkBox.on('click', function() {
+          if ($(this).is(":checked")) {
+              $(btn).removeAttr("disabled").removeClass("-disabled");
+          } else {
+              $(btn).attr("disabled", "disabled").addClass("-disabled");
+          }
+        });
+      })
+    }
+    checkDisableButton()
+
+    // js custom dropdown
+    $(".js-dropdown .js-dropdown-selected a").click(function(e) {
+      e.preventDefault();
+      $(".js-dropdown .js-dropdown-list").toggleClass('is-show');
+    });
+    $(".js-dropdown .js-dropdown-list li a").click(function(e) {
+      e.preventDefault();
+      var text = $(this).html();
+      $(".js-dropdown .js-dropdown-selected a span").html(text);
+      $(".js-dropdown .js-dropdown-list").removeClass('is-show');
+    });
+    $(document).bind('click', function(e) {
+      var $clicked = $(e.target);
+      if (! $clicked.parents().hasClass("js-dropdown"))
+          $(".js-dropdown .js-dropdown-list").removeClass('is-show');
+    });
+
 });
 
+function matchHeight($o,m) {
+  $o.css('height','auto')
+  var foo_length = $o.length;
 
+  for(var i = 0 ; i < Math.ceil(foo_length / m) ; i++) {
+      var maxHeight = 0;
+      for(var j = 0; j < m; j++){
+          if ($o.eq(i * m + j).height() > maxHeight) {
+              maxHeight = $o.eq(i * m + j).height();
+          }
+      }
+      for(var k = 0; k < m; k++){
+          $o.eq(i * m + k).height(maxHeight);
+      }
+  }
+}
+
+$(function(){
+  var $match = $('.js-max-height');
+  $(window).bind('load resize',function(){
+      matchHeight($match, 2);
+  })
+});
