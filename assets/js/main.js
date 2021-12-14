@@ -148,6 +148,17 @@ $(document).ready(function(){
           $(".js-dropdown .js-dropdown-list").removeClass('is-show');
     });
 
+    // js custom toggle
+    $('.js-toggle').each(function() {
+      let jsBtn = $(this).find('.js-toggle-btn')
+      let jsShow = $(this).find('.js-toggle-show')
+      jsBtn.on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active')
+        jsShow.slideToggle();
+      })
+    })
+
 });
 
 function matchHeight($o,m) {
@@ -172,4 +183,14 @@ $(function(){
   $(window).bind('load resize',function(){
       matchHeight($match, 2);
   })
+  if($('.js-date').length) {
+    mobiscroll.setOptions({
+      theme: 'ios',
+      themeVariant: 'dark'
+    });
+    $('.js-date').mobiscroll().datepicker({
+        controls: ['date'],
+        display: 'anchored'
+    });
+  }
 });
