@@ -444,6 +444,22 @@
 
 .wl__modal{
   background-color: rgba(#090E44, 0.8);
+  .-close{
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #7B87A3;;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1;
+    position: absolute;
+    padding: 0;
+    outline: none;
+    transition: 0.3s;
+    &:hover{
+      color: #FB451D;
+    }
+  }
   .modal{
     &-dialog{
       width: calc(100% - 32px);
@@ -486,25 +502,11 @@
         }
       }
       .-close{
-        background: none;
-        border: none;
-        box-shadow: none;
-        color: #7B87A3;;
-        font-size: 16px;
-        margin: 0;
-        line-height: 1;
-        position: absolute;
-        padding: 0;
         top: 28px;
         right: 28px;
-        outline: none;
-        transition: 0.3s;
         @media (max-width: 575px){
           top: 40px;
           right: 20px;
-        }
-        &:hover{
-          color: #FB451D;
         }
       }
     }
@@ -543,6 +545,65 @@
     .modal{
       &-dialog{
         max-width: 500px;
+      }
+    }
+  }
+  &.-alert{
+    .-close{
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      color: #232863;
+      font-size: 10px;
+      right: -10px;
+      top: -10px;
+      z-index: 2;
+      i{
+        vertical-align: middle;
+        &:before{
+          font-weight: 900;
+        }
+      }
+      &:hover{
+        background-color: #FB451D;
+        color: #FFFFFF;
+      }
+    }
+    .modal{
+      &-content{
+        position: relative;
+        background: none;
+        backdrop-filter: unset;
+        -webkit-backdrop-filter: unset;
+        overflow: visible;
+      }
+      &-body{
+        background: #232863;
+        border-radius: 12px;
+        padding: 20px 32px;
+        text-align: center;
+        @media (max-width: 575px){
+          padding: 16px;
+        }
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+        &:not(.-txt-large){
+          font-size: 16px;
+          line-height: (24/16);
+        }
+        &.-txt-large{
+          font-size: 20px;
+          line-height: (28/20);
+        }
+        .nt__icon{
+          font-size: 34px;
+          color: #FF972F;
+          margin-bottom: 20px;
+          line-height: 1;
+        }
       }
     }
   }
