@@ -184,6 +184,14 @@ body.modal-open{
                 }
             }
         }
+        .languages__content{
+            right: auto;
+            left: 0;
+            &::before{
+                right: auto;
+                left: 7px;
+            }
+        }
     }
 }
 /**/

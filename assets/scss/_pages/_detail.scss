@@ -4,6 +4,9 @@
     border-radius: 32px;
     border: 1px solid transparent;
     padding: 18px 32px;
+    @media (max-width: 575px) {
+      padding: 18px 25px;
+    }
     cursor: pointer;
     .-title{
       font-size: 20px;
@@ -71,11 +74,25 @@
     line-height: (26/16);
     margin: 28px 0 0;
     padding: 0 32px;
+    @media (max-width: 575px){
+      padding: 0 16px;
+    }
   }
 }
 .about{
   &-deffect{
     padding: 190px 0 80px;
+    @media (max-width: 575px){
+      padding: 120px 0 50px;
+    }
+    .sc__header{
+      margin-bottom: 24px;
+      &__title{
+        @media (max-width: 575px){
+          font-size: 32px;
+        }
+      }
+    }
     .el__item__except{
       color: #EEF1FD;
       font-size: 16px;
@@ -86,9 +103,24 @@
   &-join{
     &:before{
       height: 63%;
+      @media (max-width: 575px){
+        background: url('../img/pages/about-join-bg-sp.png') no-repeat;
+        width: calc(100% - 32px);
+        height: 52%;
+        left: 16px;
+        top: 19%;
+      }
     }
     .sc__header{
-      margin-bottom: 70px;
+      @media (min-width: 576px){
+        margin-bottom: 70px;
+      }
+      &__title, &__sub{
+        @media (max-width: 575px){
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
     }
     .sc__header__sub{
       font-size: 16px;
@@ -101,23 +133,39 @@
       &__box{
         padding: 70px 0;
         border: none;
+        @media (max-width: 575px){
+          width: calc(100% - 32px);
+          margin: 0 auto;
+          padding: 33px 0;
+        }
+        [class*="col-"]{
+          &:not(:last-child){
+            @media (max-width: 991px) and (min-width: 576px){
+              margin-bottom: 40px;
+            }
+            @media (max-width: 575px){
+              margin-bottom: 24px;
+            }
+          }
+        }
       }
       &__item{
         width: 90%;
         max-width: 300px;
         margin: 0 auto;
-        @media (max-width: 991px){
-          margin-bottom: 30px;
-        }
         .dnfix__thumb{
           padding-top: 64px;
         }
         &__title{
           color: #FB741D;
+          @media (max-width: 575px){
+            font-size: 24px;
+            line-height: (34/24);
+          }
         }
         &__excerpt{
           font-size: 16px;
-          margin-top: 20px;
+          margin-top: 18px;
           line-height: 1.4;
         }
       }
@@ -125,8 +173,13 @@
   }
   &-faqs{
     margin: 40px 0 100px;
+    @media (max-width: 575px){
+      margin-top: 80px;
+    }
     .sc__header{
-      margin-bottom: 60px;
+      @media (min-width: 576px){
+        margin-bottom: 60px;
+      }
     }
     .sc__header__sub{
       font-size: 16px;
@@ -143,6 +196,9 @@
       &__item{
         &:not(:last-child){
           margin-bottom: 30px;
+          @media (max-width: 575px){
+            margin-bottom: 16px;
+          }
         }
       }
     }
