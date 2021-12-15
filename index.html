@@ -63,7 +63,7 @@
             <span class="">$0.01951</span>
           </div>
 
-          <a href="#" class="btn -wallet d-none d-lg-inline-block"><span>Connect wallet</span></a>
+          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
 
           <div class="d-lg-none d-lg-none">
             <div class="menu-mb__btn">
@@ -92,7 +92,7 @@
                 <div class="el__meta">
                   <h2 class="el__title wow fadeInLeft"><strong>DeffZone</strong></h2>
                   <div class="el__excerpt wow fadeInRight">One Action - More Effects</div>
-                  <a href="#" class="btn -wallet wow fadeInUp"><span>Connect wallet</span></a>
+                  <a href="#" class="btn -wallet wow fadeInUp" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
                 </div>
               </div>
             </div>
@@ -570,6 +570,68 @@ is to be a professional at the crossroads between business and culture.</p>
         </div>
       </section>
 
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group">
+                  <ul class="wallet-list d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWalletNote">
+                  <span>Connect wallet</span>
+                </button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <!-- modal connect wallet success -->
+      <div class="modal fade wl__modal -connect -alert" id="connectWalletNote" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable flex-wrap">
+          <div class="modal-content">
+            <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            <div class="modal-body">
+              In publishing and graphic design, Lorem ipsum is a placeholder text commonly
+            </div>
+            <div class="modal-body -txt-large">
+              <div class="nt__icon"><i class="icon-document-check"></i></div>
+              <div class="nt__txt">In publishing and graphic design, Lorem ipsum is a placeholder text commonly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet success -->
+
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -652,7 +714,7 @@ is to be a professional at the crossroads between business and culture.</p>
               </div>
             </div> <!-- .languages -->
 
-            <a href="#" class="btn -wallet w-100"><span>Connect wallet</span></a>
+            <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
           </div>
       </nav>
     </div> <!-- .wrapper -->
