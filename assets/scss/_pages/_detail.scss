@@ -309,6 +309,36 @@
         }
       }
     }
+    &.-sp-horizontal{
+      @media (max-width: 575px){
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .news__item__thumb{
+          width: percentage(109/343);
+        }
+        .news__item__info{
+          width: percentage(226/343);
+        }
+      }
+      .news__item__info{
+        .-title{
+          @media (max-width: 575px){
+            font-size: 14px !important;
+          }
+        }
+        .-txt{
+          @media (max-width: 575px){
+            display: none;
+          }
+        }
+        .-at{
+          @media (max-width: 575px){
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
   }
   &-archive{
     padding: 190px 0 100px;
@@ -552,35 +582,160 @@
         }
         .news__item{
           margin-bottom: 26px;
-          @media (max-width: 575px){
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            &__thumb{
-              width: percentage(109/343);
-            }
-            &__info{
-              width: percentage(226/343);
-            }
-          }
           &__info{
             .-title{
               font-size: 18px;
               margin-bottom: 6px;
-              @media (max-width: 575px){
-                font-size: 14px;
-              }
             }
-            .-txt{
-              @media (max-width: 575px){
-                display: none;
-              }
+          }
+        }
+      }
+    }
+  }
+}
+.app{
+  &-banner{
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      padding-top: 64.6%;
+      min-height: 1000px;
+    }
+    @media (max-width: 1199px) and (min-width: 992px){
+      min-height: 900px;
+    }
+    .home-banner__wrap{
+      top: 26%;
+      @media (max-width: 991px) {
+        padding-top: 20%;
+      }
+      @media (max-width: 575px){
+        margin-bottom: 100px;
+        padding-top: 110px;
+      }
+    }
+    .el{
+      &__title{
+        @media (max-width: 575px) {
+          font-size: 48px;
+          line-height: 58px;
+        }
+      }
+      &__excerpt{
+        max-width: 536px;
+        @media (max-width: 991px){
+          margin: 24px auto 0;
+        }
+        @media (max-width: 575px) {
+          font-size: 16px;
+          line-height: (26/16);
+          margin: 16px auto 0;
+        }
+      }
+      &__app{
+        margin-top: 56px;
+        @media (max-width: 575px) {
+          margin-top: 48px;
+        }
+        li{
+          &:not(:last-child){
+            margin-right: 32px;
+            @media (max-width: 575px) {
+              margin-right: 16px;
             }
-            .-at{
-              @media (max-width: 575px){
-                margin-bottom: 8px;
-              }
-            }
+          }
+        }
+      }
+      &__thumb{
+        position: static;
+        width: 124.8%;
+        text-align: center;
+        transform: translate(5%, -14%);
+        @media (max-width: 1199px) and (min-width: 992px){
+          transform: translate(3%, -14%);
+        }
+        @media (max-width: 991px) {
+          margin: 0 auto;
+          transform: translate(0, -5%);
+          width: 100%;
+        }
+        @media (max-width: 575px){
+          transform: translate(0, 0);
+        }
+        &--2{
+          position: static;
+          width: auto;
+        }
+      }
+      &__meta{
+        @media (max-width: 991px){
+          text-align: center;
+        }
+      }
+    }
+    .-ic-top{
+			position: absolute;
+      bottom: 17%;
+      left: 0;
+      width: 181px;
+      height: 181px;
+      background: url(../img/home-ecosytem-ic-top-left2.png) no-repeat;
+      background-size: contain;
+      pointer-events: none;
+      z-index: -1;
+      @media (max-width: 1199px) and (min-width: 992px){
+        bottom: 10%;
+      }
+      @media (max-width: 991px) {
+        display: none;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 6%;
+        left: 20%;
+        width: 181px;
+        height: 181px;
+        background: url(../img/home-ecosytem-ic-top-left.png) no-repeat;
+        background-size: contain;
+        animation: spinner-rotate 20s linear infinite;
+        @media (max-width: 991px) {
+          width: 140px;
+          height: 140px;
+        }
+      }
+		}
+  }
+  &-com{
+    background: url('../img/pages/app-bg-01.png') no-repeat center center / cover;
+    padding: 90px 0 50px;
+    @media (max-width: 991px){
+      padding: 40px 0 50px;
+    }
+    .el{
+      &__thumb{
+        @media (max-width: 991px){
+          margin-bottom: 0;
+        }
+      }
+      &__header{
+        @media (max-width: 991px){
+          margin-bottom: 40px;
+        }
+      }
+      &__item{
+        @media (max-width: 575px){
+          padding-left: 130px;
+          &:before{
+            display: block !important;
+          }
+          &__number{
+            position: absolute;
+          }
+          &__title{
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 8px;
           }
         }
       }
