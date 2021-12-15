@@ -159,6 +159,37 @@ $(document).ready(function(){
       })
     })
 
+    let lastScroll = 0;
+    $(window).bind('scroll load resize',function(){
+      let scroll = $(window).scrollTop();
+      let headerHeight = $('.header').outerHeight(true)
+      if($('.js-fixed').length) {
+        $('.js-fixed').each(function() {
+          let elmFixed = $(this).find('.js-fixed-element')
+          let fixedTop = $(this).offset().top;
+          let fixedBottom = $(this).offset().top + $(this).outerHeight(true) - elmFixed.outerHeight(true);
+          if(scroll >= fixedTop && scroll <= fixedBottom) {
+            elmFixed.css({
+              'top': scroll - $(window).height() / 1.6 - headerHeight,
+              'bottom': 'auto'
+            });
+          } else if(scroll > fixedBottom) {
+            elmFixed.css({
+              'top': lastScroll - $(window).height(),
+              'bottom': 0
+            });
+          } else {
+            elmFixed.css({
+              'top': 0,
+              'bottom': 'auto'
+            });
+          }
+          lastScroll = scroll
+          console.log(lastScroll);
+        })
+      }
+    })
+
 });
 
 function matchHeight($o,m) {

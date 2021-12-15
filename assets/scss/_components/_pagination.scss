@@ -1,8 +1,85 @@
 .pagination{
   .page-link{
+    position: relative;
     border: none;
+    width: 40px;
+    height: 47px;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: #303841;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    transition: all .5s;
+    @media (max-width: 575px){
+      width: 35px;
+      height: 42px;
+      font-size: 16px;
+    }
     &.-arrow{
       background: none;
+      color: #868A96;
+    }
+    &:not(.-arrow){
+      background: #FFFFFF;
+    }
+    i{
+      vertical-align: middle;
+      &:before{
+        font-weight: 900;
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #ED8409 0%, #ff2e00 100%);
+      opacity: 0;
+      transition: all .5s;
+      z-index: -1;
+    }
+  }
+  .page-item{
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    &.-more{
+      .page-link{
+        background: none;
+        color: #303841;
+      }
+    }
+    &:not(.-more){
+      .page-link{
+        &:hover{
+          @media (min-width: 768px){
+            color: #FFFFFF;
+            &:before {
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &.active{
+      .page-link{
+        color: #FFFFFF;
+        &:before {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+        }
+      }
     }
   }
 }

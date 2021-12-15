@@ -120,6 +120,9 @@ body.modal-open{
     font-size: 14px;
     pointer-events: none;
     overflow: auto;
+    @media (max-width: 991px){
+        width: 100%;
+    }
 
     &--close {
         position: relative;
@@ -143,6 +146,10 @@ body.modal-open{
         overflow-y:auto;
         padding: 32px 16px;
         border-top: 1px solid rgba(255, 255, 255, .12);
+        @media (max-width: 991px){
+            width: 100%;
+            min-height: calc(100vh - 70px);
+        }
     }
     &.active{
         top:var(--header-height);
