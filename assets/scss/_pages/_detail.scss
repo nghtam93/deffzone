@@ -81,12 +81,12 @@
 }
 .about{
   &-deffect{
-    padding: 190px 0 80px;
+    padding: calc(90px + var(--header-height)) 0 80px;
     @media (max-width: 991px) and (min-width: 576px) {
-      padding-top: 160px;
+      padding-top: calc(60px + var(--header-height));
     }
     @media (max-width: 575px){
-      padding: 120px 0 50px;
+      padding: calc(50px + var(--header-height)) 0 50px;
     }
     .sc__header{
       margin-bottom: 24px;
@@ -341,12 +341,12 @@
     }
   }
   &-archive{
-    padding: 190px 0 100px;
+    padding: calc(90px + var(--header-height)) 0 100px;
     @media (max-width: 991px) and (min-width: 576px) {
-      padding-top: 160px;
+      padding-top: calc(60px + var(--header-height));
     }
     @media (max-width: 575px){
-      padding: 120px 0 50px;
+      padding: calc(50px + var(--header-height)) 0 50px;
     }
     .sc__header{
       @media (min-width: 576px){
@@ -373,12 +373,12 @@
     }
   }
   &-detail{
-    padding: 190px 0 60px;
+    padding: calc(90px + var(--header-height)) 0 60px;
     @media (max-width: 991px) and (min-width: 576px) {
-      padding-top: 160px;
+      padding-top: calc(60px + var(--header-height));
     }
     @media (max-width: 575px){
-      padding: 110px 0 30px;
+      padding: calc(40px + var(--header-height)) 0 30px;
     }
     .container{
       max-width: 924px;
@@ -746,9 +746,9 @@
 .p404{
   &-detail{
     position: relative;
-    padding: calc(110px + var(--header-height)) 0 100px;
     color: #FFFFFF;
     z-index: 1;
+    padding: calc(110px + var(--header-height)) 0 100px;
     @media (max-width: 991px) and (min-width: 576px) {
       padding: calc(70px + var(--header-height)) 0 70px;
     }
