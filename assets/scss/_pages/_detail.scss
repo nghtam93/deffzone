@@ -80,7 +80,7 @@
   }
 }
 .about{
-  &-deffect{
+  &-deffzone{
     padding: calc(90px + var(--header-height)) 0 80px;
     @media (max-width: 991px) and (min-width: 576px) {
       padding-top: calc(60px + var(--header-height));
@@ -780,7 +780,6 @@
     &--img{
       &-1{
         max-width: 133px;
-        animation: Mousex 3s linear infinite;
         @media (max-width: 575px){
           width: percentage(95.8/333.5);
           max-width: 96px;
