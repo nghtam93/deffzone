@@ -16,13 +16,16 @@
 
 	&__price{
 		display: flex;
-    	align-items: center;
+		align-items: center;
 		margin-right: 32px;
 		font-weight: bold;
 		font-size: 14px;
 		line-height: 24px;
 		text-align: right;
 		color: #FFFFFF;
+		@media (max-width: 1199px) and (min-width: 992px){
+			margin-right: 20px;
+		}
 		img{
 			flex: 0 0 auto;
 			width: 28px;
