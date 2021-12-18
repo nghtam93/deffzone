@@ -194,3 +194,70 @@ $(function(){
     });
   }
 });
+
+if($('body').hasClass('dashboard')){
+  var options1 = {
+    type: 'doughnut',
+    data: {
+      labels: ["your stake", "total stake"],
+      datasets: [
+        {
+          label: '# of Stakes',
+          data: [80, 20],
+          backgroundColor: [
+            '#FB741D',
+            '#31415B',
+          ],
+          borderColor: [
+            '#FB741D',
+            '#31415B',
+          ],
+          borderWidth: 5
+        }
+      ]
+    },
+    options: {
+    rotation: 1 * Math.PI,
+      circumference: 1 * Math.PI,
+      legend: {
+        display: false
+      },
+      tooltip: {
+        enabled: false
+      },
+      cutoutPercentage: 95
+    }
+  }
+
+  var ctx1 = document.getElementById('chartJSContainer').getContext('2d');
+  new Chart(ctx1, options1);
+}
+if($('.-date__slider').length){
+  const slider = document.querySelector('.-date__slider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+  });
+}
