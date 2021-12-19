@@ -29,6 +29,45 @@
       max-width: calc(1170px + var(--bs-gutter-x, 0.75rem) * 2);
     }
   }
+  .-status{
+    color: #FB741D;
+    position: relative;
+    font-size: 14px;
+    min-height: 25px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    @media (max-width: 1199px) and (min-width: 992px){
+      min-height: 22px;
+    }
+    &:not(.-publish){
+      font-style: italic;
+    }
+    &.-publish{
+      font-weight: 700;
+      font-size: 12px;
+      background-color: #fff;
+      border-radius: 10px;
+      @media (max-width: 1199px) and (min-width: 992px){
+        font-size: 10px;
+      }
+      &:before{
+        content: '';
+        background-color: #FB741D;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+        transform: translateY(-1px);
+      }
+    }
+  }
+  .-hover__hand{
+    &:hover{
+      cursor: pointer;
+    }
+  }
   .row{
     row-gap: var(--bs-gutter-x, 0.75rem);
     @media (max-width: 575px){
@@ -539,6 +578,76 @@
           border-radius: 6px;
           .dnfix__thumb{
             padding-top: percentage(90/136);
+          }
+        }
+      }
+    }
+  }
+  .pl{
+    &__row{
+      &:not(:last-child){
+        margin-bottom: 24px;
+      }
+    }
+    &__info{
+      .-txt{
+        font-size: 18px;
+        font-weight: 700;
+        @media (max-width: 1199px) and (min-width: 992px){
+          font-size: 16px;
+        }
+      }
+      .-price{
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 24px;
+        @media (max-width: 1199px) and (min-width: 992px){
+          font-size: 24px;
+        }
+      }
+    }
+    &__status{
+      .-thumb{
+        width: 60px;
+        height: 60px;
+        margin-top: 16px;
+        .dnfix__thumb{
+          padding-top: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .uc{
+    &__item{
+      &:not(:last-child){
+        margin-right: 16px;
+      }
+      &__txt{
+        color: #CFD2DD;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.4285714286;
+        margin-bottom: 8px;
+      }
+      &__linear{
+        font-size: 18px;
+        font-weight: 700;
+        .-linear__thumb{
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          margin-right: 5px;
+          img{
+            margin: 0px auto;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
           }
         }
       }
