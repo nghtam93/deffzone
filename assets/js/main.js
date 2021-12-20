@@ -132,8 +132,9 @@ $(document).ready(function(){
     checkDisableButton()
 
     // js custom dropdown
-    $(".js-dropdown .js-dropdown-selected a").click(function(e) {
+    $(".js-dropdown .js-dropdown-selected").click(function(e) {
       e.preventDefault();
+      $(this).toggleClass('is-show')
       $(".js-dropdown .js-dropdown-list").toggleClass('is-show');
     });
     $(".js-dropdown .js-dropdown-list li a").click(function(e) {
@@ -145,7 +146,7 @@ $(document).ready(function(){
     $(document).bind('click', function(e) {
       var $clicked = $(e.target);
       if (! $clicked.parents().hasClass("js-dropdown"))
-          $(".js-dropdown .js-dropdown-list").removeClass('is-show');
+          $(".js-dropdown .js-dropdown-selected, .js-dropdown .js-dropdown-list").removeClass('is-show');
     });
 
     // js custom toggle
@@ -155,7 +156,7 @@ $(document).ready(function(){
       jsBtn.on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('is-active')
-        jsShow.slideToggle();
+        jsShow.slideToggle().toggleClass('is-active');
       })
     })
 

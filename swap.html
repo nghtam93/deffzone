@@ -62,7 +62,22 @@
             <span class="">$0.01951</span>
           </div>
 
-          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+          <!-- <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a> -->
+          <div class="-connected js-dropdown d-none d-lg-inline-block">
+            <div class="btn js-dropdown-selected -wallet d-flex align-items-center">
+              <span class="-txt me-2">0x...a78E</span>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="-wallet__more js-dropdown-list">
+              <ul class="-list list-unstyled">
+                <li><a href="#">Wallet</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Your NTFs</a></li>
+                <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
+                <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
+              </ul>
+            </div>
+          </div>
 
           <div class="d-lg-none d-lg-none">
             <div class="menu-mb__btn">
@@ -77,59 +92,106 @@
 
       <section class="wallet-detail">
         <div class="container">
-          <div class="wl__wrap mx-auto">
+          <div class="wl__wrap mx-auto mb-3">
             <header class="wl__header d-flex align-items-center justify-content-between">
               <h2 class="wl__header__title me-5">Swap</h2>
               <div class="wl__header__sub">Swap tokens in an instant</div>
-            </header>
+            </header><!-- wl__header -->
             <form action="#" method="post" class="wl__form">
-              <div class="form-group wl__token d-flex justify-content-between">
-                <div class="wl__item">
-                  <div class="-txt">From</div>
-                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
-                    <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
-                      <div class="-sym">DEFF</div>
-                    </div>
-                    <div class="-name">DeffZone</div>
-                  </div>
-                </div><!-- end wl__item -->
-                <div class="-arrow"><i class="icon-arrow-right"></i></div>
-                <div class="wl__item">
-                  <div class="-txt">To</div>
-                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
-                    <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                      <div class="-sym">BNB</div>
-                    </div>
-                    <div class="-name">Binance Smart Chain Network</div>
+              <div class="form-group mb-3">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    <div class="-sym">DEFF</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div><!-- cr__item -->
+                  <span class="-txt">Balance: 0.00371221</span>
+                </div>
+                <div class="cr__input">
+                  <input type="email" class="form-control" id="wl__amount__from" placeholder="0.0" />
+                  <div class="-txt text-end"><span>Max</span></div>
+                </div><!-- cr__input -->
+              </div><!-- end form-group -->
+              <div class="-currency__arrow mt-4 mb-3"><i class="icon-arrow-down"></i></div>
+              <div class="form-group mb-4">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                    <div class="-sym">BNB</div>
                     <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
                       <i class="icon-arrow-down"></i>
                     </button>
                   </div>
-                </div><!-- end wl__item -->
+                  <span class="-txt">Balance: 0</span>
+                </div><!-- cr__item -->
+                <div class="cr__input">
+                  <input type="email" class="form-control" id="wl__amount__to" placeholder="0.0" />
+                  <div class="-txt text-end"><span>Max</span></div>
+                </div><!-- cr__input -->
               </div><!-- end form-group -->
-              <div class="form-group mb-3">
-                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
-                <div class="-input position-relative">
-                  <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
-                  <span class="-txt position-absolute top-50 translate-middle-y">DEFF</span>
+              <div class="cr__percent d-flex align-items-center justify-content-between mb-4">
+                <div class="cr__txt">Price</div>
+                <div class="-per d-flex align-items-center justify-content-between">
+                  <div class="-per__txt">0.0236837 DEFF per BNB</div>
+                  <a href="javascript: void(0);" class="-per__refresh d-flex align-items-center justify-content-center">
+                    <svg viewBox="0 0 24 24" width="14px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                      <path fill="#ED8409" d="M12 6V7.79C12 8.24 12.54 8.46 12.85 8.14L15.64 5.35C15.84 5.15 15.84 4.84 15.64 4.64L12.85 1.85C12.54 1.54 12 1.76 12 2.21V4C7.58 4 4 7.58 4 12C4 13.04 4.2 14.04 4.57 14.95C4.84 15.62 5.7 15.8 6.21 15.29C6.48 15.02 6.59 14.61 6.44 14.25C6.15 13.56 6 12.79 6 12C6 8.69 8.69 6 12 6ZM17.79 8.71C17.52 8.98 17.41 9.4 17.56 9.75C17.84 10.45 18 11.21 18 12C18 15.31 15.31 18 12 18V16.21C12 15.76 11.46 15.54 11.15 15.86L8.36 18.65C8.16 18.85 8.16 19.16 8.36 19.36L11.15 22.15C11.46 22.46 12 22.24 12 21.8V20C16.42 20 20 16.42 20 12C20 10.96 19.8 9.96 19.43 9.05C19.16 8.38 18.3 8.2 17.79 8.71Z"></path>
+                    </svg>
+                  </a>
                 </div>
-                <div class="-info text-end">Total reward: 000</div>
-              </div><!-- end form-group -->
-              <div class="form-group mb-5">
-                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Wallet Address</label>
-                <div class="-input position-relative">
-                  <div class="form-control d-flex align-items-center tk__key">
-                    <span>0xaaAf9d487A2B550C56822...cbA2B550C56822cbA2B5502cbCdC</span>
-                  </div>
-                  <span class="-txt -highlight position-absolute top-50 translate-middle-y">BSC</span>
-                </div>
-              </div><!-- end form-group -->
-              <button class="btn -submit" type="submit"><span>Continue</span></button>
-              <div class="-note text-center">Connect your wallet to proceed.</div>
+              </div>
+              <!-- <button class="btn -submit -disabled" disabled type="submit"><span>Insufficient DEFF balance</span></button> -->
+              <button class="btn -submit" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#confirmSwap"><span>Insufficient DEFF balance</span></button>
+              <div class="cr__btn d-flex justify-content-between mt-4">
+                <button class="btn -submit me-3" type="submit"><span>Enable DEFF</span></button>
+                <!-- <button class="btn -submit" type="submit"><span>Swap</span></button> -->
+                <button class="btn -submit -disabled" disabled type="submit"><span>Swap</span></button>
+              </div>
+              <div class="cr__step mt-4 mx-auto d-flex justify-content-between"><!-- add class "-full" to cr__step if active 2 step -->
+                <div class="cr__step__item is-active d-flex align-items-center justify-content-center">1</div>
+                <div class="cr__step__item d-flex align-items-center justify-content-center">2</div>
+              </div>
             </form>
-          </div>
+          </div><!-- wl__wrap -->
+          <div class="wl__wrap mx-auto py-4">
+            <div class="sc__box">
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Minimum received</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info">42.1 DEFF</div>
+              </div><!-- sc__item -->
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Price Impact</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info -highlight">&lsaquo; 0.01%</div>
+              </div><!-- sc__item -->
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Liquidity Provider Fee</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info">0.0025 BNB</div>
+              </div><!-- sc__item -->
+            </div><!-- sc__box -->
+          </div><!-- wl__wrap -->
         </div>
       </section>
 
@@ -196,23 +258,47 @@
                   <ul class="token-list scroll__wrap__content">
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__eth" class="-check">
-                      <label for="tk__eth" class="-name pe-4 pe-md-0"><span>ETH</span></label>
-                      <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                      <label for="tk__eth" class="-name pe-4 pe-md-0">
+                        <span>ETH</span>
+                        <span class="-full-name">Ethereum</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                      </div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__bnb" class="-check">
-                      <label for="tk__bnb" class="-name pe-4 pe-md-0"><span>BNB</span></label>
-                      <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <label for="tk__bnb" class="-name pe-4 pe-md-0">
+                        <span>BNB</span>
+                        <span class="-full-name">Binance Coin</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      </div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__metamask" class="-check">
-                      <label for="tk__metamask" class="-name pe-4 pe-md-0"><span>Metamask</span></label>
-                      <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                      <label for="tk__metamask" class="-name pe-4 pe-md-0">
+                        <span>Metamask</span>
+                        <span class="-full-name">MetaMask</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                      </div>
                     </li><!-- end tk__item -->
                     <li class="tk__item d-flex align-items-center justify-content-between">
                       <input type="radio" name="token" id="tk__usdt" class="-check">
-                      <label for="tk__usdt" class="-name pe-4 pe-md-0"><span>USDT</span></label>
-                      <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
+                      <label for="tk__usdt" class="-name pe-4 pe-md-0">
+                        <span>USDT</span>
+                        <span class="-full-name">Tether</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
+                      </div>
                     </li><!-- end tk__item -->
                   </ul>
                 </div><!-- end form-group -->
@@ -223,6 +309,79 @@
         </div>
       </div>
       <!-- end modal choose item -->
+
+      <!-- modal Confirm Swap -->
+      <div class="modal fade wl__modal -swap" id="confirmSwap" tabindex="-1" aria-labelledby="confirmSwapTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="confirmSwapTitle">Confirm Swap</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <ul class="sw__list list-unstyled mb-5">
+                    <li class="sw__list__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center me-4">
+                        <div class="-logo"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                        <div class="-price mt-0">751759</div>
+                      </div>
+                      <div class="-sym">DEFF</div>
+                    </li>
+                    <li class="sw__list__item -arrow"><i class="icon-arrow-down"></i></li>
+                    <li class="sw__list__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center me-4">
+                        <div class="-logo"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                        <div class="-price mt-0">1000</div>
+                      </div>
+                      <div class="-sym">BNB</div>
+                    </li>
+                  </ul>
+                  <div class="-info text-center mb-5">Input is estimated. You will sell at most <strong class="-highlight">751759 DEFF</strong> or the transaction will revert.</div>
+                  <div class="sc__box">
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Minimum received</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info">42.1 DEFF</div>
+                    </div><!-- sc__item -->
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Price Impact</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info -highlight">&lsaquo; 0.01%</div>
+                    </div><!-- sc__item -->
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Liquidity Provider Fee</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info">0.0025 BNB</div>
+                    </div><!-- sc__item -->
+                  </div><!-- sc__box -->
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit" type="submit"><span>Confirm Swap</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Confirm Swap -->
 
       <footer class="footer">
         <div class="container">
@@ -307,7 +466,22 @@
               </div>
             </div> <!-- .languages -->
 
-            <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+            <!-- <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a> -->
+            <div class="-connected js-dropdown">
+              <div class="btn js-dropdown-selected -wallet d-flex align-items-center justify-content-center">
+                <span class="-txt me-2">0x...a78E</span>
+                <i class="icon-arrow-down"></i>
+              </div>
+              <div class="-wallet__more js-dropdown-list">
+                <ul class="-list list-unstyled">
+                  <li><a href="#">Wallet</a></li>
+                  <li><a href="#">Transactions</a></li>
+                  <li><a href="#">Your NTFs</a></li>
+                  <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
+                  <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
+                </ul>
+              </div>
+            </div>
           </div>
       </nav>
     </div> <!-- .wrapper -->
