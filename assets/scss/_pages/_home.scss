@@ -683,6 +683,47 @@
 			font-size: 20px;
 		}
 	}
+
+	&-advisors{
+		position: relative;
+		padding: 80px 0;
+		background: url(../img/home-advisors.jpg) no-repeat;
+		background-size:cover;
+		background-position: bottom;
+		.container{
+			max-width: 800px;
+		}
+		.el__item{
+			position: relative;
+			max-width: 376px;
+			padding: 32px;
+			background: url(../img/home-advisors-item.png) no-repeat;
+			background-size: 100% 100%;
+			border-radius: 15px;
+			margin: 0 auto 30px;
+			overflow: hidden;
+			&::before{position:absolute;top:0;left:-75%;z-index:2;display:block;content:'';width:50%;height:100%;background:-webkit-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);-webkit-transform:skewX(-25deg);transform:skewX(-25deg)}
+			&:hover::before{-webkit-animation:shine 1s;animation:shine 1s}
+			&__thumb{
+				max-width: 180px;
+				margin: 0 auto 32px;
+			}
+			.dnfix__thumb{
+				padding-top: 100px;
+			}
+			&__title{
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 26px;
+				text-align: center;
+				background: -webkit-linear-gradient(
+			310deg, #FB451D 30%, #ED8409);
+			    -webkit-background-clip: text;
+			    -webkit-text-fill-color: transparent;
+			}
+
+		}
+	}
 	@media (max-width: 1899px){
 		&-team{
 			&__slider{
@@ -1015,6 +1056,9 @@
 			    line-height: 42px;
 			}
 
+		}
+		&-advisors{
+			padding: 60px 0 40px;
 		}
 
 	}
