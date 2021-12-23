@@ -1,3 +1,12 @@
+.text-validate{
+  font-size: 16px;
+  color: #FF3333;
+  font-weight: 600;
+  margin-top: 8px;
+  @media (max-width: 575px){
+    font-size: 14px;
+  }
+}
 .js-dropdown{
   position: relative;
   .form-control{
