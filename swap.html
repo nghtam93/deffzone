@@ -70,8 +70,8 @@
             </div>
             <div class="-wallet__more js-dropdown-list">
               <ul class="-list list-unstyled">
-                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Wallet</a></li>
-                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Transactions</a></li>
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Wallet</a></li>
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Transactions</a></li>
                 <li><a href="#">Your NTFs</a></li>
                 <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
                 <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
@@ -497,6 +497,64 @@
       </div>
       <!-- end modal Manage -->
 
+      <!-- modal Manage -->
+      <div class="modal fade wl__modal -manage" id="mangeWallet" tabindex="-1" aria-labelledby="mangeWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="mangeWalletTitle">Your Wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <nav class="wl__tabs">
+                <div class="nav nav-tabs" role="tablist">
+                  <button class="nav-link active" id="nav-manage-wallet-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-wallet" type="button" role="tab" aria-controls="nav-manage-wallet" aria-selected="true">Wallet</button>
+                  <button class="nav-link" id="nav-manage-transaction-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-transaction" type="button" role="tab" aria-controls="nav-manage-transaction" aria-selected="false">Transactions</button>
+                </div>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="nav-manage-wallet" role="tabpanel" aria-labelledby="nav-manage-wallet-tab">
+                  <div class="mn__wallet wl__form">
+                    <div class="mn__item form-group">
+                      <label class="form-label text-uppercase" for="yourWalletAddress">You Address</label>
+                      <div class="-input js-copy position-relative">
+                        <input type="text" class="text-truncate form-control js-copy-content" id="yourWalletAddress" value="0xaaAf9d487A2B550C56822...cbA2B550C56822cbA2B5502cbCdC" disabled style="max-width: 100%;">
+                        <span class="-txt -identical position-absolute top-50 translate-middle-y"><i class="icon-copy js-copy-btn"></i></span>
+                      </div>
+                    </div>
+                    <div class="mn__item">
+                      <div class="-item d-flex justify-content-between">
+                        <div class="-txt me-4">BNB Balance</div>
+                        <div class="-numb text-end">0.9075577</div>
+                      </div>
+                      <div class="-item d-flex justify-content-between">
+                        <div class="-txt me-4">DEFF Balance</div>
+                        <div class="-numb text-end">0.000</div>
+                      </div>
+                    </div>
+                    <div class="mn__item text-end">
+                      <a href="#" class="-link">View on BscScan <i class="icon-external-link ms-2"></i></a>
+                    </div>
+                    <div class="mn__item">
+                      <a href="#" class="btn"><span>Disconnect Wallet</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-manage-transaction" role="tabpanel" aria-labelledby="nav-manage-transaction-tab">
+                  <div class="mn__wallet wl__form">
+                    <div class="mn__item form-group">
+                      <label class="form-label text-uppercase" for="yourWalletAddress">Recent Transactions</label>
+                      <div class="-empty text-center pt-4 pb-5">No recent transactions</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Manage -->
+
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -588,8 +646,8 @@
               </div>
               <div class="-wallet__more js-dropdown-list">
                 <ul class="-list list-unstyled">
-                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Wallet</a></li>
-                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Transactions</a></li>
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Wallet</a></li>
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Transactions</a></li>
                   <li><a href="#">Your NTFs</a></li>
                   <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
                   <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
