@@ -135,13 +135,13 @@ $(document).ready(function(){
     $(".js-dropdown .js-dropdown-selected").click(function(e) {
       e.preventDefault();
       $(this).toggleClass('is-show')
-      $(".js-dropdown .js-dropdown-list").toggleClass('is-show');
+      $(this).parents('.js-dropdown').find('.js-dropdown-list').toggleClass('is-show');
     });
     $(".js-dropdown .js-dropdown-list li a").click(function(e) {
       e.preventDefault();
       var text = $(this).html();
-      $(".js-dropdown .js-dropdown-selected a span").html(text);
-      $(".js-dropdown .js-dropdown-list").removeClass('is-show');
+      $(this).parents('.js-dropdown').find('.js-dropdown-selected a span').html(text);
+      $(this).parents('.js-dropdown-list').removeClass('is-show');
     });
     $(document).bind('click', function(e) {
       var $clicked = $(e.target);

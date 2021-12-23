@@ -70,8 +70,8 @@
             </div>
             <div class="-wallet__more js-dropdown-list">
               <ul class="-list list-unstyled">
-                <li><a href="#">Wallet</a></li>
-                <li><a href="#">Transactions</a></li>
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Wallet</a></li>
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Transactions</a></li>
                 <li><a href="#">Your NTFs</a></li>
                 <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
                 <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
@@ -302,7 +302,7 @@
                     </li><!-- end tk__item -->
                   </ul>
                 </div><!-- end form-group -->
-                <button class="btn -submit" type="submit"><span>OK</span></button>
+                <button class="btn -submit" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken"><span>Manage Tokens</span></button>
               </form>
             </div>
           </div>
@@ -382,6 +382,119 @@
         </div>
       </div>
       <!-- end modal Confirm Swap -->
+
+      <!-- modal Manage -->
+      <div class="modal fade wl__modal -manage" id="mangeToken" tabindex="-1" aria-labelledby="mangeTokenTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="mangeTokenTitle">Manage</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <nav class="wl__tabs">
+                <div class="nav nav-tabs" role="tablist">
+                  <button class="nav-link active" id="nav-manage-list-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-list" type="button" role="tab" aria-controls="nav-manage-list" aria-selected="true">Lists</button>
+                  <button class="nav-link" id="nav-manage-token-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-token" type="button" role="tab" aria-controls="nav-manage-token" aria-selected="false">Tokens</button>
+                </div>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="nav-manage-list" role="tabpanel" aria-labelledby="nav-manage-list-tab">
+                  <form action="#" method="post" class="wl__form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="https:// or ipfs:// or ENS name">
+                    </div>
+                    <div class="form-group mn__list">
+                      <div class="mn__list__item d-flex align-items-center justify-content-between">
+                        <div class="-info d-flex align-items-center">
+                          <div class="-info__thumb"><img src="./assets/img/pages/pancake.png" alt=""></div>
+                          <div class="-info__content">
+                            <div class="-txt">PancakeSwap Extended</div>
+                            <div class="-meta d-flex align-items-center">
+                              264 tokens 
+                              <div class="js-dropdown ms-2">
+                                <i class="icon-settings js-dropdown-selected"></i>
+                                <div class="js-dropdown-list">
+                                  <div class="-meta__txt">v2.16.53</div>
+                                  <div class="-meta__link d-flex align-items-center"><a href="#"><span>See</span><i class="icon-external-link"></i></a></div>
+                                  <div class="-meta__btn"><a href="#" class="btn"><span>Remove</span></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="-enable">
+                          <input type="checkbox" name="" id="token-swap1" class="-enable__check">
+                          <label for="token-swap1" class="-enable__label"></label>
+                        </div>
+                      </div><!-- mn__list__item -->
+                      <div class="mn__list__item d-flex align-items-center justify-content-between">
+                        <div class="-info d-flex align-items-center">
+                          <div class="-info__thumb"><img src="./assets/img/pages/pancake.png" alt=""></div>
+                          <div class="-info__content">
+                            <div class="-txt">PancakeSwap Extended</div>
+                            <div class="-meta d-flex align-items-center">
+                              264 tokens
+                              <div class="js-dropdown ms-2">
+                                <i class="icon-settings js-dropdown-selected"></i>
+                                <div class="js-dropdown-list">
+                                  <div class="-meta__txt">v2.16.53</div>
+                                  <div class="-meta__link d-flex align-items-center"><a href="#"><span>See</span><i class="icon-external-link"></i></a></div>
+                                  <div class="-meta__btn"><a href="#" class="btn"><span>Remove</span></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="-enable">
+                          <input type="checkbox" name="" id="token-swap2" class="-enable__check">
+                          <label for="token-swap2" class="-enable__label"></label>
+                        </div>
+                      </div><!-- mn__list__item -->
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="nav-manage-token" role="tabpanel" aria-labelledby="nav-manage-token-tab">
+                  <form action="#" method="post" class="wl__form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="0x0000" aria-describedby="tokenArea">
+                      <div id="tokenArea" class="form-text -highlight">Enter valid token address</div>
+                    </div>
+                    <div class="form-group tk__info d-flex justify-content-between">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3 me-2">USDTT</div>
+                        <div class="-txt">USDT Token</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <i class="icon-check-circle me-2"></i>
+                        <span class="-txt">Active</span>
+                      </div>
+                    </div>
+                    <div class="form-group d-flex justify-content-between ps-2">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3">USDTT</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <a href="#" class="is-close"><i class="icon-close"></i></a>
+                        <a href="#"><i class="icon-external-link"></i></a>
+                      </div>
+                    </div>
+                    <div class="form-group tk__custom d-flex align-items-center justify-content-between">
+                      <div class="tk__custom__txt me-3">1 Custom Token</div>
+                      <div class="tk__custom__btn">
+                        <a href="$" class="btn"><span>Clear All</span></a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Manage -->
 
       <footer class="footer">
         <div class="container">
@@ -474,8 +587,8 @@
               </div>
               <div class="-wallet__more js-dropdown-list">
                 <ul class="-list list-unstyled">
-                  <li><a href="#">Wallet</a></li>
-                  <li><a href="#">Transactions</a></li>
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Wallet</a></li>
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken">Transactions</a></li>
                   <li><a href="#">Your NTFs</a></li>
                   <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
                   <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
