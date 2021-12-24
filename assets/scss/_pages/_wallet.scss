@@ -805,6 +805,136 @@
     }
   }
 }
+.ip{
+  &__notes{
+    background-color: rgba(#FB741D, 0.05);
+    border: 2px solid #FB741D;
+    border-radius: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 20px;
+    @media (max-width: 575px){
+      padding: 12px 15px;
+      font-size: 15px;
+    }
+    p{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+    .-icon{
+      color: #FB741D;
+      font-size: 24px;
+      @media (max-width: 575px){
+        font-size: 20px;
+      }
+    }
+    .-txt{
+      flex-grow: 1;
+    }
+  }
+  &__unknown{
+    border: 2px solid #FF3333;
+    border-radius: 20px;
+    color: #FF3333;
+    padding: 5px 16px;
+    font-size: 16px;
+    @media (max-width: 575px){
+      font-size: 14px;
+    }
+    .-icon{
+      font-size: 20px;
+      padding-top: 1px;
+      @media (max-width: 575px){
+        font-size: 18px;
+      }
+    }
+  }
+  &__info{
+    font-size: 18px;
+    @media (max-width: 575px){
+      font-size: 14px;
+    }
+    .-info{
+      margin-top: 0 !important;
+      &__token{
+        font-size: 20px;
+        @media (max-width: 575px){
+          font-size: 16px;
+        }
+      }
+    }
+    .-link{
+      a{
+        color: #FB451D;
+        transition: 0.3s;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__bottom{
+    .-check{
+      position: relative;
+      font-size: 18px;
+      @media (max-width: 575px){
+        font-size: 16px;
+      }
+      label{
+        position: relative;
+        padding-left: 35px;
+        @media (max-width: 575px){
+          padding-left: 30px;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 4px;
+          border: 1px solid #FFFFFF;
+          left: 0;
+          top: 0;
+          @media (max-width: 575px){
+            width: 18px;
+            height: 18px;
+            top: 2px;
+          }
+        }
+      }
+      .icon-check{
+        position: absolute;
+        left: 4px;
+        top: 6px;
+        font-size: 12px;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      input{
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        &:checked{
+          +.icon-check{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .btn{
+      padding: 10px 25px;
+      min-width: 150px;
+      font-size: 18px;
+      @media (max-width: 575px){
+        font-size: 15px;
+        min-width: 100px;
+        padding: 8px 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
 .-swap{
   .-info{
     font-size: 16px;
@@ -1082,6 +1212,15 @@
         @media (max-width: 575px) {
           font-size: 18px;
         }
+      }
+    }
+    .btn{
+      font-size: 16px;
+      padding: 8px 25px;
+      @media (max-width: 575px){
+        font-size: 14px;
+        min-width: 100px;
+        padding: 8px;
       }
     }
   }

@@ -482,6 +482,16 @@
                         <a href="#"><i class="icon-external-link"></i></a>
                       </div>
                     </div>
+                    <div class="form-group tk__info d-flex justify-content-between">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3 me-2">USDTT</div>
+                        <div class="-txt">USDT Token</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#importToken"><span>Import</span></button>
+                      </div>
+                    </div>
                     <div class="form-group tk__custom d-flex align-items-center justify-content-between">
                       <div class="tk__custom__txt me-3">1 Custom Token</div>
                       <div class="tk__custom__btn">
@@ -554,6 +564,55 @@
         </div>
       </div>
       <!-- end modal Manage -->
+
+      <!-- modal Import Tokens -->
+      <div class="modal fade wl__modal" id="importToken" tabindex="-1" aria-labelledby="importTokenTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="importTokenTitle">Import Tokens</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <div class="ip__notes d-flex">
+                    <div class="-icon me-3"><i class="icon-warning"></i></div>
+                    <div class="-txt">
+                      <p>Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.</p>
+                      <p>If you purchase an arbitrary token, you may be unable to sell it back.</p>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="form-group">
+                  <div class="ip__unknown d-flex align-items-center mb-4">
+                    <div class="-icon me-3"><i class="icon-warning-circle"></i></div>
+                    <div class="-txt">Unknown source</div>
+                  </div>
+                  <div class="ip__info d-flex align-items-end justify-content-between">
+                    <div class="-info me-4">
+                      <div class="-info__txt mb-3">USDT Token (USDTT)</div>
+                      <div class="-info__token">0x88...A707</div>
+                    </div>
+                    <div class="-link">
+                      <a href="#">(View on BscScan)</a>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="ip__bottom d-flex justify-content-between align-items-center">
+                  <div class="-check">
+                    <input type="checkbox" name="" id="ip__agree">
+                    <i class="icon-check"></i>
+                    <label for="ip__agree">I understand</label>
+                  </div>
+                  <button class="btn -disabled" disabled type="button" data-bs-toggle="modal" data-bs-target="#mangeToken"><span>Import</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Import Tokens -->
 
       <footer class="footer">
         <div class="container">
