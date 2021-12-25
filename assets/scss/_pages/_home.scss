@@ -690,7 +690,7 @@
 		background: url(../img/home-advisors.jpg) no-repeat;
 		background-size:cover;
 		background-position: bottom;
-		.container{
+		.container-800{
 			max-width: 800px;
 		}
 		.el__item{
@@ -704,14 +704,25 @@
 			overflow: hidden;
 			&::before{position:absolute;top:0;left:-75%;z-index:2;display:block;content:'';width:50%;height:100%;background:-webkit-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);-webkit-transform:skewX(-25deg);transform:skewX(-25deg)}
 			&:hover::before{-webkit-animation:shine 1s;animation:shine 1s}
+			&.-s2{
+				.el__item{
+					&__thumb{
+						max-width: 100%;
+					}
+				}
+				.dnfix__thumb{
+					padding-top: 120px;
+				}
+			}
 			&__thumb{
 				max-width: 180px;
-				margin: 0 auto 32px;
+				margin: 0 auto 0;
 			}
 			.dnfix__thumb{
 				padding-top: 100px;
 			}
 			&__title{
+				margin-top: 32px;
 				font-weight: bold;
 				font-size: 18px;
 				line-height: 26px;
@@ -724,6 +735,7 @@
 
 		}
 	}
+
 	@media (max-width: 1899px){
 		&-team{
 			&__slider{
@@ -1059,7 +1071,22 @@
 		}
 		&-advisors{
 			padding: 60px 0 40px;
+			.el__item {
+			    &.-s2{
+			    	padding: 16px;
+			    	margin-bottom: var(--bs-gutter-x);
+			    	.dnfix__thumb {
+					    padding-top: 60px;
+					}
+			    }
+			}
+			.fund-container{
+				.row{
+					--bs-gutter-x: 1rem;
+				}
+			}
 		}
+
 
 	}
 
