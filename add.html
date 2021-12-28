@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | Add Liquidity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item"><a href="swap.html">Swap</a></li>
+              <li class="menu-item"><a href="dashboard.html">Launchpad</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.01951</span>
+          </div>
+
+          <!-- <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a> -->
+          <div class="-connected js-dropdown d-none d-lg-inline-block">
+            <div class="btn js-dropdown-selected -wallet d-flex align-items-center">
+              <span class="-txt me-2">0x...a78E</span>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="-wallet__more js-dropdown-list">
+              <ul class="-list list-unstyled">
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Wallet</a></li>
+                <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Transactions</a></li>
+                <li><a href="#">Your NTFs</a></li>
+                <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
+                <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="wallet-detail">
+        <div class="container">
+          <div class="wl__wrap mx-auto mb-3">
+            <header class="wl__header d-flex align-items-center justify-content-between">
+              <h2 class="wl__header__title me-5">Add Liquidity</h2>
+              <div class="wl__header__sub"><i class="icon-question-circle"></i> Add liquidity to receive LP tokens</div>
+            </header><!-- wl__header -->
+            <form action="#" method="post" class="wl__form">
+              <div class="form-group mb-3">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    <div class="-sym">DEFF</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div><!-- cr__item -->
+                  <span class="-txt">Balance: 0.00371221</span>
+                </div>
+                <div class="cr__input position-relative" for="wl__amount__from">
+                  <input type="number" class="form-control" id="wl__amount__from" placeholder="0.0" />
+                  <div class="-txt text-end position-absolute"><button type="button">Max</button></div>
+                </div><!-- cr__input -->
+              </div><!-- end form-group -->
+              <div class="-currency__arrow mt-4 mb-3"><i class="icon-arrow-down"></i></div>
+              <div class="form-group mb-4">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                    <div class="-sym">BNB</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div>
+                  <span class="-txt">Balance: 0</span>
+                </div><!-- cr__item -->
+                <div class="cr__input position-relative" for="wl__amount__from">
+                  <input type="number" class="form-control" id="wl__amount__from" placeholder="0.0" />
+                  <div class="-txt text-end position-absolute"><button type="button">Max</button></div>
+                </div><!-- cr__input -->
+              </div><!-- end form-group -->
+              <div class="cr__percent d-flex align-items-center justify-content-between mb-4">
+                <div class="cr__txt">Price</div>
+                <div class="-per d-flex align-items-center justify-content-between">
+                  <div class="-per__txt">0.0236837 DEFF per BNB</div>
+                  <a href="javascript: void(0);" class="-per__refresh d-flex align-items-center justify-content-center">
+                    <svg viewBox="0 0 24 24" width="14px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                      <path fill="#ED8409" d="M12 6V7.79C12 8.24 12.54 8.46 12.85 8.14L15.64 5.35C15.84 5.15 15.84 4.84 15.64 4.64L12.85 1.85C12.54 1.54 12 1.76 12 2.21V4C7.58 4 4 7.58 4 12C4 13.04 4.2 14.04 4.57 14.95C4.84 15.62 5.7 15.8 6.21 15.29C6.48 15.02 6.59 14.61 6.44 14.25C6.15 13.56 6 12.79 6 12C6 8.69 8.69 6 12 6ZM17.79 8.71C17.52 8.98 17.41 9.4 17.56 9.75C17.84 10.45 18 11.21 18 12C18 15.31 15.31 18 12 18V16.21C12 15.76 11.46 15.54 11.15 15.86L8.36 18.65C8.16 18.85 8.16 19.16 8.36 19.36L11.15 22.15C11.46 22.46 12 22.24 12 21.8V20C16.42 20 20 16.42 20 12C20 10.96 19.8 9.96 19.43 9.05C19.16 8.38 18.3 8.2 17.79 8.71Z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- <button class="btn -submit -disabled" disabled type="submit"><span>Insufficient DEFF balance</span></button> -->
+              <button class="btn -submit" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#confirmSwap"><span>Insufficient DEFF balance</span></button>
+              <div class="cr__btn d-flex justify-content-between mt-4">
+                <button class="btn -submit me-3" type="submit"><span>Enable DEFF</span></button>
+                <!-- <button class="btn -submit" type="submit"><span>Swap</span></button> -->
+                <button class="btn -submit -disabled" disabled type="submit"><span>Swap</span></button>
+              </div>
+              <div class="cr__step mt-4 mx-auto d-flex justify-content-between"><!-- add class "-full" to cr__step if active 2 step -->
+                <div class="cr__step__item is-active d-flex align-items-center justify-content-center">1</div>
+                <div class="cr__step__item d-flex align-items-center justify-content-center">2</div>
+              </div>
+            </form>
+          </div><!-- wl__wrap -->
+          <div class="wl__wrap mx-auto py-4">
+            <div class="sc__box">
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Minimum received</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info">42.1 DEFF</div>
+              </div><!-- sc__item -->
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Price Impact</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info -highlight">&#10094; 0.01%</div>
+              </div><!-- sc__item -->
+              <div class="sc__item d-flex align-items-center justify-content-between">
+                <div class="-txt d-flex align-items-center">
+                  <div class="-txt__info">Liquidity Provider Fee</div>
+                  <div class="-txt__icon ms-2">
+                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="-info">0.0025 BNB</div>
+              </div><!-- sc__item -->
+            </div><!-- sc__box -->
+          </div><!-- wl__wrap -->
+        </div>
+      </section>
+
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group scroll__wrap">
+                  <ul class="wallet-list scroll__wrap__content d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="submit"><span>Connect wallet</span></button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <!-- modal choose item -->
+      <div class="modal fade wl__modal" id="chooseToken" tabindex="-1" aria-labelledby="chooseTokenTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="chooseTokenTitle">Select a token</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <div class="-search position-relative">
+                    <input type="email" class="form-control" id="wl__amount" placeholder="Search name or paste address" />
+                    <span class="-txt -highlight position-absolute top-50 translate-middle-y"><i class="icon-search"></i></span>
+                  </div>
+                  <div class="-common">
+                    <div class="-common__txt mb-2">Common bases <i class="icon-question-circle ms-2"></i></div>
+                    <ul class="-common__list list-unstyled d-flex flex-wrap justify-content-center justify-content-sm-start">
+                      <li class="-item cm__choose">
+                        <input type="radio" name="token" id="cm__deffzone" class="-check" checked>
+                        <label for="cm__deffzone" class="-name d-flex align-items-center">
+                          <span class="-logo"><img src="./assets/img/pages/logo-deffzone.png" alt=""></span>
+                          <span class="ms-2">DEFF</span>
+                        </label>
+                      </li><!-- end cm__choose -->
+                      <li class="-item cm__choose">
+                        <input type="radio" name="token" id="cm__eth" class="-check">
+                        <label for="cm__eth" class="-name d-flex align-items-center">
+                          <span class="-logo"><img src="./assets/img/pages/logo-eth.png" alt=""></span>
+                          <span class="ms-2">ETH</span>
+                        </label>
+                      </li><!-- end cm__choose -->
+                      <li class="-item cm__choose">
+                        <input type="radio" name="token" id="cm__bnb" class="-check">
+                        <label for="cm__bnb" class="-name d-flex align-items-center">
+                          <span class="-logo"><img src="./assets/img/pages/logo-bnb.png" alt=""></span>
+                          <span class="ms-2">BNB</span>
+                        </label>
+                      </li><!-- end cm__choose -->
+                      <li class="-item cm__choose">
+                        <input type="radio" name="token" id="cm__metamask" class="-check">
+                        <label for="cm__metamask" class="-name d-flex align-items-center">
+                          <span class="-logo"><img src="./assets/img/pages/logo-metamask.png" alt=""></span>
+                          <span class="ms-2">Metamask</span>
+                        </label>
+                      </li><!-- end cm__choose -->
+                      <li class="-item cm__choose">
+                        <input type="radio" name="token" id="cm__usdt" class="-check">
+                        <label for="cm__usdt" class="-name d-flex align-items-center">
+                          <span class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></span>
+                          <span class="ms-2">USDT</span>
+                        </label>
+                      </li><!-- end cm__choose -->
+                    </ul>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="form-group scroll__wrap">
+                  <ul class="token-list scroll__wrap__content">
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__eth" class="-check">
+                      <label for="tk__eth" class="-name pe-4 pe-md-0">
+                        <span>ETH</span>
+                        <span class="-full-name">Ethereum</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                      </div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__bnb" class="-check">
+                      <label for="tk__bnb" class="-name pe-4 pe-md-0">
+                        <span>BNB</span>
+                        <span class="-full-name">Binance Coin</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      </div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__metamask" class="-check">
+                      <label for="tk__metamask" class="-name pe-4 pe-md-0">
+                        <span>Metamask</span>
+                        <span class="-full-name">MetaMask</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                      </div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex align-items-center justify-content-between">
+                      <input type="radio" name="token" id="tk__usdt" class="-check">
+                      <label for="tk__usdt" class="-name pe-4 pe-md-0">
+                        <span>USDT</span>
+                        <span class="-full-name">Tether</span>
+                      </label>
+                      <div class="-meta d-flex align-items-center">
+                        <div class="-numb">0.003712</div>
+                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
+                      </div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -submit" type="button" data-bs-toggle="modal" data-bs-target="#mangeToken"><span>Manage Tokens</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal choose item -->
+
+      <!-- modal Confirm Swap -->
+      <div class="modal fade wl__modal -swap" id="confirmSwap" tabindex="-1" aria-labelledby="confirmSwapTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="confirmSwapTitle">Confirm Swap</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <ul class="sw__list list-unstyled mb-5">
+                    <li class="sw__list__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center me-4">
+                        <div class="-logo"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                        <div class="-price mt-0">751759</div>
+                      </div>
+                      <div class="-sym">DEFF</div>
+                    </li>
+                    <li class="sw__list__item -arrow"><i class="icon-arrow-down"></i></li>
+                    <li class="sw__list__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center me-4">
+                        <div class="-logo"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                        <div class="-price mt-0">1000</div>
+                      </div>
+                      <div class="-sym">BNB</div>
+                    </li>
+                  </ul>
+                  <div class="-info text-center mb-5">Input is estimated. You will sell at most <strong class="-highlight">751759 DEFF</strong> or the transaction will revert.</div>
+                  <div class="sc__box">
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Minimum received</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info">42.1 DEFF</div>
+                    </div><!-- sc__item -->
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Price Impact</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info -highlight">&#10094; 0.01%</div>
+                    </div><!-- sc__item -->
+                    <div class="sc__item d-flex align-items-center justify-content-between">
+                      <div class="-txt d-flex align-items-center">
+                        <div class="-txt__info">Liquidity Provider Fee</div>
+                        <div class="-txt__icon ms-2">
+                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
+                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="-info">0.0025 BNB</div>
+                    </div><!-- sc__item -->
+                  </div><!-- sc__box -->
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit" type="submit"><span>Confirm Swap</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Confirm Swap -->
+
+      <!-- modal Manage -->
+      <div class="modal fade wl__modal -manage" id="mangeToken" tabindex="-1" aria-labelledby="mangeTokenTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="mangeTokenTitle">Manage</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <nav class="wl__tabs">
+                <div class="nav nav-tabs" role="tablist">
+                  <button class="nav-link active" id="nav-manage-list-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-list" type="button" role="tab" aria-controls="nav-manage-list" aria-selected="true">Lists</button>
+                  <button class="nav-link" id="nav-manage-token-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-token" type="button" role="tab" aria-controls="nav-manage-token" aria-selected="false">Tokens</button>
+                </div>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="nav-manage-list" role="tabpanel" aria-labelledby="nav-manage-list-tab">
+                  <form action="#" method="post" class="wl__form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="https:// or ipfs:// or ENS name">
+                      <div class="text-validate">Enter valid list location</div>
+                    </div>
+                    <div class="form-group mn__list">
+                      <div class="mn__list__item d-flex align-items-center justify-content-between">
+                        <div class="-info d-flex align-items-center">
+                          <div class="-info__thumb"><img src="./assets/img/pages/pancake.png" alt=""></div>
+                          <div class="-info__content">
+                            <div class="-txt">PancakeSwap Extended</div>
+                            <div class="-meta d-flex align-items-center">
+                              264 tokens 
+                              <div class="js-dropdown ms-2">
+                                <i class="icon-settings js-dropdown-selected"></i>
+                                <div class="js-dropdown-list">
+                                  <div class="-meta__txt">v2.16.53</div>
+                                  <div class="-meta__link d-flex align-items-center"><a href="#"><span>See</span><i class="icon-external-link"></i></a></div>
+                                  <div class="-meta__btn"><a href="#" class="btn"><span>Remove</span></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="-enable">
+                          <input type="checkbox" name="" id="token-swap1" class="-enable__check">
+                          <label for="token-swap1" class="-enable__label"></label>
+                        </div>
+                      </div><!-- mn__list__item -->
+                      <div class="mn__list__item d-flex align-items-center justify-content-between">
+                        <div class="-info d-flex align-items-center">
+                          <div class="-info__thumb"><img src="./assets/img/pages/pancake.png" alt=""></div>
+                          <div class="-info__content">
+                            <div class="-txt">PancakeSwap Extended</div>
+                            <div class="-meta d-flex align-items-center">
+                              264 tokens
+                              <div class="js-dropdown ms-2">
+                                <i class="icon-settings js-dropdown-selected"></i>
+                                <div class="js-dropdown-list">
+                                  <div class="-meta__txt">v2.16.53</div>
+                                  <div class="-meta__link d-flex align-items-center"><a href="#"><span>See</span><i class="icon-external-link"></i></a></div>
+                                  <div class="-meta__btn"><a href="#" class="btn"><span>Remove</span></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="-enable">
+                          <input type="checkbox" name="" id="token-swap2" class="-enable__check">
+                          <label for="token-swap2" class="-enable__label"></label>
+                        </div>
+                      </div><!-- mn__list__item -->
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="nav-manage-token" role="tabpanel" aria-labelledby="nav-manage-token-tab">
+                  <form action="#" method="post" class="wl__form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="0x0000" />
+                      <div class="text-validate">Enter valid token address</div>
+                    </div>
+                    <div class="form-group tk__info d-flex justify-content-between">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3 me-2">USDTT</div>
+                        <div class="-txt">USDT Token</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <i class="icon-check-circle me-2"></i>
+                        <span class="-txt">Active</span>
+                      </div>
+                    </div>
+                    <div class="form-group d-flex justify-content-between ps-2">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3">USDTT</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <a href="#" class="is-close"><i class="icon-close"></i></a>
+                        <a href="#"><i class="icon-external-link"></i></a>
+                      </div>
+                    </div>
+                    <div class="form-group tk__info d-flex justify-content-between">
+                      <div class="tk__name d-flex align-items-center me-3">
+                        <i class="icon-question-circle"></i>
+                        <div class="-name ms-3 me-2">USDTT</div>
+                        <div class="-txt">USDT Token</div>
+                      </div>
+                      <div class="tk__status d-flex align-items-center">
+                        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#importToken"><span>Import</span></button>
+                      </div>
+                    </div>
+                    <div class="form-group tk__custom d-flex align-items-center justify-content-between">
+                      <div class="tk__custom__txt me-3">1 Custom Token</div>
+                      <div class="tk__custom__btn">
+                        <a href="$" class="btn"><span>Clear All</span></a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Manage -->
+
+      <!-- modal Manage -->
+      <div class="modal fade wl__modal -manage" id="mangeWallet" tabindex="-1" aria-labelledby="mangeWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="mangeWalletTitle">Your Wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <nav class="wl__tabs">
+                <div class="nav nav-tabs" role="tablist">
+                  <button class="nav-link active" id="nav-manage-wallet-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-wallet" type="button" role="tab" aria-controls="nav-manage-wallet" aria-selected="true">Wallet</button>
+                  <button class="nav-link" id="nav-manage-transaction-tab" data-bs-toggle="tab" data-bs-target="#nav-manage-transaction" type="button" role="tab" aria-controls="nav-manage-transaction" aria-selected="false">Transactions</button>
+                </div>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="nav-manage-wallet" role="tabpanel" aria-labelledby="nav-manage-wallet-tab">
+                  <div class="mn__wallet wl__form">
+                    <div class="mn__item form-group">
+                      <label class="form-label text-uppercase" for="yourWalletAddress">You Address</label>
+                      <div class="-input js-copy position-relative">
+                        <input type="text" class="text-truncate form-control js-copy-content" id="yourWalletAddress" value="0xaaAf9d487A2B550C56822...cbA2B550C56822cbA2B5502cbCdC" disabled style="max-width: 100%;">
+                        <span class="-txt -identical position-absolute top-50 translate-middle-y"><i class="icon-copy js-copy-btn"></i></span>
+                      </div>
+                    </div>
+                    <div class="mn__item">
+                      <div class="-item d-flex justify-content-between">
+                        <div class="-txt me-4">BNB Balance</div>
+                        <div class="-numb text-end">0.9075577</div>
+                      </div>
+                      <div class="-item d-flex justify-content-between">
+                        <div class="-txt me-4">DEFF Balance</div>
+                        <div class="-numb text-end">0.000</div>
+                      </div>
+                    </div>
+                    <div class="mn__item text-end">
+                      <a href="#" class="-link">View on BscScan <i class="icon-external-link ms-2"></i></a>
+                    </div>
+                    <div class="mn__item">
+                      <a href="#" class="btn"><span>Disconnect Wallet</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-manage-transaction" role="tabpanel" aria-labelledby="nav-manage-transaction-tab">
+                  <div class="mn__wallet wl__form">
+                    <div class="mn__item form-group">
+                      <label class="form-label text-uppercase" for="yourWalletAddress">Recent Transactions</label>
+                      <div class="-empty text-center pt-4 pb-5">No recent transactions</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Manage -->
+
+      <!-- modal Import Tokens -->
+      <div class="modal fade wl__modal" id="importToken" tabindex="-1" aria-labelledby="importTokenTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="importTokenTitle">Import Tokens</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <div class="ip__notes d-flex">
+                    <div class="-icon me-3"><i class="icon-warning"></i></div>
+                    <div class="-txt">
+                      <p>Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.</p>
+                      <p>If you purchase an arbitrary token, you may be unable to sell it back.</p>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="form-group">
+                  <div class="ip__unknown d-flex align-items-center mb-4">
+                    <div class="-icon me-3"><i class="icon-warning-circle"></i></div>
+                    <div class="-txt">Unknown source</div>
+                  </div>
+                  <div class="ip__info d-flex align-items-end justify-content-between">
+                    <div class="-info me-4">
+                      <div class="-info__txt mb-3">USDT Token (USDTT)</div>
+                      <div class="-info__token">0x88...A707</div>
+                    </div>
+                    <div class="-link">
+                      <a href="#">(View on BscScan)</a>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+                <div class="ip__bottom d-flex justify-content-between align-items-center">
+                  <div class="-check">
+                    <input type="checkbox" name="" id="ip__agree">
+                    <i class="icon-check"></i>
+                    <label for="ip__agree">I understand</label>
+                  </div>
+                  <button class="btn -disabled" disabled type="button" data-bs-toggle="modal" data-bs-target="#mangeToken"><span>Import</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal Import Tokens -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <a href="mailto:support@deffZone.com">Support@deffZone.com.</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="https://docs.deffzone.com/" target="_blank">Document</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+          <div class="nav__mobile__content">
+            <ul class="nav__mobile--ul">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item active"><a href="swap.html">Swap</a></li>
+              <li class="menu-item"><a href="dashboard.html">Launchpad</a></li>
+            </ul>
+            <div class="languages ms-0 mt-3 mb-3">
+              <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+              <div class="languages__content">
+                <p class="languages__text">Select language</p>
+                <ul class="">
+                  <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                  <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                </ul>
+              </div>
+            </div> <!-- .languages -->
+
+            <!-- <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a> -->
+            <div class="-connected js-dropdown">
+              <div class="btn js-dropdown-selected -wallet d-flex align-items-center justify-content-center">
+                <span class="-txt me-2">0x...a78E</span>
+                <i class="icon-arrow-down"></i>
+              </div>
+              <div class="-wallet__more js-dropdown-list">
+                <ul class="-list list-unstyled">
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Wallet</a></li>
+                  <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#mangeWallet">Transactions</a></li>
+                  <li><a href="#">Your NTFs</a></li>
+                  <li><a href="#" class="d-flex justify-content-between align-items-center">Make a Profile <span class="-required"></span></a></li>
+                  <li><a href="#" class="d-flex justify-content-between align-items-center">Disconnect <i class="icon-logout"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
