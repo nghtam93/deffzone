@@ -834,14 +834,23 @@
   &__arrow{
     width: 40px;
     height: 40px;
-    line-height: 40px;
     border-radius: 50%;
     background-color: #232863;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 10px;
     margin: 0 auto;
     padding-top: 3px;
-    color: #FB741D ;
+    color: #FB741D;
+    line-height: 0;
+    i{
+      line-height: 1;
+    }
+    .icon-plus{
+      font-size: 18px;
+      transform: translateY(-2px);
+    }
   }
   >.-txt{
     font-size: 16px;
@@ -1479,17 +1488,18 @@
     .-name{
       border-radius: 6px;
       background: #232863;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       font-size: 16px;
       color: #EEF1FD;
       padding: 12px 120px 12px 20px;
       width: calc(100% - 2px);
       height: calc(100% - 2px);
+      min-height: 64px;
       margin: 1px;
       transition: 0.3s;
       cursor: pointer;
-      @media (max-width: 767px) {
-        width: 100%;
-      }
       &:before{
         content: '';
         border-radius: 6px;
@@ -1514,6 +1524,18 @@
       .-full-name{
         font-size: 14px;
         color: rgba(207,210,221,0.6);
+      }
+      +.-logo{
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        @media (max-width: 575px){
+          top: 20px;
+          left: 18px;
+          right: auto;
+          transform: translateY(0);
+        }
       }
     }
     .-check{
@@ -1904,6 +1926,9 @@
       &:not(:last-child){
         margin-bottom: 16px;
       }
+      &:last-child{
+        margin-bottom: 1px;
+      }
     }
   }
   .wallet-list{
@@ -1911,6 +1936,12 @@
       width: calc((100% - 12px) / 2);
       &:nth-child(n+3) {
         margin-top: 12px;
+      }
+      .-name{
+        padding-right: 70px;
+        @media (max-width: 575px){
+          padding: 70px 16px 16px;
+        }
       }
     }
   }
