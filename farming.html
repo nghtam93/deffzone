@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>DeffZone | Farming</title>
+    <title>DeffZone | Harvest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/favicon.png" />
     <meta property="og:image" content="images/image-featured.jpg">
@@ -76,84 +76,195 @@
       </header>
 
       <section class="wallet-detail">
-        <nav class="wallet-tabs d-none d-sm-block">
-          <a href="farming.html" class="is-active">Farming</a>
-          <a href="harvest.html">Harvest</a>
-        </nav>
-
         <div class="container">
-          <div class="wl__wrap mx-auto">
+          <div class="dt__header mb-4">
+            <form action="#" method="post" class="wl__form d-flex justify-content-end">
+              <div class="dt__sort me-3">
+                <label class="form-label mb-2">SORT BY</label>
+                <div class="js-dropdown">
+                  <div class="js-dropdown-selected">
+                    <a href="#" class="form-control d-flex align-items-center"><span>Hot</span></a>
+                    <i class="-arrow icon-arrow-down"></i>
+                  </div>
+                  <ul class="js-dropdown-list list-unstyled">
+                    <li><a href="#">APR</a></li>
+                    <li><a href="#">Multiplier</a></li>
+                    <li><a href="#">Earned</a></li>
+                    <li><a href="#">Liquidity</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dt__search">
+                <label for="wl__search_farms" class="form-label mb-2">SEARCH</label>
+                <input type="text" class="form-control" placeholder="Search Farms">
+              </div>
+            </form>
+          </div>
+          <div class="wl__wrap mw-100 mx-auto">
             <header class="wl__header d-flex align-items-center justify-content-between">
               <h2 class="wl__header__title me-5">Farming</h2>
               <div class="wl__header__sub">Exchange for interest or more DEFF</div>
             </header>
-            <form action="#" method="post" class="wl__form">
-              <div class="form-group wl__token d-flex justify-content-between">
-                <div class="wl__item">
-                  <div class="-txt">To</div>
-                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
-                    <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon d-flex justify-content-center align-items-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                      <div class="-sym">BNB</div>
+            <div class="hv__content">
+              <div class="hv__item js-toggle">
+                <header class="hv__header d-flex align-items-center flex-wrap flex-md-nowrap">
+                  <div class="hv__header__token d-flex align-items-center">
+                    <div class="-logo me-3">
+                      <div class="-logo__small"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <div class="-logo__pri"><img src="./assets/img/pages/logo-pancake.png" alt=""></div>
                     </div>
-                    <div class="-name">Binance Smart Chain Network</div>
-                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
-                      <i class="icon-arrow-down"></i>
-                    </button>
+                    <div class="-name">CAKE-DEFF</div>
                   </div>
-                </div><!-- end wl__item -->
-                <div class="-arrow"><i class="icon-arrow-right"></i></div>
-                <div class="wl__item">
-                  <div class="-txt">From</div>
-                  <div class="-token d-flex flex-column flex-md-row align-items-center js-max-height">
-                    <div class="-square d-flex flex-column align-items-center justify-content-center">
-                      <div class="-icon d-flex justify-content-center align-items-center"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
-                      <div class="-sym">DEFF</div>
-                    </div>
-                    <div class="-name">DeffZone</div>
-                  </div>
-                </div><!-- end wl__item -->
-              </div><!-- end form-group -->
-              <div class="form-group mb-3 mb-sm-4">
-                <label for="wl__amount" class="form-label d-flex justify-content-between align-items-center mb-3">Amount<span class="-txt">Available: 0</span></label>
-                <div class="-input position-relative">
-                  <input type="email" class="form-control" id="wl__amount" placeholder="Enter amount" />
-                  <span class="-txt -identical position-absolute top-50 translate-middle-y">BNB</span>
-                </div>
-                <div class="-price -red">Min $100 - Max $50,000</div>
-              </div><!-- end form-group -->
-              <div class="form-group -border -border__bottom mb-3 mb-sm-4">
-                <div class="row">
-                  <div class="col-md-6 mb-3 mb-sm-0">
-                    <label for="wl__plan" class="form-label mb-3">Choose plan</label>
-                    <div class="js-dropdown">
-                      <div class="js-dropdown-selected">
-                        <a href="#" class="form-control d-flex align-items-center"><span>Choose a plan</span></a>
-                        <i class="-arrow icon-arrow-down"></i>
+                  <div class="hv__info d-flex justify-content-sm-center justify-content-md-between">
+                    <div class="hv__info__item -earned">
+                      <div class="-title mb-2">Earned</div>
+                      <div class="-numb">000,000,000</div>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -apr">
+                      <div class="-title mb-2">APR</div>
+                      <div class="-numb d-flex">
+                        42.69%
+                        <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
+                          <i class="icon-calculator d-none d-lg-inline-block"></i>
+                        </button>
                       </div>
-                      <ul class="js-dropdown-list list-unstyled">
-                        <li><a href="#">Choose plan 1</a></li>
-                        <li><a href="#">Choose plan 2</a></li>
-                        <li><a href="#">Choose plan 3</a></li>
-                      </ul>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -staked d-none d-lg-block">
+                      <div class="-title mb-2">Liquidity</div>
+                      <div class="-numb">$326,520,315<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -apr d-none d-lg-block">
+                      <div class="-title mb-2">Multiplier</div>
+                      <div class="-numb">40x<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                    </div><!-- hv__info__item -->
+                  </div><!-- hv__info -->
+                  <a href="#" class="-arrow js-toggle-btn ms-auto"><i class="icon-arrow-down"></i></a>
+                </header><!-- hv__header -->
+                <div class="js-toggle-show">
+                  <div class="hv__action d-flex align-items-lg-start flex-wrap flex-lg-nowrap">
+                    <div class="hv__info d-block d-lg-none">
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">APR</div>
+                        <div class="-numb">
+                          42.69%
+                          <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
+                            <i class="icon-calculator"></i>
+                          </button>
+                        </div>
+                      </div><!-- hv__info__item -->
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">Liquidity</div>
+                        <div class="-numb">$326,520,315<i class="icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                      </div><!-- hv__info__item -->
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">Multiplier</div>
+                        <div class="-numb">40x<i class="icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                      </div><!-- hv__info__item -->
+                    </div><!-- hv__info -->
+                    <ul class="hv__action__list list-unstyled">
+                      <li><a href="#">Get CAKE-DEFF LP <i class="icon-external-link"></i></a></li>
+                      <li><a href="#">View contract <i class="icon-external-link"></i></a></li>
+                      <li><a href="#">See pair info <i class="icon-external-link"></i></a></li>
+                      <li class="-core">
+                        <div class="-core__wrap"><i class="icon-patch-check-fill"></i>Core</div>
+                      </li>
+                    </ul>
+                    <div class="hv__action__btn d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                      <div class="ac__item">
+                        <label class="ac__item__txt" for="cake_earned">CAKE EARNED</label>
+                        <form class="wl__form ac__item__info d-flex align-items-center justify-content-between">
+                          <div class="-input"><input type="text" id="cake_earned" value="0" placeholder="0" disabled></div>
+                          <button href="#" class="btn -disabled" disabled><span>Harvest</span></button>
+                        </form>
+                      </div>
+                      <div class="ac__item">
+                        <label class="ac__item__txt">START FARMING</label>
+                        <a href="#" class="btn -wallet" type="button" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="wl__farm" class="form-label mb-3">Farm/APR</label>
-                    <input type="email" class="form-control" id="wl__farm" placeholder="00%" />
-                  </div>
+                  </div><!-- hv__action -->
                 </div>
-              </div><!-- end form-group -->
-              <div class="form-group mb-5">
-                <label for="wl__total" class="form-label mb-3">Total reward</label>
-                <div class="-input position-relative">
-                  <input type="email" class="form-control" id="wl__total" placeholder="Choose your plan first" />
-                  <span class="-txt -identical position-absolute top-50 translate-middle-y">DEFF</span>
+              </div>
+              <div class="hv__item js-toggle">
+                <header class="hv__header d-flex align-items-center flex-wrap flex-md-nowrap">
+                  <div class="hv__header__token d-flex align-items-center">
+                    <div class="-logo me-3">
+                      <div class="-logo__small"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <div class="-logo__pri"><img src="./assets/img/pages/logo-pancake.png" alt=""></div>
+                    </div>
+                    <div class="-name">CAKE-DEFF</div>
+                  </div>
+                  <div class="hv__info d-flex justify-content-sm-center justify-content-md-between">
+                    <div class="hv__info__item -earned">
+                      <div class="-title mb-2">Earned</div>
+                      <div class="-numb">000,000,000</div>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -apr">
+                      <div class="-title mb-2">APR</div>
+                      <div class="-numb d-flex">
+                        42.69%
+                        <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
+                          <i class="icon-calculator d-none d-lg-inline-block"></i>
+                        </button>
+                      </div>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -staked d-none d-lg-block">
+                      <div class="-title mb-2">Liquidity</div>
+                      <div class="-numb">$326,520,315<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                    </div><!-- hv__info__item -->
+                    <div class="hv__info__item -apr d-none d-lg-block">
+                      <div class="-title mb-2">Multiplier</div>
+                      <div class="-numb">40x<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                    </div><!-- hv__info__item -->
+                  </div><!-- hv__info -->
+                  <a href="#" class="-arrow js-toggle-btn ms-auto"><i class="icon-arrow-down"></i></a>
+                </header><!-- hv__header -->
+                <div class="js-toggle-show">
+                  <div class="hv__action d-flex align-items-lg-start flex-wrap flex-lg-nowrap">
+                    <div class="hv__info d-block d-lg-none">
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">APR</div>
+                        <div class="-numb">
+                          42.69%
+                          <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
+                            <i class="icon-calculator"></i>
+                          </button>
+                        </div>
+                      </div><!-- hv__info__item -->
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">Liquidity</div>
+                        <div class="-numb">$326,520,315<i class="icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                      </div><!-- hv__info__item -->
+                      <div class="hv__info__item d-flex align-items-center justify-content-between">
+                        <div class="-title">Multiplier</div>
+                        <div class="-numb">40x<i class="icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                      </div><!-- hv__info__item -->
+                    </div><!-- hv__info -->
+                    <ul class="hv__action__list list-unstyled">
+                      <li><a href="#">Get CAKE-DEFF LP <i class="icon-external-link"></i></a></li>
+                      <li><a href="#">View contract <i class="icon-external-link"></i></a></li>
+                      <li><a href="#">See pair info <i class="icon-external-link"></i></a></li>
+                      <li class="-core">
+                        <div class="-core__wrap -community"><i class="icon-community"></i>Community</div>
+                      </li>
+                    </ul>
+                    <div class="hv__action__btn d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                      <div class="ac__item">
+                        <label class="ac__item__txt" for="cake_earned">CAKE EARNED</label>
+                        <form class="wl__form ac__item__info d-flex align-items-center justify-content-between">
+                          <div class="-input"><input type="text" id="cake_earned" value="0" placeholder="0" disabled></div>
+                          <button href="#" class="btn -disabled" disabled><span>Harvest</span></button>
+                        </form>
+                      </div>
+                      <div class="ac__item">
+                        <label class="ac__item__txt">START FARMING</label>
+                        <a href="#" class="btn -wallet" type="button" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+                      </div>
+                    </div>
+                  </div><!-- hv__action -->
                 </div>
-              </div><!-- end form-group -->
-              <button class="btn -submit" type="submit"><span>Continue</span></button>
-              <div class="-note text-center">Connect your wallet to proceed.</div>
-            </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -201,77 +312,146 @@
       </div>
       <!-- end modal connect wallet -->
 
-      <!-- modal choose item -->
-      <div class="modal fade wl__modal" id="chooseToken" tabindex="-1" aria-labelledby="chooseTokenTitle" aria-hidden="true">
+      <!-- modal ROI Calculator -->
+      <div class="modal fade wl__modal -connect" id="roiCalculator" tabindex="-1" aria-labelledby="roiCalculatorTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="chooseTokenTitle">Choose token</h3>
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="roiCalculatorTitle">ROI Calculator</h3>
               <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
-            </div>
+            </div><!-- modal-header -->
             <div class="modal-body">
               <form action="#" method="post" class="wl__form">
                 <div class="form-group">
-                  <div class="-search position-relative">
-                    <input type="email" class="form-control" id="wl__amount" placeholder="Search token" />
-                    <span class="-txt -highlight position-absolute top-50 translate-middle-y"><i class="icon-search"></i></span>
+                  <label for="cake_bnb_lp_staked" class="form-label">CAKE-BNB LP STAKED</label>
+                  <div class="-calculator position-relative d-flex align-items-center mb-3" for="cake_bnb_lp_staked">
+                    <div class="cc__wrap">
+                      <div class="cc__input d-flex justify-content-end align-items-center mb-3">
+                        <input type="number" class="form-control" id="cake_bnb_lp_staked" placeholder="0.00" />
+                        <span class="cc__input__txt ms-2">USD</span>
+                      </div>
+                      <div class="cc__txt">0.00 CAKE-BNB LP</div>
+                    </div>
+                    <div class="cc__icon ms-3">
+                      <i class="icon-up-down"></i>
+                    </div>
+                  </div><!-- -calculator -->
+                  <div class="-choose d-flex justify-content-end align-items-center">
+                    <button class="-choose__btn">$100</button>
+                    <button class="-choose__btn">$1000</button>
+                    <button class="-choose__btn -disabled" disabled>MY BALANCE</button>
+                    <span class="-choose__icon"><i class="icon-question-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></span>
                   </div>
-                </div><!-- end form-group -->
-                <div class="form-group scroll__wrap">
-                  <ul class="token-list scroll__wrap__content">
-                    <li class="tk__item d-flex align-items-center justify-content-between">
-                      <input type="radio" name="token" id="tk__eth" class="-check">
-                      <label for="tk__eth" class="-name pe-4 pe-md-0">
-                        <span>ETH</span>
-                        <span class="-full-name">Ethereum</span>
-                      </label>
-                      <div class="-meta d-flex align-items-center">
-                        <div class="-numb">0.003712</div>
-                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                </div><!-- form-group -->
+                <div class="form-group">
+                  <label class="form-label">STAKED FOR</label>
+                  <div class="cc__staked cc__time">
+                    <div class="cc__time__wrap d-flex">
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__staked" id="cc__staked__1D">
+                        <label for="cc__staked__1D">1D</label>
                       </div>
-                    </li><!-- end tk__item -->
-                    <li class="tk__item d-flex align-items-center justify-content-between">
-                      <input type="radio" name="token" id="tk__bnb" class="-check">
-                      <label for="tk__bnb" class="-name pe-4 pe-md-0">
-                        <span>BNB</span>
-                        <span class="-full-name">Binance Coin</span>
-                      </label>
-                      <div class="-meta d-flex align-items-center">
-                        <div class="-numb">0.003712</div>
-                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__staked" id="cc__staked__7D">
+                        <label for="cc__staked__7D">7D</label>
                       </div>
-                    </li><!-- end tk__item -->
-                    <li class="tk__item d-flex align-items-center justify-content-between">
-                      <input type="radio" name="token" id="tk__metamask" class="-check">
-                      <label for="tk__metamask" class="-name pe-4 pe-md-0">
-                        <span>Metamask</span>
-                        <span class="-full-name">MetaMask</span>
-                      </label>
-                      <div class="-meta d-flex align-items-center">
-                        <div class="-numb">0.003712</div>
-                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__staked" id="cc__staked__30D">
+                        <label for="cc__staked__30D">30D</label>
                       </div>
-                    </li><!-- end tk__item -->
-                    <li class="tk__item d-flex align-items-center justify-content-between">
-                      <input type="radio" name="token" id="tk__usdt" class="-check">
-                      <label for="tk__usdt" class="-name pe-4 pe-md-0">
-                        <span>USDT</span>
-                        <span class="-full-name">Tether</span>
-                      </label>
-                      <div class="-meta d-flex align-items-center">
-                        <div class="-numb">0.003712</div>
-                        <div class="-logo d-flex align-items-center justify-content-center"><img src="./assets/img/pages/logo-usdt.png" alt=""></div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__staked" id="cc__staked__1Y" checked>
+                        <label for="cc__staked__1Y">1Y</label>
                       </div>
-                    </li><!-- end tk__item -->
-                  </ul>
-                </div><!-- end form-group -->
-                <button class="btn -submit" type="submit"><span>Manage Tokens</span></button>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__staked" id="cc__staked__5Y">
+                        <label for="cc__staked__5Y">5Y</label>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- form-group -->
+                <div class="form-group">
+                  <label class="form-label">COMPOUNDING EVERY</label>
+                  <div class="cc__compounding cc__time d-flex align-items-center">
+                    <div class="cc__time__status me-3">
+                      <input type="checkbox" name="cc__compounding" id="cc__compounding__status">
+                      <label for="cc__compounding__status"><i class="icon-check"></i></label>
+                    </div>
+                    <div class="cc__time__wrap d-flex -disabled">
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__compounding" id="cc__compounding__1D" checked disabled>
+                        <label for="cc__compounding__1D">1D</label>
+                      </div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__compounding" id="cc__compounding__7D" disabled>
+                        <label for="cc__compounding__7D">7D</label>
+                      </div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__compounding" id="cc__compounding__14D" disabled>
+                        <label for="cc__compounding__14D">14D</label>
+                      </div>
+                      <div class="cc__time__item">
+                        <input type="radio" name="cc__compounding" id="cc__compounding__30D" disabled>
+                        <label for="cc__compounding__30D">30D</label>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- form-group -->
+                <div class="form-group cc__convert d-flex align-items-center justify-content-center">
+                  <i class="icon-arrow-down-tall"></i>
+                </div><!-- form-group -->
+                <div class="form-group">
+                  <div class="cc__rate">
+                    <div class="cc__rate__wrap">
+                      <label class="form-label">ROI AT CURRENT RATES</label>
+                      <div class="cc__rate__input position-relative d-flex align-items-center justify-content-between">
+                        <input type="checkbox" name="" id="cc__rate__input__edit">
+                        <span class="-sym position-absolute">$</span>
+                        <input type="number" class="form-control" value="0.00" id="cc__rate__input__price">
+                        <label for="cc__rate__input__edit" class="ms-4 position-relative js-focus" data-focus="cc__rate__input__price" data-modal="roiCalculator">
+                          <i class="icon-pencil position-absolute top-50 start-50 translate-middle"></i>
+                          <i class="icon-check position-absolute top-50 start-50 translate-middle"></i>
+                        </label>
+                      </div>
+                      <div class="-txt mt-2">~ 0 CAKE (0.00%)</div>
+                    </div>
+                  </div>
+                </div><!-- form-group -->
               </form>
-            </div>
+            </div><!-- modal-body -->
+            <div class="modal-footer d-block cc__detail js-toggle">
+              <a href="#" class="js-toggle-btn cc__detail__btn d-flex align-items-center justify-content-center"><i class="icon-arrow-down"></i></a>
+              <div class="cc__detail__content js-toggle-show">
+                <ul class="-list unstyled">
+                  <li class="-list__item d-flex align-items-center justify-content-between">
+                    <div class="-txt">APR (incl. LP rewards)</div>
+                    <div class="-numb">43.3%</div>
+                  </li>
+                  <li class="-list__item d-flex align-items-center justify-content-between">
+                    <div class="-txt">Base APR (CAKE yield only)</div>
+                    <div class="-numb">38.61%</div>
+                  </li>
+                  <li class="-list__item d-flex align-items-center justify-content-between">
+                    <div class="-txt">APY (1x daily compound)</div>
+                    <div class="-numb">46.81%</div>
+                  </li>
+                  <li class="-list__item d-flex align-items-center justify-content-between">
+                    <div class="-txt">Farm Multiplier</div>
+                    <div class="-numb">40X<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                  </li>
+                </ul>
+                <ul class="-info list-instyled">
+                  <li>Calculated based on current rates.</li>
+                  <li>LP rewards: 0.17% trading fees, distributed proportionally among LP token holders.</li>
+                  <li>All figures are estimates provided for your convenience only, and by no means represent guaranteed returns.</li>
+                </ul>
+                <div class="-link text-center"><a href="#" class="d-inline-flex align-items-center">Get CAKE-BNB<i class="icon-external-link ms-2"></i></a></div>
+              </div>
+            </div><!-- modal-footer -->
           </div>
         </div>
       </div>
-      <!-- end modal choose item -->
+      <!-- end modal ROI Calculator -->
 
       <footer class="footer">
         <div class="container">

@@ -160,6 +160,21 @@ $(document).ready(function(){
       })
     })
 
+    // js focus
+    $('.js-focus').each(function() {
+      $(this).on('click', function() {
+        let dataFocus = $(this).attr('data-focus');
+        let dataModal = $(this).attr('data-modal');
+        if(dataModal != 'undefined') {
+          $(`#${dataModal}`).on('shown.bs.modal', function () {
+            $(`#${dataFocus}`).focus();
+          })
+        } else {
+          $(`#${dataFocus}`).trigger('focus')
+        }
+      })
+    })
+
 });
 
 function matchHeight($o,m) {
