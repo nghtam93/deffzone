@@ -108,11 +108,10 @@
                       <i class="icon-arrow-down"></i>
                     </button>
                   </div><!-- cr__item -->
-                  <span class="-txt">Balance: 0.00371221</span>
                 </div>
                 <div class="cr__input position-relative" for="wl__amount__from">
                   <input type="number" class="form-control" id="wl__amount__from" placeholder="0.0" />
-                  <div class="-txt text-end position-absolute"><button type="button">Max</button></div>
+                  <!-- <div class="-txt text-end position-absolute"><button type="button">Max</button></div> -->
                 </div><!-- cr__input -->
               </div><!-- end form-group -->
               <div class="-currency__arrow mt-4 mb-3"><i class="icon-plus"></i></div>
@@ -126,6 +125,49 @@
                       <i class="icon-arrow-down"></i>
                     </button>
                   </div>
+                </div><!-- cr__item -->
+                <div class="cr__input position-relative" for="wl__amount__from">
+                  <input type="number" class="form-control" id="wl__amount__from" placeholder="0.0" />
+                  <!-- <div class="-txt text-end position-absolute"><button type="button">Max</button></div> -->
+                </div><!-- cr__input -->
+              </div><!-- end form-group -->
+              <!-- <button class="btn -submit -disabled" disabled type="submit"><span>Insufficient DEFF balance</span></button> -->
+              <button class="btn -submit -wallet" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect Wallet</span></button>
+            </form>
+          </div><!-- wl__wrap -->
+
+          <div class="wl__wrap mx-auto mb-3">
+            <header class="wl__header d-flex align-items-center justify-content-between">
+              <h2 class="wl__header__title me-5">Add Liquidity</h2>
+              <div class="wl__header__sub"><i class="icon-question-circle"></i> Add liquidity to receive LP tokens</div>
+            </header><!-- wl__header -->
+            <form action="#" method="post" class="wl__form">
+              <div class="form-group mb-3">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    <div class="-sym">DEFF</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div><!-- cr__item -->
+                  <span class="-txt">Balance: 0.00371221</span>
+                </div>
+                <div class="cr__input position-relative" for="wl__amount__from">
+                  <input type="number" class="form-control" id="wl__amount__from" placeholder="0.0" />
+                  <div class="-txt text-end position-absolute"><button type="button">Max</button></div>
+                </div><!-- cr__input -->
+              </div><!-- end form-group -->
+              <div class="-currency__arrow mt-4 mb-3"><i class="icon-plus"></i></div>
+              <div class="form-group mb-4">
+                <div class="-currency d-flex justify-content-between align-items-center mb-3">
+                  <div class="cr__item d-flex align-items-center">
+                    <div class="-icon"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
+                    <div class="-sym">BNB</div>
+                    <button type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#chooseToken">
+                      <i class="icon-arrow-down"></i>
+                    </button>
+                  </div>
                   <span class="-txt">Balance: 0</span>
                 </div><!-- cr__item -->
                 <div class="cr__input position-relative" for="wl__amount__from">
@@ -133,66 +175,96 @@
                   <div class="-txt text-end position-absolute"><button type="button">Max</button></div>
                 </div><!-- cr__input -->
               </div><!-- end form-group -->
-              <div class="cr__percent d-flex align-items-center justify-content-between mb-4">
-                <div class="cr__txt">Price</div>
-                <div class="-per d-flex align-items-center justify-content-between">
-                  <div class="-per__txt">0.0236837 DEFF per BNB</div>
-                  <a href="javascript: void(0);" class="-per__refresh d-flex align-items-center justify-content-center">
-                    <svg viewBox="0 0 24 24" width="14px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
-                      <path fill="#ED8409" d="M12 6V7.79C12 8.24 12.54 8.46 12.85 8.14L15.64 5.35C15.84 5.15 15.84 4.84 15.64 4.64L12.85 1.85C12.54 1.54 12 1.76 12 2.21V4C7.58 4 4 7.58 4 12C4 13.04 4.2 14.04 4.57 14.95C4.84 15.62 5.7 15.8 6.21 15.29C6.48 15.02 6.59 14.61 6.44 14.25C6.15 13.56 6 12.79 6 12C6 8.69 8.69 6 12 6ZM17.79 8.71C17.52 8.98 17.41 9.4 17.56 9.75C17.84 10.45 18 11.21 18 12C18 15.31 15.31 18 12 18V16.21C12 15.76 11.46 15.54 11.15 15.86L8.36 18.65C8.16 18.85 8.16 19.16 8.36 19.36L11.15 22.15C11.46 22.46 12 22.24 12 21.8V20C16.42 20 20 16.42 20 12C20 10.96 19.8 9.96 19.43 9.05C19.16 8.38 18.3 8.2 17.79 8.71Z"></path>
-                    </svg>
-                  </a>
-                </div>
+              <div class="pr__pool mb-4">
+                <div class="pr__txt">Prices and pool share</div>
+                <ul class="pr__pool__list list-unstyled d-flex justify-content-between text-center">
+                  <li class="-item">
+                    <div class="-numb">0.287877</div>
+                    <div class="-txt">DEFF per BNB</div>
+                  </li>
+                  <li class="-item">
+                    <div class="-numb">3.47371</div>
+                    <div class="-txt">BNB per DEFF</div>
+                  </li>
+                  <li class="-item">
+                    <div class="-numb">0.10%</div>
+                    <div class="-txt">Share of Pool</div>
+                  </li>
+                </ul>
               </div>
               <!-- <button class="btn -submit -disabled" disabled type="submit"><span>Insufficient DEFF balance</span></button> -->
-              <button class="btn -submit -wallet" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect Wallet</span></button>
-              <div class="cr__btn d-flex justify-content-between mt-4">
+              <div class="cr__btn d-flex justify-content-between mb-4">
                 <button class="btn -submit me-3" type="submit"><span>Enable DEFF</span></button>
-                <!-- <button class="btn -submit" type="submit"><span>Swap</span></button> -->
-                <button class="btn -submit -disabled" disabled type="submit"><span>Swap</span></button>
+                <button class="btn -submit" type="submit"><span>Enable BNB</span></button>
               </div>
-              <div class="cr__step mt-4 mx-auto d-flex justify-content-between"><!-- add class "-full" to cr__step if active 2 step -->
-                <div class="cr__step__item is-active d-flex align-items-center justify-content-center">1</div>
-                <div class="cr__step__item d-flex align-items-center justify-content-center">2</div>
-              </div>
+              <!-- <button class="btn -submit -disabled" disabled class="show-modal" data-bs-toggle="modal" data-bs-target="#willReceive"><span>Supply</span></button> -->
+              <button class="btn -submit" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#willReceive"><span>Supply</span></button>
             </form>
           </div><!-- wl__wrap -->
-          <div class="wl__wrap mx-auto py-4">
-            <div class="sc__box">
-              <div class="sc__item d-flex align-items-center justify-content-between">
-                <div class="-txt d-flex align-items-center">
-                  <div class="-txt__info">Minimum received</div>
-                  <div class="-txt__icon ms-2">
-                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="-info">42.1 DEFF</div>
-              </div><!-- sc__item -->
-              <div class="sc__item d-flex align-items-center justify-content-between">
-                <div class="-txt d-flex align-items-center">
-                  <div class="-txt__info">Price Impact</div>
-                  <div class="-txt__icon ms-2">
-                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="-info -highlight">&#10094; 0.01%</div>
-              </div><!-- sc__item -->
-              <div class="sc__item d-flex align-items-center justify-content-between">
-                <div class="-txt d-flex align-items-center">
-                  <div class="-txt__info">Liquidity Provider Fee</div>
-                  <div class="-txt__icon ms-2">
-                    <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                      <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="-info">0.0025 BNB</div>
-              </div><!-- sc__item -->
+
+          <div class="wl__wrap mx-auto py-4 mb-3">
+            <div class="pr__box text-center">
+              <span role="img" aria-label="pancake-icon">🥞</span> By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
             </div><!-- sc__box -->
+          </div><!-- wl__wrap -->
+
+          <div class="wl__wrap mx-auto">
+            <header class="wl__header d-flex align-items-center justify-content-between">
+              <h2 class="wl__header__title me-5">Your Liquidity</h2>
+              <div class="wl__header__sub">Remove liquidity to receive tokens back</div>
+            </header><!-- wl__header -->
+            <div class="hs__content">
+              <div class="js-toggle lq__detail mb-4">
+                <div class="js-toggle-btn lq__detail__head d-flex justify-content-between align-items-center">
+                  <div class="-title me-3">
+                    <div class="-title__info">
+                      <i class="icon-question-circle me-1"></i>
+                      <i class="icon-question-circle me-1"></i>
+                      <span class="-txt">DEFF_TOKEN/DEFF</span>
+                    </div>
+                    <div class="-title__txt mt-2">72.81</div>
+                  </div>
+                  <i class="-arrow icon-arrow-down"></i>
+                </div>
+                <div class="js-toggle-show lq__detail__content">
+                  <ul class="-list list-unstyled mb-4">
+                    <li class="d-flex justify-content-between align-items-center">
+                      <div class="-txt me-3">
+                        <i class="icon-question-circle me-1"></i>
+                        <span class="-txt__info">Pooled DEFF_TOKEN</span>
+                      </div>
+                      <div class="-numb">135.737</div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                      <div class="-txt me-3">
+                        <i class="icon-question-circle me-1"></i>
+                        <span class="-txt__info">Pooled DEFF</span>
+                      </div>
+                      <div class="-numb">39.0755</div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                      <div class="-txt me-3">
+                        <span class="-txt__info">Share of pool</span>
+                      </div>
+                      <div class="-numb">11.95%</div>
+                    </li>
+                  </ul>
+                  <button class="btn lq__btn w-100 mb-4"><span>Remove</span></button>
+                  <div class="-link text-center">
+                    <a href="./add.html" class="d-inline-flex align-items-center"><i class="icon-plus me-3"></i>Add liquidity instead</a>
+                  </div>
+                </div>
+              </div><!-- lq__detail -->
+              <div class="lq__find mb-4 text-center">
+                <div class="-txt mb-3">Don't see a pool you joined?</div>
+                <div class="-link"><a href="#" class="btn"><span>Find other LP tokens</span></a></div>
+              </div>
+              <a href="./add.html" class="btn lq__btn d-flex align-items-center justify-content-center">
+                <span>
+                  <i class="icon-plus me-3"></i>Add Liquidity
+                </span>
+              </a>
+            </div><!-- hs__content -->
           </div><!-- wl__wrap -->
         </div>
       </section>
@@ -351,79 +423,6 @@
         </div>
       </div>
       <!-- end modal choose item -->
-
-      <!-- modal Confirm Swap -->
-      <div class="modal fade wl__modal -swap" id="confirmSwap" tabindex="-1" aria-labelledby="confirmSwapTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header -border -border__bottom">
-              <h3 class="modal-title" id="confirmSwapTitle">Confirm Swap</h3>
-              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
-            </div>
-            <div class="modal-body">
-              <form action="#" method="post" class="wl__form">
-                <div class="form-group">
-                  <ul class="sw__list list-unstyled mb-5">
-                    <li class="sw__list__item d-flex align-items-center justify-content-between">
-                      <div class="-txt d-flex align-items-center me-4">
-                        <div class="-logo"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
-                        <div class="-price mt-0">751759</div>
-                      </div>
-                      <div class="-sym">DEFF</div>
-                    </li>
-                    <li class="sw__list__item -arrow"><i class="icon-arrow-down"></i></li>
-                    <li class="sw__list__item d-flex align-items-center justify-content-between">
-                      <div class="-txt d-flex align-items-center me-4">
-                        <div class="-logo"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                        <div class="-price mt-0">1000</div>
-                      </div>
-                      <div class="-sym">BNB</div>
-                    </li>
-                  </ul>
-                  <div class="-info text-center mb-5">Input is estimated. You will sell at most <strong class="-highlight">751759 DEFF</strong> or the transaction will revert.</div>
-                  <div class="sc__box">
-                    <div class="sc__item d-flex align-items-center justify-content-between">
-                      <div class="-txt d-flex align-items-center">
-                        <div class="-txt__info">Minimum received</div>
-                        <div class="-txt__icon ms-2">
-                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="-info">42.1 DEFF</div>
-                    </div><!-- sc__item -->
-                    <div class="sc__item d-flex align-items-center justify-content-between">
-                      <div class="-txt d-flex align-items-center">
-                        <div class="-txt__info">Price Impact</div>
-                        <div class="-txt__icon ms-2">
-                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="-info -highlight">&#10094; 0.01%</div>
-                    </div><!-- sc__item -->
-                    <div class="sc__item d-flex align-items-center justify-content-between">
-                      <div class="-txt d-flex align-items-center">
-                        <div class="-txt__info">Liquidity Provider Fee</div>
-                        <div class="-txt__icon ms-2">
-                          <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM cSawQi">
-                            <path fill="#CFD2DD" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="-info">0.0025 BNB</div>
-                    </div><!-- sc__item -->
-                  </div><!-- sc__box -->
-                </div><!-- end form-group -->
-                <button class="btn -wallet -submit" type="submit"><span>Confirm Swap</span></button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end modal Confirm Swap -->
 
       <!-- modal Manage -->
       <div class="modal fade wl__modal -manage" id="mangeToken" tabindex="-1" aria-labelledby="mangeTokenTitle" aria-hidden="true">
@@ -655,6 +654,116 @@
         </div>
       </div>
       <!-- end modal Import Tokens -->
+
+      <!-- modal You Will Receive -->
+      <div class="modal fade wl__modal" id="willReceive" tabindex="-1" aria-labelledby="willReceiveTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="willReceiveTitle">You will receive</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group">
+                  <div class="rc__numb d-flex align-items-center mt-3 mb-4">18.6338<i class="icon-question-circle ms-3"></i><i class="icon-question-circle ms-3"></i></div>
+                  <div class="rc__txt">DEFF/BNB Pool Tokens</div>
+                </div><!-- end form-group -->
+                <div class="form-group">
+                  <div class="rc__meta mb-4">Output is estimated. If the price changes by more than 0.5% your transaction will revert.</div>
+                  <div class="rc__info">
+                    <div class="rc__info__item d-flex justify-content-between">
+                      <div class="-txt me-3">DEFF Deposited</div>
+                      <div class="-numb text-end"><i class="icon-question-circle me-2"></i>10</div>
+                    </div>
+                    <div class="rc__info__item d-flex justify-content-between">
+                      <div class="-txt me-3">BNB Deposited</div>
+                      <div class="-numb text-end"><i class="icon-question-circle me-2"></i>34.7371</div>
+                    </div>
+                    <div class="rc__info__item d-flex justify-content-between">
+                      <div class="-txt me-3">Rates</div>
+                      <div class="-numb text-end">
+                        1 DEFF = 3.474 BNB<br/>
+                        1 BNB = 0.2879 DEFF
+                      </div>
+                    </div>
+                    <div class="rc__info__item d-flex justify-content-between">
+                      <div class="-txt me-3">Share of Pool</div>
+                      <div class="-numb text-end">3.357%</div>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+                <button class="btn -submit" type="button" data-bs-toggle="modal" data-bs-target="#willReceiveConfirm"><span>Confirm Supply</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal You Will Receive -->
+
+      <!-- modal You Will Receive Confirm -->
+      <div class="modal fade wl__modal" id="willReceiveConfirm" tabindex="-1" aria-labelledby="willReceiveConfirmTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="willReceiveConfirmTitle">You will receive</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group rc__confirm">
+                  <div class="rc__confirm__thumb text-center mb-4">
+                    <svg class="-thumb -thumb__1" width="80" height="80" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M56.7204 37.5858C56.7204 45.3822 58.0271 54.1169 60.2906 60.8591C61.4246 64.2369 62.7705 67.0285 64.249 68.946C65.742 70.8826 67.1906 71.7103 68.5307 71.7103C71.1919 71.7103 74.4165 70.5307 77.8384 68.3524C81.235 66.1902 84.7001 63.1234 87.8127 59.5481C94.0844 52.3439 98.6784 43.3694 98.6784 35.942C98.6784 28.1653 97.1567 21.2636 93.9931 16.3543C90.8793 11.5222 86.1363 8.54284 79.3564 8.54284C72.6009 8.54284 66.9825 11.9157 63.0072 17.2564C59.0174 22.6164 56.7204 29.9263 56.7204 37.5858Z" fill="#FEDC90" stroke="#D1884F" stroke-width="2.89134"></path><path d="M32.7442 66.7859C39.4364 62.9222 47.2575 60.5211 53.8454 59.9252C57.1411 59.6272 60.0564 59.7876 62.336 60.3933C64.6294 61.0028 66.1079 62.0118 66.8368 63.2742C69.6116 68.0804 69.9429 76.4856 67.7501 84.8501C65.5656 93.1829 61.0085 100.957 54.6069 104.653C47.9434 108.5 40.9505 110.185 34.8292 109.454C28.7533 108.729 23.476 105.626 20.0729 99.7316C16.6658 93.8305 16.5364 87.5528 18.8757 81.7754C21.228 75.9659 26.1018 70.6209 32.7442 66.7859Z" fill="#D1884F" stroke="#633001" stroke-width="2.89134"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M73.6122 7.76013C69.4145 8.86483 64.8207 11.0867 61.24 16.1556C53.2804 27.4231 51.7006 41.9592 58.5495 60.7386C65.3984 79.518 63.3431 89.9236 56.0487 98.3189C48.7543 106.714 29.475 108.685 23.3482 101.929C21.8481 100.274 17.4954 97.4588 20.3675 102.54C23.2397 107.622 30.7527 111.748 39.59 111.748C48.4273 111.748 55.5943 108.146 61.958 101.338C68.3217 94.5306 74.292 78.3883 68.3268 61.7709C60.6331 40.3385 62.8311 27.508 68.2893 19.7815C71.0879 15.8198 75.5453 12.3629 78.6077 10.5868C81.8233 8.72183 84.8797 8.42294 86.8682 8.42294C83.3332 6.65548 77.8099 6.65542 73.6122 7.76013Z" fill="#633001"></path>
+                    </svg>
+                    <svg class="-thumb -thumb__2" width="160" height="180" viewBox="0 0 256 256" color="text" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M166.898 204.279C172.402 190.795 170.197 176.127 166.942 163.633C164.747 155.208 156.522 149.043 143.339 146.339C130.289 143.662 113.23 144.62 95.212 149.658C77.1941 154.696 61.9863 162.761 52.0088 171.877C41.9295 181.085 37.8164 190.7 40.0117 199.126C43.2669 211.619 48.4857 225.444 59.7919 234.228C70.9463 242.894 88.7701 247.193 118.461 238.891C148.152 230.589 161.467 217.582 166.898 204.279ZM119.268 241.986C179.746 225.075 176.514 188.072 169.929 162.798C164.622 142.43 131.106 136.301 94.4056 146.563C57.7053 156.825 31.7183 179.593 37.0251 199.961C43.6102 225.235 58.7891 258.897 119.268 241.986Z" fill="#464649"></path><path d="M155.801 175.68C158.653 186.628 180.351 181.576 214.977 171.894C249.604 162.212 257.158 150.578 254.305 139.63C251.453 128.682 244.685 121.053 216.678 128.884C182.051 138.566 152.948 164.732 155.801 175.68Z" fill="#606063"></path><path d="M159.97 178.737L175.437 178.709C178.284 178.704 178.523 174.429 177.474 164.815C176.82 158.816 173.457 154.101 171.27 155.477L159.942 163.875L159.97 178.737Z" fill="#464649"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M162.261 177.996C160.059 177.319 159.158 176.266 158.788 174.845C158.644 174.296 158.636 173.375 159.104 171.965C159.566 170.568 160.432 168.889 161.754 166.98C164.397 163.161 168.612 158.775 174.091 154.332C185.037 145.456 200.6 136.7 217.484 131.979C231.34 128.104 239.201 128.297 243.777 130.191C248.018 131.946 250.005 135.425 251.319 140.465C251.901 142.7 251.928 144.848 251.283 146.962C250.634 149.091 249.235 151.411 246.622 153.858C241.312 158.83 231.342 163.998 214.171 168.799C196.798 173.657 182.967 177.263 173.149 178.336C168.216 178.875 164.644 178.728 162.261 177.996ZM214.977 171.894C180.351 181.576 158.653 186.628 155.801 175.68C152.948 164.732 182.051 138.566 216.678 128.884C244.685 121.053 251.453 128.682 254.305 139.63C257.158 150.578 249.604 162.212 214.977 171.894Z" fill="#464649"></path><path d="M169.925 161.024C176.511 186.298 179.743 223.301 119.264 240.212C58.7859 257.123 43.607 223.461 37.022 198.187C31.7151 177.819 57.7022 155.052 94.4024 144.789C131.103 134.527 164.619 140.656 169.925 161.024Z" fill="#606063"></path><path d="M62.2322 217.512C45.5076 212.12 42.4613 203.795 40.3848 196.052L41.9594 211.275L50.2352 225.685L64.4374 238.481L80.947 244.327C82.4065 243.612 89.4986 243.299 83.1029 242.028C76.7073 240.758 72.7474 234.756 69.9914 231.378C68.2638 226.484 67.7365 219.287 62.2322 217.512Z" fill="#464649"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M166.895 202.505C172.399 189.021 170.194 174.353 166.939 161.86C164.744 153.434 156.519 147.269 143.336 144.565C130.286 141.888 113.227 142.846 95.2088 147.884C77.1909 152.922 61.9831 160.987 52.0056 170.103C41.9263 179.311 37.8132 188.926 40.0086 197.352C43.2637 209.845 48.4825 223.67 59.7887 232.454C70.9431 241.12 88.7669 245.419 118.458 237.117C148.149 228.815 161.464 215.809 166.895 202.505ZM119.264 240.212C179.743 223.301 176.511 186.298 169.925 161.024C164.619 140.656 131.103 134.527 94.4024 144.789C57.7022 155.052 31.7151 177.819 37.022 198.187C43.607 223.461 58.7859 257.123 119.264 240.212Z" fill="#464649"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M164.233 181.686C165.018 182.322 165.157 183.497 164.543 184.311C162.98 186.382 161.187 188.422 159.188 190.412C158.469 191.128 157.327 191.104 156.636 190.36C155.945 189.615 155.968 188.431 156.687 187.716C158.576 185.834 160.252 183.925 161.7 182.007C162.314 181.193 163.448 181.05 164.233 181.686ZM57.4215 216.239C57.6566 215.235 58.6323 214.619 59.6008 214.863C73.2899 218.308 91.7045 217.793 111.035 212.388C120.262 209.808 128.779 206.37 136.271 202.374C137.157 201.901 138.245 202.263 138.701 203.181C139.157 204.099 138.809 205.226 137.923 205.699C130.195 209.821 121.438 213.352 111.976 215.998C92.2044 221.527 73.1589 222.124 58.7494 218.497C57.7809 218.253 57.1863 217.242 57.4215 216.239Z" fill="#979797"></path><path d="M159.836 163.292C164.405 180.829 141.059 195.381 109.857 204.106C78.655 212.831 51.4793 212.682 46.8428 194.887C42.2064 177.092 65.6193 162.798 96.8214 154.074C128.024 145.349 155.266 145.755 159.836 163.292Z" fill="#464649"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M145.831 183.549C154.508 176.998 157.462 170.578 155.854 164.406C154.245 158.233 148.575 154.225 137.894 153.086C127.333 151.96 113.281 153.898 97.8965 158.2C82.4985 162.506 69.3986 168.094 60.8132 174.54C52.1526 181.043 49.1801 187.461 50.825 193.774C52.4698 200.087 58.1557 204.083 68.7987 205.189C79.3491 206.285 93.384 204.285 108.782 199.98C124.166 195.678 137.251 190.028 145.831 183.549ZM110.264 205.113C141.466 196.388 164.405 180.829 159.836 163.292C155.266 145.755 128.024 145.349 96.8214 154.074C65.6193 162.798 42.2064 177.092 46.8428 194.887C51.4793 212.682 79.0614 213.838 110.264 205.113Z" fill="#737373"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M103.877 181.153C89.0555 185.297 76.4977 192.072 68.1169 199.619C67.3647 200.297 66.2249 200.214 65.5711 199.434C64.9173 198.655 64.997 197.474 65.7492 196.796C74.622 188.806 87.7006 181.803 102.936 177.543C106.034 176.676 109.107 175.955 112.134 175.375C113.114 175.187 114.056 175.858 114.237 176.873C114.419 177.889 113.771 178.864 112.792 179.052C109.86 179.614 106.881 180.313 103.877 181.153ZM123.847 175.658C123.792 174.627 124.554 173.745 125.549 173.688C132.378 173.297 138.774 173.682 144.424 174.797C145.403 174.991 146.046 175.97 145.86 176.984C145.673 177.999 144.728 178.664 143.749 178.471C138.431 177.421 132.333 177.045 125.749 177.422C124.753 177.479 123.902 176.69 123.847 175.658Z" fill="#606063"></path>
+                    </svg>
+                  </div>
+                  <div class="rc__confirm__info text-center">
+                    <div class="-txt mb-4">Waiting For Confirmation</div>
+                    <div class="-supply mb-4">Supplying 10 DEFF and 34.7371 BNB</div>
+                    <div class="-link">
+                      <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#willReceiveSubmit">Confirm this transaction in your wallet</a>
+                    </div>
+                  </div>
+                </div><!-- end form-group -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal You Will Receive Confirm -->
+
+      <!-- modal You Will Receive Submitted -->
+      <div class="modal fade wl__modal" id="willReceiveSubmit" tabindex="-1" aria-labelledby="willReceiveSubmitTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="willReceiveSubmitTitle">You will receive</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form">
+                <div class="form-group rc__submit">
+                  <div class="rc__submit__thumb text-center mb-4">
+                    <i class="icon-arrow-up"></i>
+                  </div>
+                  <div class="rc__submit__info text-center">
+                    <div class="-txt mb-4">Transaction Submitted</div>
+                    <div class="-link mb-4">
+                      <a href="#">View on BscScan</a>
+                    </div>
+                    <div class="-add mb-5">Add Cake-LP to Metamask <img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    <button type="button" class="btn btn__close w-50 mx-auto" data-bs-dismiss="modal" aria-label="Close"><span>Close</span></button>
+                  </div>
+                </div><!-- end form-group -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal You Will Receive Submitted -->
 
       <footer class="footer">
         <div class="container">
