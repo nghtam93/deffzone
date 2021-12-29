@@ -77,49 +77,24 @@
 
       <section class="wallet-detail">
         <div class="container">
-          <div class="dt__header mb-4">
-            <form action="#" method="post" class="wl__form d-flex justify-content-end">
-              <div class="dt__sort me-3">
-                <label class="form-label mb-2">SORT BY</label>
-                <div class="js-dropdown">
-                  <div class="js-dropdown-selected">
-                    <a href="#" class="form-control d-flex align-items-center"><span>Hot</span></a>
-                    <i class="-arrow icon-arrow-down"></i>
-                  </div>
-                  <ul class="js-dropdown-list list-unstyled">
-                    <li><a href="#">APR</a></li>
-                    <li><a href="#">Earned</a></li>
-                    <li><a href="#">Total Staked</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="dt__search">
-                <label for="wl__search_farms" class="form-label mb-2">SEARCH</label>
-                <input type="text" class="form-control" placeholder="Search Farms">
-              </div>
-            </form>
-          </div>
           <div class="wl__wrap mw-100 mx-auto">
             <header class="wl__header d-flex align-items-center justify-content-between">
               <h2 class="wl__header__title me-5">Staking</h2>
               <div class="wl__header__sub">Exchange for interest or more DEFF</div>
             </header>
             <div class="hv__content">
-              <div class="hv__item js-toggle">
-                <header class="hv__header d-flex align-items-center flex-wrap flex-md-nowrap">
+              <div class="hv__item">
+                <header class="hv__header d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
                   <div class="hv__header__token d-flex align-items-center">
                     <div class="-logo -reverse me-3">
                       <div class="-logo__small"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                      <div class="-logo__pri"><img src="./assets/img/pages/logo-pancake.png" alt=""></div>
+                      <div class="-logo__pri"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
                     </div>
-                    <div class="-name">
-                      <div class="-name__txt">IFO CAKE</div>
-                      <div class="-name__info mt-1">Stake CAKE to participate in IFOs</div>
-                    </div>
+                    <div class="-name">DEFF</div>
                   </div>
                   <div class="hv__info d-flex justify-content-sm-center justify-content-md-between">
                     <div class="hv__info__item -earned d-none d-lg-block">
-                      <div class="-title mb-2">Recent CAKE profit</div>
+                      <div class="-title mb-2">Recent DEFF profit</div>
                       <div class="-numb">
                         <div class="-numb__pri">000,000,000</div>
                         <div class="-numb__txt mt-1">0 USD</div>
@@ -143,12 +118,11 @@
                     </div><!-- hv__info__item -->
                     <div class="hv__info__item -total d-none d-lg-block">
                       <div class="-title mb-2">Total staked</div>
-                      <div class="-numb">53,013,041 CAKE</div>
+                      <div class="-numb">53,013,041 DEFF</div>
                     </div><!-- hv__info__item -->
                   </div><!-- hv__info -->
-                  <a href="#" class="-arrow js-toggle-btn ms-auto"><i class="icon-arrow-down"></i></a>
                 </header><!-- hv__header -->
-                <div class="js-toggle-show">
+                <div class="hv__main">
                   <div class="hv__action d-flex align-items-center flex-wrap flex-lg-nowrap">
                     <div class="hv__info d-block d-lg-none">
                       <div class="hv__info__item d-flex align-items-center justify-content-between">
@@ -162,7 +136,7 @@
                       </div><!-- hv__info__item -->
                       <div class="hv__info__item d-flex align-items-center justify-content-between">
                         <div class="-title">Total staked</div>
-                        <div class="-numb">53,013,041 CAKE</div>
+                        <div class="-numb">53,013,041 DEFF</div>
                       </div><!-- hv__info__item -->
                     </div><!-- hv__info -->
                     <ul class="hv__action__list list-unstyled">
@@ -176,183 +150,13 @@
                     </ul>
                     <div class="hv__action__btn d-flex justify-content-between flex-wrap flex-sm-nowrap">
                       <div class="ac__item">
-                        <label class="ac__item__txt" for="cake_earned">RECENT CAKE PROFIT</label>
+                        <label class="ac__item__txt" for="cake_earned">RECENT DEFF PROFIT</label>
                         <form class="wl__form ac__item__info d-flex align-items-center justify-content-between">
                           <div class="-input"><input type="text" id="cake_earned" value="0" placeholder="0" disabled></div>
                         </form>
                       </div>
                       <div class="ac__item">
-                        <label class="ac__item__txt">START FARMING</label>
-                        <a href="#" class="btn -wallet" type="button" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
-                      </div>
-                    </div>
-                  </div><!-- hv__action -->
-                </div>
-              </div>
-              <div class="hv__item js-toggle">
-                <header class="hv__header d-flex align-items-center flex-wrap flex-md-nowrap">
-                  <div class="hv__header__token d-flex align-items-center">
-                    <div class="-logo -reverse me-3">
-                      <div class="-logo__small"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                      <div class="-logo__pri"><img src="./assets/img/pages/logo-pancake.png" alt=""></div>
-                    </div>
-                    <div class="-name">
-                      <div class="-name__txt">Manual CAKE</div>
-                      <div class="-name__info mt-1">Earn CAKE stake CAKE</div>
-                    </div>
-                  </div><!-- hv__header__token -->
-                  <div class="hv__info d-flex justify-content-sm-center justify-content-md-between">
-                    <div class="hv__info__item -earned">
-                      <div class="-title mb-2">CAKE Earned</div>
-                      <div class="-numb">
-                        <div class="-numb__pri">0.0</div>
-                        <div class="-numb__txt mt-1">0 USD</div>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -staked d-none d-lg-block">
-                      <div class="-title mb-2">CAKE Staked</div>
-                      <div class="-numb">
-                        <div class="-numb__pri">$326,520,315</div>
-                        <div class="-numb__txt mt-1">0 USD</div>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -apr">
-                      <div class="-title mb-2">APR</div>
-                      <div class="-numb d-flex">
-                        42.69%
-                        <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
-                          <i class="icon-calculator d-none d-lg-inline-block"></i>
-                        </button>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -total d-none d-lg-block">
-                      <div class="-title mb-2">Total staked</div>
-                      <div class="-numb">101,754,118 CAKE</div>
-                    </div><!-- hv__info__item -->
-                  </div><!-- hv__info -->
-                  <a href="#" class="-arrow js-toggle-btn ms-auto"><i class="icon-arrow-down"></i></a>
-                </header><!-- hv__header -->
-                <div class="js-toggle-show">
-                  <div class="hv__action d-flex align-items-center flex-wrap flex-lg-nowrap">
-                    <div class="hv__info d-block d-lg-none">
-                      <div class="hv__info__item d-flex align-items-center justify-content-between">
-                        <div class="-title">APR</div>
-                        <div class="-numb d-flex">
-                          42.69%
-                          <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
-                            <i class="icon-calculator"></i>
-                          </button>
-                        </div>
-                      </div><!-- hv__info__item -->
-                      <div class="hv__info__item d-flex align-items-center justify-content-between">
-                        <div class="-title">Total staked</div>
-                        <div class="-numb">53,013,041 CAKE</div>
-                      </div><!-- hv__info__item -->
-                    </div><!-- hv__info -->
-                    <ul class="hv__action__list list-unstyled">
-                      <li class="text-end text-lg-start"><a href="#">See Token Info <i class="icon-external-link"></i></a></li>
-                      <li class="text-end text-lg-start"><a href="#">View Project Site <i class="icon-external-link"></i></a></li>
-                      <li class="text-end text-lg-start"><a href="#">View Contract <i class="icon-external-link"></i></a></li>
-                      <li class="-core d-flex align-items-center">
-                        <div class="-core__wrap"><i class="icon-clockwise"></i>Manual</div>
-                        <i class="icon-info ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i>
-                      </li>
-                    </ul>
-                    <div class="hv__action__btn d-flex justify-content-between flex-wrap flex-sm-nowrap">
-                      <div class="ac__item">
-                        <label class="ac__item__txt" for="cake_earned">CAKE EARNED</label>
-                        <form class="wl__form ac__item__info d-flex align-items-center justify-content-between">
-                          <div class="-input"><input type="text" id="cake_earned" value="0" placeholder="0" disabled></div>
-                          <button href="#" class="btn -disabled" disabled><span>Harvest</span></button>
-                        </form>
-                      </div>
-                      <div class="ac__item">
-                        <label class="ac__item__txt">START FARMING</label>
-                        <a href="#" class="btn -wallet" type="button" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
-                      </div>
-                    </div>
-                  </div><!-- hv__action -->
-                </div>
-              </div>
-              <div class="hv__item js-toggle">
-                <header class="hv__header d-flex align-items-center flex-wrap flex-md-nowrap">
-                  <div class="hv__header__token d-flex align-items-center">
-                    <div class="-logo -reverse me-3">
-                      <div class="-logo__small"><img src="./assets/img/pages/logo-bnb.png" alt=""></div>
-                      <div class="-logo__pri"><img src="./assets/img/pages/logo-pancake.png" alt=""></div>
-                    </div>
-                    <div class="-name">
-                      <div class="-name__txt">Earn CCAR</div>
-                      <div class="-name__info mt-1">Stake CAKE</div>
-                    </div>
-                  </div>
-                  <div class="hv__info d-flex justify-content-sm-center justify-content-md-between">
-                    <div class="hv__info__item -earned">
-                      <div class="-title mb-2">CCAR Earned</div>
-                      <div class="-numb">
-                        <div class="-numb__pri">000,000,000</div>
-                        <div class="-numb__txt mt-1">0 USD</div>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -staked d-none d-lg-block">
-                      <div class="-title mb-2">Total staked</div>
-                      <div class="-numb">
-                        <div class="-numb__pri">436,916 CAKE</div>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -apr">
-                      <div class="-title mb-2">APR</div>
-                      <div class="-numb d-flex">
-                        42.69%
-                        <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
-                          <i class="icon-calculator d-none d-lg-inline-block"></i>
-                        </button>
-                      </div>
-                    </div><!-- hv__info__item -->
-                    <div class="hv__info__item -total d-none d-lg-block">
-                      <div class="-title mb-2">Ends in</div>
-                      <div class="-numb">1,564,927 blocks <a href="#" target="_blank" class="ms-2"><i class="icon-alarm"></i></a></div>
-                    </div><!-- hv__info__item -->
-                  </div><!-- hv__info -->
-                  <a href="#" class="-arrow js-toggle-btn ms-auto"><i class="icon-arrow-down"></i></a>
-                </header><!-- hv__header -->
-                <div class="js-toggle-show">
-                  <div class="hv__action d-flex align-items-center flex-wrap flex-lg-nowrap">
-                    <div class="hv__info d-block d-lg-none">
-                      <div class="hv__info__item d-flex align-items-center justify-content-between">
-                        <div class="-title">APR</div>
-                        <div class="-numb d-flex">
-                          42.69%
-                          <button class="-icon js-focus" data-focus="cake_bnb_lp_staked" data-modal="roiCalculator" type="button" data-bs-toggle="modal" data-bs-target="#roiCalculator">
-                            <i class="icon-calculator"></i>
-                          </button>
-                        </div>
-                      </div><!-- hv__info__item -->
-                      <div class="hv__info__item d-flex align-items-center justify-content-between">
-                        <div class="-title">Total staked</div>
-                        <div class="-numb">53,013,041 CAKE</div>
-                      </div><!-- hv__info__item -->
-                    </div><!-- hv__info -->
-                    <ul class="hv__action__list list-unstyled">
-                      <li class="d-flex justify-content-between"><span class="-txt me-2">Ends in:</span><a href="#" target="_blank">1,564,855 blocks <i class="icon-alarm"></i></a></li>
-                      <li class="text-end text-lg-start"><a href="#">See Token Info <i class="icon-external-link"></i></a></li>
-                      <li class="text-end text-lg-start"><a href="#">View Project Site <i class="icon-external-link"></i></a></li>
-                      <li class="text-end text-lg-start"><a href="#">View Contract <i class="icon-external-link"></i></a></li>
-                      <li class="-core d-flex align-items-center">
-                        <div class="-core__wrap"><i class="icon-repeat"></i>Manual</div>
-                        <i class="icon-info ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i>
-                      </li>
-                    </ul>
-                    <div class="hv__action__btn d-flex justify-content-between flex-wrap flex-sm-nowrap">
-                      <div class="ac__item">
-                        <label class="ac__item__txt" for="cake_earned">RECENT CAKE PROFIT</label>
-                        <form class="wl__form ac__item__info d-flex align-items-center justify-content-between">
-                          <div class="-input"><input type="text" id="cake_earned" value="0" placeholder="0" disabled></div>
-                          <button href="#" class="btn -disabled" disabled><span>Harvest</span></button>
-                        </form>
-                      </div>
-                      <div class="ac__item">
-                        <label class="ac__item__txt">START FARMING</label>
+                        <label class="ac__item__txt">START DEFF</label>
                         <a href="#" class="btn -wallet" type="button" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
                       </div>
                     </div>
@@ -418,14 +222,14 @@
             <div class="modal-body">
               <form action="#" method="post" class="wl__form">
                 <div class="form-group">
-                  <label for="cake_bnb_lp_staked" class="form-label">CAKE-BNB LP STAKED</label>
+                  <label for="cake_bnb_lp_staked" class="form-label">CAKE-DEFF LP STAKED</label>
                   <div class="-calculator position-relative d-flex align-items-center mb-3" for="cake_bnb_lp_staked">
                     <div class="cc__wrap">
                       <div class="cc__input d-flex justify-content-end align-items-center mb-3">
                         <input type="number" class="form-control" id="cake_bnb_lp_staked" placeholder="0.00" />
                         <span class="cc__input__txt ms-2">USD</span>
                       </div>
-                      <div class="cc__txt">0.00 CAKE-BNB LP</div>
+                      <div class="cc__txt">0.00 CAKE-DEFF LP</div>
                     </div>
                     <div class="cc__icon ms-3">
                       <i class="icon-up-down"></i>
@@ -503,7 +307,7 @@
                         <input type="checkbox" name="" id="cc__rate__input__edit">
                         <span class="-sym position-absolute">$</span>
                         <input type="number" class="form-control" value="0.00" id="cc__rate__input__price">
-                        <label for="cc__rate__input__edit" class="ms-4 position-relative" data-focus="cc__rate__input__price" data-modal="roiCalculator">
+                        <label for="cc__rate__input__edit" class="ms-4 position-relative js-focus" data-focus="cc__rate__input__price" data-modal="roiCalculator">
                           <i class="icon-pencil position-absolute top-50 start-50 translate-middle"></i>
                           <i class="icon-check position-absolute top-50 start-50 translate-middle"></i>
                         </label>
@@ -532,7 +336,7 @@
                   </li>
                   <li class="-list__item d-flex align-items-center justify-content-between">
                     <div class="-txt">Farm Multiplier</div>
-                    <div class="-numb">40X<i class="-icon icon-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
+                    <div class="-numb">40X<i class="-icon icon-info ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notes......"></i></div>
                   </li>
                 </ul>
                 <ul class="-info list-instyled">
@@ -540,7 +344,7 @@
                   <li>LP rewards: 0.17% trading fees, distributed proportionally among LP token holders.</li>
                   <li>All figures are estimates provided for your convenience only, and by no means represent guaranteed returns.</li>
                 </ul>
-                <div class="-link text-center"><a href="#" class="d-inline-flex align-items-center">Get CAKE-BNB<i class="icon-external-link ms-2"></i></a></div>
+                <div class="-link text-center"><a href="#" class="d-inline-flex align-items-center">Get CAKE-DEFF<i class="icon-external-link ms-2"></i></a></div>
               </div>
             </div><!-- modal-footer -->
           </div>
