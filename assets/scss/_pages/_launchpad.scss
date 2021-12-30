@@ -388,6 +388,9 @@
   &__chart{
     max-width: 352px;
     margin: 16px auto 12px;
+    @media (max-width: 575px){
+      max-width: 254px;
+    }
   }
 
   &__single{
