@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | My Contributions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body class="dashboard">
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item has-sub">
+                <a href="javascript: void(0);">Swap</a>
+                <ul class="sub-menu">
+                  <li><a href="swap.html">Exchange</a></li>
+                  <li><a href="liquidity.html">Liquidity</a></li>
+                </ul>
+              </li>
+              <li class="menu-item active"><a href="dashboard.html">Launchpad</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.01951</span>
+          </div>
+
+          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="launchpad-detail">
+        <nav class="wallet-tabs d-none d-sm-block">
+          <a href="launchpad.html">All launchpad</a>
+          <a href="contributions.html" class="is-active">My contributions</a>
+        </nav><!-- wallet-tabs -->
+
+        <div class="launchpad-content">
+          <div class="container">
+            <div class="dt__header">
+              <form action="#" method="post" class="wl__form d-flex justify-content-between justify-content-md-center flex-wrap flex-md-nowrap">
+                <div class="dt__search">
+                  <label for="wl__search_farms" class="form-label mb-2">Search by name:</label>
+                  <input type="text" class="form-control" placeholder="Enter token name or token symbol">
+                  <div class="dt__search__box">
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status">Inprogress</div>
+                    </div><!-- -item -->
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status -kyc">KYC</div>
+                    </div><!-- -item -->
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status -upcoming">Upcoming</div>
+                    </div><!-- -item -->
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status -fill">Filled</div>
+                    </div><!-- -item -->
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status -end">Ended</div>
+                    </div><!-- -item -->
+                    <div class="-item d-flex align-items-center justify-content-between">
+                      <div class="-item__info d-flex align-items-center me-4">
+                        <div class="-thumb d-flex align-items-center justify-content-center me-3">
+                          <img src="./assets/img/pages/logo-bnb.png" alt="">
+                        </div>
+                        <div class="-info">
+                          <div class="-info__name mb-1">Louie Duck Token <span class="-txt">(louieduckT)</span></div>
+                          <div class="-info__token">0x595C1Aab3e4Eb593cb4Ee1F6e2a09622f83A0f0d</div>
+                        </div>
+                      </div><!-- -item__info -->
+                      <div class="-item__status -cancel">Canceled</div>
+                    </div><!-- -item -->
+                  </div><!-- dt__search__box -->
+                </div><!-- dt__search -->
+                <div class="dt__sort">
+                  <label class="form-label mb-2">Filter by:</label>
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control d-flex align-items-center"><span>All status</span></a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li class="dr__title">All status</li>
+                      <li><a href="#">KYC</a></li>
+                      <li><a href="#">Upcoming</a></li>
+                      <li><a href="#">Inprogress</a></li>
+                      <li><a href="#">Filled</a></li>
+                      <li><a href="#">Ended</a></li>
+                      <li><a href="#">Canceled</a></li>
+                    </ul>
+                  </div>
+                </div><!-- dt__sort -->
+                <div class="dt__sort">
+                  <label class="form-label mb-2">Filter by:</label>
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control d-flex align-items-center"><span>No filter</span></a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li class="dr__title">No filter</li>
+                      <li><a href="#">Hard cap</a></li>
+                      <li><a href="#">Soft cap</a></li>
+                      <li><a href="#">LP Percent</a></li>
+                      <li><a href="#">Start time</a></li>
+                      <li><a href="#">End time</a></li>
+                    </ul>
+                  </div>
+                </div><!-- dt__sort -->
+              </form>
+            </div><!-- dt__header -->
+
+            <div class="lp__box d-flex flex-wrap">
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+              <div class="lp__item">
+                <div class="-thumb d-flex align-items-center justify-content-center mb-3">
+                  <img src="./assets/img/pages/logo-bnb.png" alt="">
+                </div>
+                <div class="-title mb-1">Louie Duck Token <span class="-title__info">(louieduckT)</span></div>
+                <div class="-value">1 DEFF = 5.000 louieduckT</div>
+                <div class="-cap">
+                  <div class="-cap__txt mb-1">Your deposit:</div>
+                  <div class="-cap__value -highlight">150 BNB</div>
+                </div><!-- -cap -->
+                <div class="-progress mb-3">
+                  <div class="-progress__title">Progress</div>
+                  <div class="-progress__bar">
+                    <span class="-bar" style="width: 70%;"></span>
+                  </div>
+                  <div class="-progress__value d-flex justify-content-between mt-2">
+                    <span>0 DEFF</span>
+                    <span>150 DEFF</span>
+                  </div>
+                </div><!-- -progress -->
+                <ul class="-info list-unstyled">
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Liquidity:</span>
+                    <span class="-value">70%</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Lookup time:</span>
+                    <span class="-value">28 days</span>
+                  </li>
+                  <li class="-info__item d-flex justify-content-between align-items-center">
+                    <span class="-txt">Project status:</span>
+                    <span class="-value -warning">Filled</span>
+                  </li>
+                </ul>
+                <div class="-bottom d-flex justify-content-between align-items-center">
+                  <div class="-bottom__time me-3">
+                    <div class="-txt mb-1">Reward in:</div>
+                    <div class="-time">dd:hh:mm:ss</div>
+                  </div>
+                  <a href="contributions-detail.html" class="btn"><span>View pool</span></a>
+                </div>
+              </div><!-- lp__item -->
+            </div><!-- lp__box -->
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link -arrow d-flex align-items-center justify-content-center" href="#" aria-label="Previous">
+                  <i class="icon-arrow-left"></i>
+                </a>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link d-flex align-items-center justify-content-center">1</span>
+              </li>
+              <li class="page-item"><a class="page-link d-flex align-items-center justify-content-center" href="#">2</a></li>
+              <li class="page-item"><a class="page-link d-flex align-items-center justify-content-center" href="#">3</a></li>
+              <li class="page-item -more">
+                <span class="page-link d-flex align-items-center justify-content-center" href="#">...</span>
+              </li>
+              <li class="page-item"><a class="page-link d-flex align-items-center justify-content-center" href="#">30</a></li>
+              <li class="page-item">
+                <a class="page-link -arrow d-flex align-items-center justify-content-center" href="#" aria-label="Next">
+                  <i class="icon-arrow-right"></i>
+                </a>
+              </li>
+            </ul><!-- pagination -->
+          </div><!-- container -->
+        </div><!-- launchpad-content -->
+
+      </section>
+
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group scroll__wrap">
+                  <ul class="wallet-list scroll__wrap__content d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="submit"><span>Connect wallet</span></button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <a href="mailto:support@deffZone.com">Support@deffZone.com.</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="https://docs.deffzone.com/" target="_blank">Document</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+          <div class="nav__mobile__content">
+            <ul class="nav__mobile--ul">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item js-toggle">
+                <a href="javascript: void(0);" class="js-toggle-btn">Swap</a>
+                <ul class="sub-menu js-toggle-show">
+                  <li><a href="swap.html">Exchange</a></li>
+                  <li><a href="liquidity.html">Liquidity</a></li>
+                </ul>
+              </li>
+              <li class="menu-item active"><a href="dashboard.html">Launchpad</a></li>
+            </ul>
+            <div class="languages ms-0 mt-3 mb-3">
+              <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+              <div class="languages__content">
+                <p class="languages__text">Select language</p>
+                <ul class="">
+                  <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                  <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                </ul>
+              </div>
+            </div> <!-- .languages -->
+
+            <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+          </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/chartjs/Chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
