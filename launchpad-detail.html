@@ -310,12 +310,25 @@
                       <span>0 / 150 DEFF</span>
                     </div>
                   </div>
-                  <form action="#" method="post" class="-form wl__form">
+                  <div class="-pool">
+                    <ul class="-pool__list list-unstyled">
+                      <li class="d-flex align-items-center justify-content-between">
+                        <span class="-txt">Conditions:</span>
+                        <div class="-value text-end">10.000 DEFF<br />in staking pool</div>
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between">
+                        <span class="-txt">Your status:</span>
+                        <div class="-value text-end">8.000 DEFF (80%)</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <form action="#" method="post" class="-form wl__form mb-4">
                     <div class="form-group">
                       <input type="number" class="form-control" placeholder="Enter amount">
                     </div>
-                    <button type="submit" class="btn w-100 d-block"><span>Deposit</span></button>
+                    <button type="submit" class="btn w-100 d-block -disabled" disabled><span>Deposit</span></button>
                   </form>
+                  <div class="-pool__txt text-center">You are unqualified for joining launchpad</div>
                 </div><!-- lp__item -->
                 <div class="lp__item">
                   <h2 class="dt__title">Token metric</h2>
