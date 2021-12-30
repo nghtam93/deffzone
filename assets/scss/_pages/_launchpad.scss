@@ -151,10 +151,6 @@
             border-radius: 6px;
             padding: 8px;
             line-height: (18/16);
-            &.-warning{
-              color: #FF9138;
-              background-color: rgba(#FF9138, 0.1);
-            }
             &.-fill{
               color: #FF9138;
               background-color: rgba(#FF9138, 0.1);
@@ -244,6 +240,72 @@
         padding: 12px 16px;
       }
     }
+    .-pool{
+      color: #CFD2DD;
+      font-size: 16px;
+      line-height: (24/16);
+      &__title{
+        margin-bottom: 28px;
+      }
+      &__list{
+        margin-bottom: 32px;
+        @media (max-width: 1199px) and (min-width: 992px){
+          font-size: 12px;
+        }
+        @media (max-width: 575px){
+          font-size: 15px;
+        }
+        li{
+          &:not(:last-child){
+            margin-bottom: 20px;
+            @media (max-width: 1199px) and (min-width: 992px){
+              margin-bottom: 14px;
+            }
+          }
+        }
+        .-txt{
+          font-weight: 300;
+          margin-right: 24px;
+          @media (max-width: 1199px) and (min-width: 992px){
+            margin-right: 12px;
+          }
+          @media (max-width: 575px){
+            margin-right: 12px;
+          }
+        }
+        .-value{
+          font-weight: 400;
+          @media (max-width: 1199px) and (min-width: 992px){
+            font-size: 12px;
+          }
+          @media (max-width: 575px){
+            font-size: 15px;
+          }
+        }
+      }
+      .btn{
+        box-shadow: none;
+        padding: 12px 16px;
+        font-size: 16px;
+        &:not(:last-child){
+          margin-bottom: 12px;
+        }
+        &__status{
+          border: 1px solid #FB741D;
+          background: none;
+          color: #FB741D;
+          &:hover{
+            color: #FFFFFF;
+          }
+        }
+      }
+      &__txt{
+        color: #7B87A3;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 8px;
+      }
+    }
   }
 
   &__scroll-x{
@@ -323,6 +385,10 @@
       }
     }
   }
+  &__chart{
+    max-width: 352px;
+    margin: 16px auto 12px;
+  }
 
   &__single{
     --row-gap: 30px;
@@ -385,7 +451,6 @@
               @media (max-width: 767px){
                 padding-top: 0;
                 margin-top: 16px;
-                margin-bottom: 14px;
               }
               &__name{
                 color: #7B87A3;
@@ -465,7 +530,26 @@
                 margin-top: 18px;
                 @media (max-width: 767px){
                   margin-top: 0;
-                  margin-bottom: 22px;
+                  margin-bottom: 20px;
+                }
+                li{
+                  width: 19px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  &:not(:last-child){
+                    margin-right: 25px;
+                  }
+                  a{
+                    display: block;
+                    transition: 0.3s;
+                    &:hover{
+                      transform: translateY(-3px);
+                    }
+                  }
+                  img{
+                    max-height: 100%;
+                  }
                 }
               }
             }

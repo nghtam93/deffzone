@@ -100,6 +100,11 @@
                         <div class="-txt">louieduckT</div>
                       </div>
                       <div class="if__status">Inprogress</div>
+                      <!-- <div class="if__status -fill">Filled</div>
+                      <div class="if__status -cancel">Cancelled</div>
+                      <div class="if__status -end">Ended</div>
+                      <div class="if__status -upcoming">Upcoming</div>
+                      <div class="if__status -kyc">KYC</div> -->
                     </div><!-- -if__header -->
                     <div class="if__content">
                       <p>#Pekka Inu HOLD&EARN $PKA is an innovative decentralized cryptocurrency with instant rewards and much more. ✅The team will not own any token from the supply . ✅It was created to be one of the best and biggest crypto communities. ✅Our goal is to provide generational wealth to all of our loyal holders. ✅You’re getting rewarded 4%BNB & 2%$PKA for every time a transaction is made. ✅Project Audit & KYC. ✅ Huge Marketing Campaign. ✅ Liquidity locked.</p>
@@ -268,6 +273,9 @@
               </div><!-- lp__single__detail -->
               <div class="lp__single__metric order-2 order-lg-1">
                 <h2 class="dt__title">Token metric</h2>
+                <div class="lp__chart">
+                  <canvas id="progress-chart"></canvas>
+                </div>
               </div><!-- lp__single__metric -->
               <div class="lp__single__sidebar">
                 <div class="lp__item">
@@ -285,12 +293,25 @@
                       <span>150 DEFF</span>
                     </div>
                   </div>
-                  <form action="#" method="post" class="-form wl__form">
-                    <div class="form-group">
-                      <input type="number" class="form-control" placeholder="Enter amount">
+                  <div class="-pool">
+                    <div class="-pool__title text-center">The pool has filled</div>
+                    <ul class="-pool__list list-unstyled">
+                      <li class="d-flex align-items-center justify-content-between">
+                        <span class="-txt">Your vesting:</span>
+                        <div class="-value text-end">500.000 DEFF</div>
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between">
+                        <span class="-txt">Deposit time:</span>
+                        <div class="-value text-end">dd/mm/yyyy - hh:mm:ss</div>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn block w-100"><span>Finalize pool</span></a>
+                    <a href="#" class="btn btn__status block w-100"><span>Cancel pool</span></a>
+                    <a href="#" class="btn btn__status block w-100"><span>Enable whitelist</span></a>
+                    <div class="-pool__txt text-center">
+                      To Finalize presale, you have to exclude token transfer fee for presale contract.
                     </div>
-                    <button type="submit" class="btn w-100 d-block"><span>Deposit</span></button>
-                  </form>
+                  </div>
                 </div><!-- lp__item -->
               </div><!-- lp__single__sidebar -->
             </div><!-- lp__single -->
@@ -437,7 +458,7 @@
     </div> <!-- .wrapper -->
 
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/chartjs/Chart.js"></script>
+    <script src="assets/libs/chartjs/chart.min.js"></script>
 
     <script src="assets/js/main.js"></script>
 

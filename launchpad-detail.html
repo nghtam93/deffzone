@@ -82,7 +82,7 @@
       </header>
 
       <section class="launchpad-detail -single">
-        <nav class="wallet-tabs d-none d-sm-block">
+        <nav class="wallet-tabs">
           <a href="launchpad.html" class="is-active">All launchpad</a>
           <a href="contributions.html">My contributions</a>
         </nav><!-- wallet-tabs -->
@@ -100,11 +100,20 @@
                         <div class="-txt">louieduckT</div>
                       </div>
                       <div class="if__status">Inprogress</div>
+                      <!-- <div class="if__status -fill">Filled</div>
+                      <div class="if__status -cancel">Cancelled</div>
+                      <div class="if__status -end">Ended</div>
+                      <div class="if__status -upcoming">Upcoming</div>
+                      <div class="if__status -kyc">KYC</div> -->
                     </div><!-- -if__header -->
                     <div class="if__content">
                       <p>#Pekka Inu HOLD&EARN $PKA is an innovative decentralized cryptocurrency with instant rewards and much more. ✅The team will not own any token from the supply . ✅It was created to be one of the best and biggest crypto communities. ✅Our goal is to provide generational wealth to all of our loyal holders. ✅You’re getting rewarded 4%BNB & 2%$PKA for every time a transaction is made. ✅Project Audit & KYC. ✅ Huge Marketing Campaign. ✅ Liquidity locked.</p>
                       <ul class="-share list-unstyled d-flex flex-wrap">
-                        <li><a href="#"></a></li>
+                        <li><a href="#"><img src="./assets/img/globe.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./assets/img/messenger.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./assets/img/facebook-square.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./assets/img/snapchat.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./assets/img/telegram-light.svg" alt=""></a></li>
                       </ul>
                     </div><!-- -if__content -->
                   </div><!-- -info -->
@@ -268,6 +277,9 @@
               </div><!-- lp__single__detail -->
               <div class="lp__single__metric order-2 order-lg-1">
                 <h2 class="dt__title">Token metric</h2>
+                <div class="lp__chart">
+                  <canvas id="progress-chart"></canvas>
+                </div>
               </div><!-- lp__single__metric -->
               <div class="lp__single__sidebar">
                 <div class="lp__item">
@@ -464,7 +476,7 @@
     </div> <!-- .wrapper -->
 
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/chartjs/Chart.js"></script>
+    <script src="assets/libs/chartjs/chart.min.js"></script>
 
     <script src="assets/js/main.js"></script>
 
