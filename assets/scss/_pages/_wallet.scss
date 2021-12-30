@@ -2043,8 +2043,14 @@
     font-size: 20px;
     line-height: 1.5;
     transition: 0.3s;
+    @media (max-width: 375px){
+      font-size: 18px;
+    }
     &:not(:last-child){
       margin-right: 30px;
+      @media (max-width: 375px){
+        margin-right: 24px;
+      }
     }
     &:after{
       content: '';
