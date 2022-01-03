@@ -69,6 +69,25 @@ $(document).ready(function(){
 
     }
 
+    if($('body').hasClass('landing-page')){
+      setTimeout(function(){ new WOW().init(); }, 400);
+
+      $('.landing-happy__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        autoplay: true
+      });
+      $('.landing-work .-main__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true
+      });
+    }
+
     /*----Get Header Stick ---*/
     var header_sticky=$("header.-fix")
     $(window).scroll(function(){
@@ -171,6 +190,26 @@ $(document).ready(function(){
           })
         } else {
           $(`#${dataFocus}`).trigger('focus')
+        }
+      })
+    })
+    $(document).on('click', 'a[href^="#"]', function (event) {
+      $('a[href^="#"]').parent().removeClass('active');
+      $(this).parent().addClass('active');
+      $('.menu-mb__btn').removeClass('active')
+      $('.nav__mobile').removeClass('active')
+      $('body').removeClass('modal-open')
+    });
+
+    $(window).on('load resize', function() {
+      var currentPath = window.location.hash;
+      $('a[href^="#"]').each(function() {
+        var attrHref = $(this).attr('href');
+        if(attrHref === currentPath){
+          $(this).parent().addClass('active')
+          console.log($(this).parent().children());
+        } else {
+          $(this).parent().removeClass('active');
         }
       })
     })

@@ -131,6 +131,17 @@
 
 }
 
+.landing-page{
+    .main__nav {
+        a{
+            padding: 8px 24px;
+            @media (max-width: 1199px) and (min-width: 992px){
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+
 
 /*Menu custom*/
 .modal-open{overflow:hidden;}

@@ -82,6 +82,20 @@
 			}
 		}
 	}
+	&__subscribe{
+		position: relative;
+		.btn{
+			position: absolute;
+			width: 117px;
+			height: 36px;
+			font-size: 16px;
+			line-height: (24/16);
+			top: 50%;
+			right: 7px;
+			padding: 6px 10px;
+			transform: translateY(-50%);
+		}
+	}
 	@media (max-width: 1199px){
 		.copyright{
 			margin-bottom: 16px;
@@ -92,5 +106,41 @@
 	}
 	@media (max-width: 767px){
 		padding: 32px 0 0;
+	}
+}
+
+.landing-page{
+	.footer{
+		.row{
+			[class*="col-"]{
+				&:not(:last-child){
+					@media (max-width: 767px){
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+		&__logo{
+			@media (min-width: 768px){
+				margin-bottom: 28px;
+			}
+		}
+		&__item{
+			&:not(:last-child){
+				margin-bottom: 30px;
+			}
+		}
+		&__title{
+			font-size: 18px;
+			margin-bottom: 22px;
+		}
+		&__subscribe{
+			.form-control{
+				font-size: 14px;
+				font-weight: 400;
+				height: 50px;
+				padding-right: 144px;
+			}
+		}
 	}
 }

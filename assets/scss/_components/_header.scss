@@ -42,6 +42,15 @@
 			max-width: 130px;
 		}
 	}
+	.btn{
+		&.-download{
+			@media (max-width: 991px){
+				margin-left: auto;
+				margin-right: 27px;
+				padding: 12px 20px;
+			}
+		}
+	}
 }
 /*Languages*/
 .languages{
