@@ -36,7 +36,6 @@
       }
       .dnfix__thumb{
         padding-top: percentage(563/516);
-        animation: Mousex 3s linear infinite;
       }
     }
   }
@@ -189,6 +188,7 @@
         &--2{
           position: static;
           width: auto;
+          animation: Mousex 5s linear infinite;
         }
       }
       &__meta{
@@ -751,7 +751,7 @@
           left: 0;
           top: 0;
           object-fit: cover;
-          animation: spinner-rotate 20s linear infinite;
+          animation: spinner-rotate 100s linear infinite;
         }
         &__main{
           position: absolute;
@@ -766,7 +766,7 @@
             width: 150px;
             height: 150px;
             margin: 0 auto 16px;
-            animation: Mousex 3s linear infinite;
+            animation: lightAnimation 1s ease-in-out infinite;
             @media (max-width: 1199px) and (min-width: 992px){
               width: 90px;
               height: 90px;

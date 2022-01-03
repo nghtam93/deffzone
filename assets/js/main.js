@@ -201,13 +201,33 @@ $(document).ready(function(){
       $('body').removeClass('modal-open')
     });
 
+    var jump = function(e)
+    {
+      $(document).off("scroll");
+      if (e){
+        var url = $(this).attr("href");
+        var id = url.substring(url.lastIndexOf('/') + 1);
+        target = id
+      } else {
+          var target = location.hash;
+      }
+
+      if($(target).offset() != undefined){
+        e.preventDefault();
+        $('html, body').stop().animate({
+          'scrollTop': $(target).offset().top
+        });
+
+        location.hash = target;
+      }
+    }
+
     $(window).on('load resize', function() {
       var currentPath = window.location.hash;
       $('a[href^="#"]').each(function() {
         var attrHref = $(this).attr('href');
         if(attrHref === currentPath){
           $(this).parent().addClass('active')
-          console.log($(this).parent().children());
         } else {
           $(this).parent().removeClass('active');
         }
