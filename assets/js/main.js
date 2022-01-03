@@ -193,14 +193,8 @@ $(document).ready(function(){
         }
       })
     })
-    $(document).on('click', 'a[href^="#"]', function (event) {
-      $('a[href^="#"]').parent().removeClass('active');
-      $(this).parent().addClass('active');
-      $('.menu-mb__btn').removeClass('active')
-      $('.nav__mobile').removeClass('active')
-      $('body').removeClass('modal-open')
-    });
 
+    // anchor link
     var jump = function(e)
     {
       $(document).off("scroll");
@@ -213,7 +207,7 @@ $(document).ready(function(){
       }
 
       if($(target).offset() != undefined){
-        e.preventDefault();
+        // e.preventDefault();
         $('html, body').stop().animate({
           'scrollTop': $(target).offset().top
         });
@@ -221,6 +215,16 @@ $(document).ready(function(){
         location.hash = target;
       }
     }
+
+    jump();
+
+    $(document).on('click', 'a[href^="#"]', function (event) {
+      $('a[href^="#"]').parent().removeClass('active');
+      $(this).parent().addClass('active');
+      $('.menu-mb__btn').removeClass('active')
+      $('.nav__mobile').removeClass('active')
+      $('body').removeClass('modal-open')
+    });
 
     $(window).on('load resize', function() {
       var currentPath = window.location.hash;
