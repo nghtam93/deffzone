@@ -334,7 +334,6 @@
           .-thumb{
             position: relative;
             padding-top: percentage(804/446);
-            animation: Mousex 3s linear infinite;
             &__img{
               position: absolute;
             }
@@ -416,6 +415,7 @@
               font-weight: 700;
               line-height: (40/28);
               margin-bottom: 21px;
+              text-transform: capitalize;
               @media (max-width: 991px) and (min-width: 768px){
                 font-size: 20px;
               }
