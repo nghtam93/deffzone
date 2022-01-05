@@ -188,6 +188,7 @@
         &--2{
           position: static;
           width: auto;
+          height: auto;
           animation: Mousex 5s linear infinite;
         }
       }
@@ -832,6 +833,9 @@
         }
         @media (max-width: 991px){
           margin-bottom: 24px;
+        }
+        @media (max-width: 767px){
+          letter-spacing: 1em;
         }
       }
       .-list{

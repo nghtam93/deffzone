@@ -195,8 +195,12 @@ body.modal-open{
             min-height: calc(100vh - 70px);
         }
         .btn{
-            padding: 12px 16px;
+            padding: 12px 16px !important;
             margin-top: 32px;
+            height: 48px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     &.active{

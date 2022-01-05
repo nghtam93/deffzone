@@ -953,6 +953,15 @@
 		}
 	}
 	@media (max-width: 767px){
+		&-banner{
+			.btn {
+				height: 40px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+		}
 		&-new{
 			.ocean{display: none;}
 			.el__box__header{
