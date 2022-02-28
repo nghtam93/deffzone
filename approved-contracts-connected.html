@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | Approved Contracts Connected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item has-sub">
+                <a href="javascript: void(0);">Swap</a>
+                <ul class="sub-menu">
+                  <li><a href="swap.html">Exchange</a></li>
+                  <li><a href="liquidity.html">Liquidity</a></li>
+                </ul>
+              </li>
+              <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.0001951</span>
+          </div>
+
+          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="database-detail contract-detail el__wrap">
+        <div class="container">
+          <div class="el__filter">
+            <form action="#" method="post" class="wl__form d-flex justify-content-between flex-wrap flex-lg-nowrap">
+              <div class="dt__search">
+                <label for="wl__search_farms" class="form-label mb-2">Search</label>
+                <div class="form-input">
+                  <input type="text" class="form-control" placeholder="Enter name, symbol or address">
+                  <i class="icon-search"></i>
+                </div>
+              </div><!-- dt__search -->
+              <div class="dt__sort">
+                <label class="form-label mb-2">&nbsp;</label>
+                <div class="js-dropdown">
+                  <div class="js-dropdown-selected">
+                    <a href="#" class="form-control d-flex align-items-center"><span>Select</span></a>
+                    <i class="-arrow icon-arrow-down"></i>
+                  </div>
+                  <ul class="js-dropdown-list list-unstyled">
+                    <li class="dr__title">Select</li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="level-contract" id="risk-level-contracts">
+                        <label for="risk-level-contracts">Risk Level</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="level-contract" id="recently-level-contracts">
+                        <label for="recently-level-contracts">Approved Recently</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="level-contract" id="exposure-risk-contracts">
+                        <label for="exposure-risk-contracts">Risk Exposure</label>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- dt__sort -->
+              <div class="dt__sort">
+                <label class="form-label mb-2">Contracts</label>
+                <div class="js-dropdown">
+                  <div class="js-dropdown-selected">
+                    <a href="#" class="form-control d-flex align-items-center"><span>Select</span></a>
+                    <i class="-arrow icon-arrow-down"></i>
+                  </div>
+                  <ul class="js-dropdown-list list-unstyled">
+                    <li class="dr__title">Select</li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="approved-contract" id="all-contracts">
+                        <label for="all-contracts">All contracts</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="approved-contract" id="high-risk-contracts">
+                        <label for="high-risk-contracts">High Risk contracts</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="approved-contract" id="high-risk-contracts">
+                        <label for="high-risk-contracts">Medium Risk contracts</label>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="checkbox__item">
+                        <input type="radio" name="approved-contract" id="low-risk-contracts">
+                        <label for="low-risk-contracts">Low Risk contracts</label>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- dt__sort -->
+            </form>
+          </div>
+          <!-- end el__filter -->
+
+          <div class="el__action d-flex flex-wrap flex-sm-nowrap justify-content-center justify-content-sm-between align-items-center">
+            <div class="el__action__contract d-flex flex-wrap align-items-center justify-content-center justify-content-sm-start me-sm-4">
+              <div class="-status">
+                <input type="checkbox" id="contract-status">
+                <label for="contract-status">Include zero allowances</label>
+              </div>
+              <a href="#" class="btn d-flex align-items-center">
+                <i class="icon-declare"></i><span>Decline all contracts</span>
+              </a>
+            </div>
+            <!-- end el__action__contract -->
+            <div class="el__action__show d-flex align-items-center">
+              <a href="#" class="btn"><span>Show All</span></a>
+              <a href="#" class="-reload d-flex align-items-center">
+                <i class="icon-reload"></i><span>RELOAD</span>
+              </a>
+            </div>
+            <!-- end el__action__show -->
+          </div>
+          <!-- end el__action -->
+
+          <div class="el__content">
+            <div class="-status"><i class="icon-security"></i>Running Security Intelligence Engine</div>
+            <div class="el__content__wrap d-flex flex-wrap justify-content-between">
+              <div class="el__content__board">
+                <div class="item d-flex align-items-center">
+                  <div class="item__name">DSToken</div>
+                  <div class="item__token -token">0xA618E54de493e...4eFbF6Ac17F7</div>
+                  <div class="item__status -scan d-flex align-items-center">
+                    <i class="icon-scan"></i>
+                    <span class="-txt">scanning...</span>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="item d-flex align-items-center">
+                  <div class="item__name">Unknown</div>
+                  <div class="item__token -token">0xA618E54de493e...4eFbF6Ac17F7</div>
+                  <div class="item__status d-flex align-items-center">
+                    <i class="icon-security"></i>
+                    <span class="-txt">COMPLETED</span>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="item d-flex align-items-center">
+                  <div class="item__name">RewardPool</div>
+                  <div class="item__token -token">0xA618E54de493e...4eFbF6Ac17F7</div>
+                  <div class="item__status d-flex align-items-center">
+                    <i class="icon-security"></i>
+                    <span class="-txt">COMPLETED</span>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="item d-flex align-items-center">
+                  <div class="item__name">RewardPool</div>
+                  <div class="item__token -token">0xA618E54de493e...4eFbF6Ac17F7</div>
+                  <div class="item__status d-flex align-items-center">
+                    <i class="icon-security"></i>
+                    <span class="-txt">COMPLETED</span>
+                  </div>
+                </div>
+                <!-- end item -->
+              </div>
+              <!-- end el__content__board -->
+              <div class="el__content__console">
+                <h3 class="-title"><i class="icon-code"></i><span>SAFE CONSOLE</span></h3>
+                <div class="cs__progress">
+                  <div class="cs__progress__txt">
+                    <span class="-txt">Scanning</span>
+                    <span class="-highlight">DSPause Contract</span>
+                    <span class="-token">0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB</span>
+                  </div>
+                  <!-- end progress__txt -->
+                  <div class="cs__progress__bar">
+                    <div class="bar" style="width: 12.5%;"></div>
+                  </div>
+                  <!-- progress__bar -->
+                  <div class="cs__progress__status d-flex align-items-center justify-content-between">
+                    <div class="cs__progress__step d-flex align-items-center">
+                      <span class="-step">[2/4]Checking</span>
+                      <span class="-txt ms-1">- contract variables..</span>
+                    </div>
+                    <div class="cs__progress__percent">12.50%</div>
+                  </div>
+                </div>
+                <!-- end progress -->
+              </div>
+              <!-- end el__content__console -->
+            </div>
+            <!-- end el__content__wrap -->
+          </div>
+          <!-- end el__content -->
+
+          <div class="el__note__approved text-center">
+            There are no approved contracts related to your current address.
+          </div>
+        </div>
+      </section>
+
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group scroll__wrap">
+                  <ul class="wallet-list scroll__wrap__content d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="submit"><span>Connect wallet</span></button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <div><a href="mailto:support@deffZone.com">Support@deffZone.com.</a></div>
+                    <div><a href="tel:+447458149855">+447458149855</a></div>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="https://docs.deffzone.com/" target="_blank">Document</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__content">
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="staking.html">Staking</a></li>
+            <li class="menu-item"><a href="farming.html">Farming</a></li>
+            <li class="menu-item js-toggle">
+              <a href="javascript: void(0);" class="js-toggle-btn">Swap</a>
+              <ul class="sub-menu js-toggle-show">
+                <li><a href="swap.html">Exchange</a></li>
+                <li><a href="liquidity.html">Liquidity</a></li>
+              </ul>
+            </li>
+            <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+          </ul>
+          <div class="languages ms-0 mt-3 mb-3">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+        </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

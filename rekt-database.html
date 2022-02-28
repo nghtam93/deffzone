@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | REKT Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css"/>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body class="rekt-database">
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item has-sub">
+                <a href="javascript: void(0);">Swap</a>
+                <ul class="sub-menu">
+                  <li><a href="swap.html">Exchange</a></li>
+                  <li><a href="liquidity.html">Liquidity</a></li>
+                </ul>
+              </li>
+              <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.0001951</span>
+          </div>
+
+          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="audit-detail database-detail el__wrap">
+        <div class="container">
+          <div class="database-detail__head">
+            <div class="el__header d-flex flex-wrap justify-content-between align-items-end">
+              <div class="el__header__title">
+                <h1 class="-title">REKT Database</h1>
+                <div class="-info">DeFi scams, hacks and exploits explained by Solidity Engineers.</div>
+              </div>
+            </div>
+            <!-- end el__header -->
+            <div class="el__note js-remove d-flex flex-wrap align-items-center justify-content-between">
+              <div class="el__note__txt">
+                <i class="icon-question-circle"></i>
+                <div class="-txt">
+                  Report a hack / scam / malicious project / questionable functions called and get a bonus from us!<br />
+                  <span>We appreciate community contribution. Press <span style="text-decoration: underline; cursor: pointer;">"Report claim"</span> and tell us who is gonna get REKT.</span>
+                </div>
+              </div>
+              <a href="#" class="close js-remove-btn"><i class="icon-close"></i></a>
+            </div>
+          </div>
+          <!-- end audit-detail__head -->
+
+          <div class="rekt-chart d-flex flex-wrap justify-content-between">
+            <div class="rekt-chart__item rekt-chart__wrap">
+              <img src="./images/rekt-chart-img01.png" alt="">
+            </div>
+            <div class="rekt-chart__item rekt-chart__info">
+              <h4 class="-title">Latest REKT reports</h4>
+              <div class="chart-report chart-report__slider">
+                <div class="item">
+                  <div class="item-title">Exit Scam <i class="icon-question-circle"></i></div>
+                  <div class="item-lost d-flex align-items-center justify-content-between">
+                    <div class="-archive d-flex align-items-center mr-2">
+                      <div class="-icon"><img src="./assets/img/pages/logo-raptor.png" alt=""></div>
+                      <a href="#" class="-name">Raptor2</a>
+                    </div>
+                    <div class="-lost -highlight">$83.9K Lost</div>
+                  </div>
+                  <!-- end item-lost -->
+                  <div class="item-footer d-flex align-items-center justify-content-between">
+                    <div class="-txt -highlight mr-2">CONFIRMED</div>
+                    <div class="-date">21.02.2022</div>
+                  </div>
+                  <!-- end item-footer -->
+                </div>
+                <!-- end item -->
+                <div class="item">
+                  <div class="item-title">Exit Scam <i class="icon-question-circle"></i></div>
+                  <div class="item-lost d-flex align-items-center justify-content-between">
+                    <div class="-archive d-flex align-items-center mr-2">
+                      <div class="-icon"><img src="./assets/img/pages/logo-dollardoge.jpeg" alt=""></div>
+                      <a href="#" class="-name">DollarDoge</a>
+                    </div>
+                    <div class="-lost -highlight">$193.7K Lost</div>
+                  </div>
+                  <!-- end item-lost -->
+                  <div class="item-footer d-flex align-items-center justify-content-between">
+                    <div class="-txt -highlight mr-2">CONFIRMED</div>
+                    <div class="-date">21.02.2022</div>
+                  </div>
+                  <!-- end item-footer -->
+                </div>
+                <!-- end item -->
+              </div>
+            </div>
+          </div>
+          <!-- rekt-chart -->
+
+          <div class="el__note js-remove d-flex flex-wrap align-items-center justify-content-between">
+            <div class="el__note__txt">
+              <i class="icon-question-circle"></i>
+              <div class="-txt">
+                Please be aware that audits may not include exploited or attacked smart contracts within their scope. These audits are included here for informational purposes only and should not be considered as a sign of the project's quality.
+              </div>
+            </div>
+            <a href="#" class="btn js-remove-btn"><span>GOT IT</span></a>
+          </div>
+          <!-- end el__note -->
+
+          <div class="el__filter">
+            <div class="el__filter__title d-flex flex-wrap align-items-center justify-content-between">
+              <div class="-title mr-5">REKT Database (2708)</div>
+              <a href="#" class="-reset -highlight my-2">Reset Filters</a>
+            </div>
+            <form action="#" method="post" class="wl__form">
+              <div class="dt__filter__search d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between">
+                <div class="dt__search">
+                  <div class="form-input">
+                    <input type="text" class="form-control" placeholder="Project name, token name / address /auditor">
+                    <i class="icon-search"></i>
+                  </div>
+                </div><!-- dt__search -->
+                <div class="dt__status">
+                  <input type="checkbox" id="centralized-exchanges-status">
+                  <label for="centralized-exchanges-status">Show Centralized Exchanges</label>
+                </div>
+              </div>
+              <!-- dt__filter__search -->
+              <div class="dt__filter__sort d-flex flex-wrap">
+                <div class="dt__sort">
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <input type="checkbox" name="audit-coin" class="js-checkbox-all" id="audit-coin-all">
+                            <label for="audit-coin-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-exit-scam" class="js-checkbox-item">
+                            <label for="audit-exit-scam">
+                              <i class="icon-check"></i>
+                              <span class="-name">Exit Scam</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-flash-loan" class="js-checkbox-item">
+                            <label for="audit-flash-loan">
+                              <i class="icon-check"></i>
+                              <span class="-name">Flash loan</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-exploit" class="js-checkbox-item">
+                            <label for="audit-exploit">
+                              <i class="icon-check"></i>
+                              <span class="-name">Exploit</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-abandoned" class="js-checkbox-item">
+                            <label for="audit-abandoned">
+                              <i class="icon-check"></i>
+                              <span class="-name">Abandoned</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+                <div class="dt__sort has-logo">
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <input type="checkbox" name="audit-auditor" class="js-checkbox-all" id="audit-auditor-all">
+                            <label for="audit-auditor-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-tech-audit" class="js-checkbox-item">
+                            <label for="auditor-tech-audit">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></span>
+                              <span class="-name">Tech Audit</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-chainsulting" class="js-checkbox-item">
+                            <label for="auditor-chainsulting">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></span>
+                              <span class="-name">Chainsulting</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-hacken" class="js-checkbox-item">
+                            <label for="auditor-hacken">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-hacken.png" alt=""></span>
+                              <span class="-name">Hacken</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-certik" class="js-checkbox-item">
+                            <label for="auditor-certik">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-certik.png" alt=""></span>
+                              <span class="-name">Certik</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+                <div class="dt__sort">
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <label for="audit-coin-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-addLiquidityETH" class="js-checkbox-item">
+                            <label for="audit-addLiquidityETH">
+                              <i class="icon-check"></i>
+                              <span class="-name">addLiquidityETH</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-swapExactTokensETH" class="js-checkbox-item">
+                            <label for="audit-swapExactTokensETH">
+                              <i class="icon-check"></i>
+                              <span class="-name">swapExactTokensETH</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-removeLiquidityETH" class="js-checkbox-item">
+                            <label for="audit-removeLiquidityETH">
+                              <i class="icon-check"></i>
+                              <span class="-name">removeLiquidityETH</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-mint" class="js-checkbox-item">
+                            <label for="audit-mint">
+                              <i class="icon-check"></i>
+                              <span class="-name">mint</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+                <div class="dt__sort has-logo">
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <input type="checkbox" name="audit-auditor" class="js-checkbox-all" id="audit-auditor-all">
+                            <label for="audit-auditor-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-tech-audit" class="js-checkbox-item">
+                            <label for="auditor-tech-audit">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></span>
+                              <span class="-name">Tech Audit</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-chainsulting" class="js-checkbox-item">
+                            <label for="auditor-chainsulting">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></span>
+                              <span class="-name">Chainsulting</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-hacken" class="js-checkbox-item">
+                            <label for="auditor-hacken">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-hacken.png" alt=""></span>
+                              <span class="-name">Hacken</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-certik" class="js-checkbox-item">
+                            <label for="auditor-certik">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-certik.png" alt=""></span>
+                              <span class="-name">Certik</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+              </div>
+            </form>
+          </div>
+          <!-- end el__filter -->
+
+          <div class="rekt-detail">
+            <div class="rekt-detail__head d-none d-md-grid">
+              <div class="item -project">PROJECT</div>
+              <div class="item -chain">CHAIN</div>
+              <div class="item -function">FUNCTION</div>
+              <div class="item -type">TYPE OF ISSUE</div>
+              <div class="item -lost">FUNDS LOST <i class="icon-arrow-down-tall"></i></div>
+              <div class="item -date">DATE</div>
+              <div class="item -detail">DETAILS</div>
+            </div>
+            <!-- end rekt-detail__head -->
+            <div class="rekt-detail__content">
+              <div class="rekt__item js-toggle">
+                <div class="item__head">
+                  <div class="item__head__item -project">
+                    <div class="-icon">
+                      <img src="./assets/img/pages/logo-polynetwork.jpeg" alt="">
+                      <span class="-numb -first">1</span>
+                    </div>
+                    <a href="#" class="-name">Poly Network</a>
+                  </div>
+                  <div class="item__head__item -chain" data-title="- CHAIN">
+                    <div class="-item">ETH</div>
+                  </div>
+                  <div class="item__head__item -function" data-title="- FUNCTION">
+                    <div class="-item"></div>
+                  </div>
+                  <div class="item__head__item -type" data-title="- ISSUE">
+                    <div class="-item">Exploit</div>
+                  </div>
+                  <div class="item__head__item -lost" data-title="- FUNDS LOST">
+                    <div class="-item -highlight">$602,189,570</div>
+                  </div>
+                  <div class="item__head__item -date" data-title="- DATE">
+                    <div class="-item">10.08.2021</div>
+                  </div>
+                  <div class="item__head__item -detail">
+                    <a href="#" class="js-toggle-btn"><i class="icon-arrow-down"></i></a>
+                  </div>
+                </div>
+                <!-- end item__head -->
+                <div class="item__content js-toggle-show">
+                  <div class="item__content__action d-flex justify-content-end">
+                    <a href="#" class="action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied" data-bs-original-title="" title="">
+                      <i class="icon-copy"></i><span>COPPY</span>
+                    </a>
+                    <div class="action__item js-dropdown">
+                      <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span>SHARE</span></a>
+                      <ul class="js-dropdown-list list-unstyled">
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end item__content__action -->
+                  <div class="item__content__info">
+                    <ul class="info-status list-unstyled d-flex flex-wrap">
+                      <li class="-complete">
+                        <span class="-title">Public Team</span>
+                        <i class="icon-check"></i>
+                      </li>
+                      <li class="-cancel">
+                        <span class="-title">Verified source code</span>
+                        <i class="icon-close"></i>
+                      </li>
+                      <li class="-complete">
+                        <span class="-title">Audited code matches with deployed smart contracts code</span>
+                        <i class="icon-check"></i>
+                      </li>
+                    </ul><!-- rekt-statuses -->
+                    <div class="info-return">
+                      <span class="-txt">Funds returned:</span>
+                      <span class="-numb -highlight">$602,189,570</span>
+                    </div><!-- end fund-return -->
+                    <div class="info-desc">
+                      <p>
+                        Polynetwork was hacked for $602M. The attacker used unverified bytecoded Proxy smart contracts on 3 chains. Malicious smart contracts:
+                      </p>
+                      <p>1. https://bscscan.com/address/0x7cea671dabfba880af6723bddd6b9f4caa15c87b#code</p>
+                      <p>2. https://polygonscan.com/address/0xabd7f7b89c5fd5d0aef06165f8173b1b83d7d5c9#code</p>
+                      <p>3. https://etherscan.io/address/0x838bf9e95cb12dd76a54c9f9d2e3082eaf928270#code</p>
+                      <p>The owner of the Proxy contract on ETH (which was used in the attack) is another bytecoded contract (https://etherscan.io/address/0x5a51E2ebF8D136926b9cA7b59B60464E7C44d2Eb) with the EOA ownership.</p>
+                      <p>
+                        EOA was previously funded from OKEX exchange:<br />
+                        https://etherscan.io/tx/0xe864536abe5440b56c9d0e600472519ed2eb84801507e24f8a6661f2c371be02
+                      </p>
+                      <p>Attacker’s addresses:</p>
+                      <p>
+                        Polygon:<br />
+                        https://polygonscan.com/address/0x5dc3603c9d42ff184153a8a9094a73d461663214
+                      </p>
+                      <p>
+                        Binance Smart Chain:<br />
+                        https://bscscan.com/address/0x0d6e286a7cfd25e0c01fee9756765d8033b32c71
+                      </p>
+                      <p>
+                        Ethereum:<br />
+                        https://etherscan.io/address/0xc8a65fadf0e0ddaf421f28feab69bf6e2e589963
+                      </p>
+                      <p>
+                        The attacker started to approve USDC and BUSD tokens in order to deposit them into Ellipsis stablecoin pool:<br />
+                        https://bscscan.com/tx/0x5fe51028a73821777c2dcaa575d73add58cac79b9f68504b85c4281bf691fce8<br />
+                        https://bscscan.com/tx/0x4c6eaf4b0c5e080f3547160c39dca23fdd0533e1db849b1c096bf6df2cab1ba4
+                      </p>
+                      <p>
+                        Deposited into Ellipsis stablecoin pool ($32,107,136.29 BUSD and $87,602,010.73 USDC):<br />
+                        https://bscscan.com/tx/0x6768b4848b6713347195330a1a31326d3c060a9a828d5b5ec51bc6653bcc9b4e
+                      </p>
+                      <p>
+                        The attacker started to approve USDC and DAI tokens in order to deposit them into Curve stablecoin pool:<br />
+                        https://etherscan.io/tx/0x6c0b80ddb2d706a1e4bfcdb1815e6d5999443f863a7e96b37460bde75b99683d<br />
+                        https://etherscan.io/tx/0xa51979f54f6c9a2883712f5e694d9c23cf11394982cce4119b70c254624b52ea
+                      </p>
+                      <p>
+                        Deposited into Curve stablecoin pool ($671,156.42 DAI and $96,299,898.44 USDC):<br />
+                        https://etherscan.io/tx/0xbc54deb446c8daa623611c062e2e49f374ef3a04ddb2a8f4b788c9e54eb14485
+                      </p>
+                      <p>
+                        remove_liquidity_one_coin() - $96,643,770.34 DAI was removed backed to the exploiter’s address:<br />
+                        https://etherscan.io/tx/0x2465d4cf19d3bf557ea5eec8d57b1ad75c8378e68ba242139e7e186bf463c1a1
+                      </p>
+                      <p>Stolen funds:</p>
+                      <p>
+                        ETH chain:<br />
+                        616,082.58 Fei USD ($614,628)<br />
+                        26,109.06 WETH ($82,374,869)<br />
+                        33,431,197.73 USDT ($33,239,073)<br />
+                        14.47 renBTC ($656,638)<br />
+                        259,737,345,149.51 SHIB ($1,999,977)<br />
+                        43,023.75 UNI ($1,247,688)<br />
+                        673,227.94 DAI  ($673,201)<br />
+                        1,032.12 WBTC ($46,946,198)<br />
+                        96,389,444.22 USDC ($96,375,567)
+                      </p>
+                      <p>
+                        BSC chain:<br />
+                        32,107,854.11 BUSD ($32,105,564)<br />
+                        1,023.88 BTCB ($46,574,710)<br />
+                        26,629.15 ETH ($83,821,409)<br />
+                        87,603,373.77 USDC ($87,600,346)
+                      </p>
+                      <p>
+                        Polygon chain:<br />
+                        85,089,610.911 USDC ($85,057,567)
+                      </p>
+                    </div><!-- end info-desc -->
+                    <ul class="info-link list-unstyled d-flex flex-wrap">
+                      <li><a href="#">Website</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Telegram</a></li>
+                    </ul>
+                  </div>
+                </div><!-- end item__content -->
+              </div><!-- end rekt__item -->
+
+              <div class="rekt__item js-toggle">
+                <div class="item__head">
+                  <div class="item__head__item -project">
+                    <div class="-icon">
+                      <img src="./assets/img/pages/logo-wormhole.jpeg" alt="">
+                      <span class="-numb -second">2</span>
+                    </div>
+                    <a href="#" class="-name">Wormhole</a>
+                  </div>
+                  <div class="item__head__item -chain" data-title="- CHAIN">
+                    <div class="-item">SOLANA</div>
+                  </div>
+                  <div class="item__head__item -function" data-title="- FUNCTION">
+                    <div class="-item"></div>
+                  </div>
+                  <div class="item__head__item -type" data-title="- ISSUE">
+                    <div class="-item">Exploit</div>
+                  </div>
+                  <div class="item__head__item -lost" data-title="- FUNDS LOST">
+                    <div class="-item -highlight">$326,000,000</div>
+                  </div>
+                  <div class="item__head__item -date" data-title="- DATE">
+                    <div class="-item">02.02.2022</div>
+                  </div>
+                  <div class="item__head__item -detail">
+                    <a href="#" class="js-toggle-btn"><i class="icon-arrow-down"></i></a>
+                  </div>
+                </div>
+                <!-- end item__head -->
+                <div class="item__content js-toggle-show">
+                  <div class="item__content__action d-flex justify-content-end">
+                    <a href="#" class="action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied" data-bs-original-title="" title="">
+                      <i class="icon-copy"></i><span>COPPY</span>
+                    </a>
+                    <div class="action__item js-dropdown">
+                      <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span>SHARE</span></a>
+                      <ul class="js-dropdown-list list-unstyled">
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end item__content__action -->
+                  <div class="item__content__info">
+                    <ul class="info-status list-unstyled d-flex flex-wrap">
+                      <li class="-complete">
+                        <span class="-title">Public Team</span>
+                        <i class="icon-check"></i>
+                      </li>
+                      <li class="-cancel">
+                        <span class="-title">Verified source code</span>
+                        <i class="icon-close"></i>
+                      </li>
+                      <li class="-complete">
+                        <span class="-title">Audited code matches with deployed smart contracts code</span>
+                        <i class="icon-check"></i>
+                      </li>
+                    </ul><!-- rekt-statuses -->
+                    <div class="info-desc">
+                      <p>
+                        The attacker's addresses:<br>
+                        https://etherscan.io/address/0x629e7da20197a5429d30da36e77d06cdf796b71a<br>
+                        https://solscan.io/account/CxegPrfn2ge5dNiQberUrQJkHCcimeR4VXkeawcFBBka
+                      </p>
+                      <p>
+                        1. The attacker minted 120,000 wETH on Solana:<br>
+                        https://solscan.io/tx/2zCz2GgSoSS68eNJENWrYB48dMM1zmH8SZkgYneVDv2G4gRsVfwu5rNXtK5BKFxn7fSqX9BvrBc1rdPAeBEcD6Es
+                      </p>
+                      <p>
+                        2. The attacker redeemed 93,750 wETH for ETH worth $254 million onto the Ethereum:<br>
+                        https://etherscan.io/tx/0x24c7d855a0a931561e412d809e2596c3fd861cc7385566fd1cb528f9e93e5f14
+                      </p>
+                      <p>
+                        3. The hacker used some funds to buy SportX ($SX), Meta Capital ($MCAP), Finally Usable Crypto Karma ($FUCK), and Bored Ape Yacht Club Token ($APE), the example transactions:<br>
+                        https://etherscan.io/tx/0x8ab3c4adab6d1a21ec1fcd7dc96523e7dada92d1373ee6919aa6b10b51ebe8d1<br>
+                        https://etherscan.io/tx/0x697869218add15e019f7a1904b7c3b435f9048ec3bcb9c84cf23e64916a41add<br>
+                        https://etherscan.io/tx/0x6f17f122dca10e9c894af3766d93e97c08f8925eb3a20b894b810edb3d029ed0<br>
+                        https://etherscan.io/tx/0x57a48345888cbfb2d442f272c6fd9d38f57f6f5608c00c4978860eea7dc927c
+                      </p>
+                      <p>
+                        4. The remaining wETH was swapped for SOL and USDC on Solana. The hacker’s Solana wallet currently holds 432,662 SOL ($44 million):<br>
+                        https://solscan.io/account/CxegPrfn2ge5dNiQberUrQJkHCcimeR4VXkeawcFBBka#splTransfers
+                      </p>
+                      <p>
+                        Probably the issue was in the signature verification process. So it lead to an unverified call by the attacker.
+                      </p>
+                    </div><!-- end info-desc -->
+                    <ul class="info-link list-unstyled d-flex flex-wrap">
+                      <li><a href="#">Website</a></li>
+                      <li><a href="#">Source 1</a></li>
+                      <li><a href="#">Source 2</a></li>
+                      <li><a href="#">Source 3</a></li>
+                      <li><a href="#">Telegram</a></li>
+                    </ul>
+                  </div>
+                </div><!-- end item__content -->
+              </div><!-- end rekt__item -->
+
+              <div class="rekt__item js-toggle">
+                <div class="item__head">
+                  <div class="item__head__item -project">
+                    <div class="-icon">
+                      <img src="./assets/img/pages/logo-vulcan-forged.jpeg" alt="">
+                      <span class="-numb -third">3</span>
+                    </div>
+                    <a href="#" class="-name">Vulcan Forged</a>
+                  </div>
+                  <div class="item__head__item -chain" data-title="- CHAIN">
+                    <div class="-item">ETH</div>
+                    <div class="-item">POLYGON</div>
+                  </div>
+                  <div class="item__head__item -function" data-title="- FUNCTION">
+                    <div class="-item"></div>
+                  </div>
+                  <div class="item__head__item -type" data-title="- ISSUE">
+                    <div class="-item">Access control</div>
+                  </div>
+                  <div class="item__head__item -lost" data-title="- FUNDS LOST">
+                    <div class="-item -highlight">$140,000,000</div>
+                  </div>
+                  <div class="item__head__item -date" data-title="- DATE">
+                    <div class="-item">12.12.2021</div>
+                  </div>
+                  <div class="item__head__item -detail">
+                    <a href="#" class="js-toggle-btn"><i class="icon-arrow-down"></i></a>
+                  </div>
+                </div>
+                <!-- end item__head -->
+                <div class="item__content js-toggle-show">
+                  <div class="item__content__action d-flex justify-content-end">
+                    <a href="#" class="action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied" data-bs-original-title="" title="">
+                      <i class="icon-copy"></i><span>COPPY</span>
+                    </a>
+                    <div class="action__item js-dropdown">
+                      <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span>SHARE</span></a>
+                      <ul class="js-dropdown-list list-unstyled">
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end item__content__action -->
+                  <div class="item__content__info">
+                    <ul class="info-status list-unstyled d-flex flex-wrap">
+                      <li class="-complete">
+                        <span class="-title">Public Team</span>
+                        <i class="icon-check"></i>
+                      </li>
+                      <li class="-cancel">
+                        <span class="-title">Verified source code</span>
+                        <i class="icon-close"></i>
+                      </li>
+                      <li class="-complete">
+                        <span class="-title">Audited code matches with deployed smart contracts code</span>
+                        <i class="icon-check"></i>
+                      </li>
+                    </ul><!-- rekt-statuses -->
+                    <div class="info-desc">
+                      <p>
+                        Vulcan Forged creates wallets on behalf of its users and stores private keys on their own side. As a result, the leak of access to the private keys has affected 96 wallets, and based on the token price during the hack, victims suffered a $140m total loss. Assets including ETH and MATIC have also been taken out.
+                      </p>
+                      <p>The hacker's address:</p>
+                      <p>
+                        Polygon<br />https://polygonscan.com/address/0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1
+                      </p>
+                      <p>
+                        96 transactions, where the hacker steals PYR token:<br />
+                        https://explorer.bitquery.io/matic/txs/transfers?receiver=0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1&currency=0x348e62131fce2f4e0d5ead3fe1719bc039b380a9
+                      </p>
+                      <p>
+                        Transactions, where PYR token was exchanged for MATIC, which later was distributed between external wallets:<br />
+                        https://explorer.bitquery.io/matic/txs/transfers?receiver=0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1&currency=MATIC
+                      </p>
+                      <p>
+                        Ethereum<br />https://etherscan.io/address/0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1
+                      </p>
+                      <p>
+                        Selling on Ethereum:<br />
+                        https://bloxy.info/txs/calls_from/0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1?signature_id=1493863&smart_contract_address_bin=0x1111111254fb6c44bac0bed2854e76f90643097d
+                      </p>
+                      <p>
+                        https://bloxy.info/txs/calls_from/0x48ad05a3b73c9e7fac5918857687d6a11d2c73b1?signature_id=1493862&smart_contract_address_bin=0x1111111254fb6c44bac0bed2854e76f90643097d
+                      </p>
+                      <p>
+                        Part of the stolen funds was distributed between different external wallets as well as the other one was sold on Uniswap and Quickswap.
+                      </p>
+                      <p>
+                        2,000,000 PYR tokens are still held on this wallet:<br />
+                        https://etherscan.io/address/0xe3cd90be37a79d9da86b5e14e2f6042cd0e53b66#tokentxns
+                      </p>
+                    </div><!-- end info-desc -->
+                    <ul class="info-link list-unstyled d-flex flex-wrap">
+                      <li><a href="#">Website</a></li>
+                      <li><a href="#">Token Contract Address</a></li>
+                      <li><a href="#">Source</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Telegram</a></li>
+                    </ul>
+                  </div>
+                </div><!-- end item__content -->
+              </div><!-- end rekt__item -->
+
+              <div class="rekt__item js-toggle">
+                <div class="item__head">
+                  <div class="item__head__item -project">
+                    <div class="-icon">
+                      <img src="./assets/img/pages/logo-badgerdao.jpeg" alt="">
+                    </div>
+                    <a href="#" class="-name">BadgerDAO</a>
+                  </div>
+                  <div class="item__head__item -chain" data-title="- CHAIN">
+                    <div class="-item">ETH</div>
+                  </div>
+                  <div class="item__head__item -function" data-title="- FUNCTION">
+                    <div class="-item">increaseAllowance()</div>
+                    <div class="-item">transferForm()</div>
+                  </div>
+                  <div class="item__head__item -type" data-title="- ISSUE">
+                    <div class="-item">Exploit</div>
+                  </div>
+                  <div class="item__head__item -lost" data-title="- FUNDS LOST">
+                    <div class="-item -highlight">$120,285,547</div>
+                  </div>
+                  <div class="item__head__item -date" data-title="- DATE">
+                    <div class="-item">02.12.2021</div>
+                  </div>
+                  <div class="item__head__item -detail">
+                    <a href="#" class="js-toggle-btn"><i class="icon-arrow-down"></i></a>
+                  </div>
+                </div>
+                <!-- end item__head -->
+                <div class="item__content js-toggle-show">
+                  <div class="item__content__action d-flex justify-content-end">
+                    <a href="#" class="action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied" data-bs-original-title="" title="">
+                      <i class="icon-copy"></i><span>COPPY</span>
+                    </a>
+                    <div class="action__item js-dropdown">
+                      <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span>SHARE</span></a>
+                      <ul class="js-dropdown-list list-unstyled">
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end item__content__action -->
+                  <div class="item__content__info">
+                    <ul class="info-status list-unstyled d-flex flex-wrap">
+                      <li class="-complete">
+                        <span class="-title">Public Team</span>
+                        <i class="icon-check"></i>
+                      </li>
+                      <li class="-cancel">
+                        <span class="-title">Verified source code</span>
+                        <i class="icon-close"></i>
+                      </li>
+                      <li class="-complete">
+                        <span class="-title">Audited code matches with deployed smart contracts code</span>
+                        <i class="icon-check"></i>
+                      </li>
+                    </ul><!-- rekt-statuses -->
+                    <div class="info-desc">
+                      <p>
+                        The attacker's address:<br />https://etherscan.io/address/0x1FCdb04d0C5364FBd92C73cA8AF9BAA72c269107
+                      </p>
+                      <p>
+                        The attacker exploited the front end of the BadgerDAO dApp. Many impacted users alleged that while receiving yield farming rewards and engaging with Badger vaults, their wallet providers prompted them with spurious requests for extra permissions.
+                      </p>
+                      <p>
+                        One of the most affected users (896 Badger WBTC):<br />
+                        https://etherscan.io/address/0x53461e4fddcc1385f1256ae24ce3505be664f249
+                      </p>
+                      <p>
+                        The following transaction shows that this user invokes additional approval for spending tokens for the attacker's address inside increaseAllowance() function:<br />
+                        https://etherscan.io/tx/0x5e4c7966b0eaddaf63f1c89fc1c4c84812905ea79c6bee9d2ada2d2e5afe1f34
+                      </p>
+                      <p>
+                        After that, the attacker can withdraw users' funds using transferFrom() function, for example:<br />
+                        https://etherscan.io/tx/0xe4e152f5327cb1341970f73c6e91cc9a1de3eb90e8bb84361fc306f912828126
+                      </p>
+                      <p>
+                        Stolen funds are calculated up to $120m at the moment.
+                      </p>
+                      <p>
+                        Approximately 500+ users were affected, based on the Bloxy data:<br />
+                        https://bloxy.info/txs/references_address/0x1fcdb04d0c5364fbd92c73ca8af9baa72c269107?argument=spender&signature_id=5
+                      </p>
+                    </div><!-- end info-desc -->
+                    <ul class="info-link list-unstyled d-flex flex-wrap">
+                      <li><a href="#">Website</a></li>
+                      <li><a href="#">Token Contract Address</a></li>
+                      <li><a href="#">Source 1</a></li>
+                      <li><a href="#">Source 2</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Telegram</a></li>
+                    </ul>
+                  </div>
+                </div><!-- end item__content -->
+              </div><!-- end rekt__item -->
+            </div><!-- end rekt-detail__content -->
+          </div><!-- end rekt-detail -->
+
+          <div class="audit-detail__pagination d-flex justify-content-between align-items-center">
+            <div class="show-with-numb d-flex align-items-center me-4">
+              <div class="-txt me-2">Show</div>
+              <div class="js-dropdown">
+                <div class="js-dropdown-selected">
+                  <a href="#" class="d-flex align-items-center"><span>10</span></a>
+                  <i class="-arrow icon-arrow-down"></i>
+                </div>
+                <ul class="js-dropdown-list list-unstyled">
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">20</a></li>
+                  <li><a href="#">50</a></li>
+                  <li><a href="#">100</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- end show-with-numb -->
+            <div class="pagination d-flex align-items-center">
+              <div class="-txt me-2">Page</div>
+              <div class="pagination__wrap d-flex align-items-center">
+                <a href="#" class="-arrow -left me-2"><i class="icon-arrow-left"></i></a>
+                <div class="-count d-flex align-items-center">
+                  <input type="number" class="-count__input" value="1">
+                  <span class="-count__numb ms-1">/ 100</span>
+                </div>
+                <a href="#" class="-arrow -right ms-2"><i class="icon-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- end audit-detail__pagination -->
+        </div>
+      </section>
+
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group scroll__wrap">
+                  <ul class="wallet-list scroll__wrap__content d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="submit"><span>Connect wallet</span></button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <div><a href="mailto:support@deffZone.com">Support@deffZone.com.</a></div>
+                    <div><a href="tel:+447458149855">+447458149855</a></div>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="https://docs.deffzone.com/" target="_blank">Document</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__content">
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="staking.html">Staking</a></li>
+            <li class="menu-item"><a href="farming.html">Farming</a></li>
+            <li class="menu-item js-toggle">
+              <a href="javascript: void(0);" class="js-toggle-btn">Swap</a>
+              <ul class="sub-menu js-toggle-show">
+                <li><a href="swap.html">Exchange</a></li>
+                <li><a href="liquidity.html">Liquidity</a></li>
+              </ul>
+            </li>
+            <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+          </ul>
+          <div class="languages ms-0 mt-3 mb-3">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+        </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/chartjs/Chart.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

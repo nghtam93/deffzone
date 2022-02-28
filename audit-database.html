@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeffZone | Audit Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image-featured.jpg">
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="loading-page">
+        <div class="loading-page__logo">
+          <img src="images/logo.png" alt="Logo">
+          <div class="text-center mt-3">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <header class="header -fix">
+        <div class="container d-flex align-items-center">
+
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </h1> <!-- .logo -->
+
+          <div class="languages ms-lg-4 d-none d-sm-block">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <nav class="main__nav d-none d-lg-block">
+            <ul class="el__menu">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="staking.html">Staking</a></li>
+              <li class="menu-item"><a href="farming.html">Farming</a></li>
+              <li class="menu-item has-sub">
+                <a href="javascript: void(0);">Swap</a>
+                <ul class="sub-menu">
+                  <li><a href="swap.html">Exchange</a></li>
+                  <li><a href="liquidity.html">Liquidity</a></li>
+                </ul>
+              </li>
+              <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__price ms-auto">
+            <img src="assets/img/header-price-img.png" width="28" height="28" alt="">
+            <span class="">$0.0001951</span>
+          </div>
+
+          <a href="#" class="btn -wallet d-none d-lg-inline-block" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+
+          <div class="d-lg-none d-lg-none">
+            <div class="menu-mb__btn">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="audit-detail database-detail el__wrap">
+        <div class="container">
+          <div class="database-detail__head">
+            <div class="el__header d-flex flex-wrap justify-content-between align-items-end">
+              <div class="el__header__title">
+                <h1 class="-title">Audit Database</h1>
+                <div class="-info">The largest database of DeFi project audits is all free to use.</div>
+              </div>
+              <div class="el__header__count d-flex">
+                <span class="-txt">Projects Audited:</span>
+                <span class="-numb -highlight">4664</span>
+              </div>
+            </div>
+            <!-- end el__header -->
+            <div class="el__note js-remove d-flex flex-wrap align-items-center justify-content-between">
+              <div class="el__note__txt">
+                <i class="icon-question-circle"></i>
+                <div class="-txt">
+                  The audits in this database come from blockchain security experts that have reached DEFIYIELD's due diligence and security standards. As a result, audits by TechRate and other providers have not been included.
+                </div>
+              </div>
+              <a href="#" class="btn js-remove-btn"><span>GOT IT</span></a>
+            </div>
+            <!-- end el__note -->
+            <div class="el__filter">
+              <form action="#" method="post" class="wl__form d-flex justify-content-between flex-wrap flex-lg-nowrap">
+                <div class="dt__search">
+                  <label for="wl__search_farms" class="form-label mb-2">Search</label>
+                  <div class="form-input">
+                    <input type="text" class="form-control" placeholder="Project name, token name / address /auditor">
+                    <i class="icon-search"></i>
+                  </div>
+                </div><!-- dt__search -->
+                <div class="dt__sort">
+                  <label class="form-label mb-2">Ethereum (+18)</label>
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <input type="checkbox" name="audit-coin" class="js-checkbox-all" id="audit-coin-all">
+                            <label for="audit-coin-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-ethereum" class="js-checkbox-item">
+                            <label for="audit-ethereum">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-eth-light.png" alt=""></span>
+                              <span class="-name">Ethereum</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-bnb" class="js-checkbox-item">
+                            <label for="audit-bnb">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></span>
+                              <span class="-name">Binance</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-coin" id="audit-okexchain" class="js-checkbox-item">
+                            <label for="audit-okexchain">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-okexchain-light.png" alt=""></span>
+                              <span class="-name">OKexChain</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item -coming">
+                            <input type="checkbox" name="audit-coin" id="audit-near" class="js-checkbox-item">
+                            <label for="audit-near">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-near.png" alt=""></span>
+                              <span class="-name">Near</span>
+                              <span class="-numb">coming soon</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+                <div class="dt__sort">
+                  <label class="form-label mb-2">Defiyield (+91)</label>
+                  <div class="js-dropdown">
+                    <div class="js-dropdown-selected">
+                      <a href="#" class="form-control has-numb d-flex align-items-center justify-content-between">
+                        <span>Select all</span><span class="numb ms-2"></span>
+                      </a>
+                      <i class="-arrow icon-arrow-down"></i>
+                    </div>
+                    <div class="js-dropdown-list">
+                      <div class="dr__form">
+                        <i class="icon-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="scroll__wrap">
+                        <ul class="scroll__wrap__content list-unstyled">
+                          <li class="dr__title dr__title__checkbox">
+                            <input type="checkbox" name="audit-auditor" class="js-checkbox-all" id="audit-auditor-all">
+                            <label for="audit-auditor-all">
+                              <i class="icon-check"></i>
+                              <span>Select all</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-tech-audit" class="js-checkbox-item">
+                            <label for="auditor-tech-audit">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></span>
+                              <span class="-name">Tech Audit</span>
+                              <span class="-numb">(1017)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-chainsulting" class="js-checkbox-item">
+                            <label for="auditor-chainsulting">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></span>
+                              <span class="-name">Chainsulting</span>
+                              <span class="-numb">(1072)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-hacken" class="js-checkbox-item">
+                            <label for="auditor-hacken">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-hacken.png" alt=""></span>
+                              <span class="-name">Hacken</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <input type="checkbox" name="audit-auditor" id="auditor-certik" class="js-checkbox-item">
+                            <label for="auditor-certik">
+                              <i class="icon-check"></i>
+                              <span class="-img"><img src="./assets/img/pages/logo-certik.png" alt=""></span>
+                              <span class="-name">Certik</span>
+                              <span class="-numb">(6)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- dt__sort -->
+              </form>
+            </div>
+          </div>
+          <!-- end audit-detail__head -->
+
+          <div class="audit-detail__list">
+            <div class="ad__item js-toggle">
+              <div class="ad__item__head">
+                <div class="item-icon"><img src="./assets/img/pages/logo-0x-nodes.png" alt=""></div>
+                <div class="item-name">0x_Nodes</div>
+                <div class="item-info d-flex flex-wrap">
+                  <ul class="item-info__item item-info__list list-unstyled d-flex align-items-center">
+                    <li>ETH</li>
+                    <li>BSC</li>
+                  </ul>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__token d-flex align-items-center">
+                    <div class="-ticker d-flex align-items-center">
+                      <span class="me-2">TSHP</span>
+                      <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="explore on Etherscan">
+                        <img src="./assets/img/pages/icon-chart-circle.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__auditors d-flex align-items-center">
+                    <div class="auditor-item">
+                      <span class="-name">Tech Audit:</span>
+                      <span class="-numb -highlight">12</span>
+                    </div>
+                    <div class="auditor-item -more">
+                      <span class="d-flex align-items-center">+2 others<i class="icon-arrow-down"></i></span>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                </div>
+                <!-- end item-info -->
+                <div class="item-action d-flex align-items-center justify-content-end">
+                  <a href="#" class="item-action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied">
+                    <i class="icon-copy"></i><span class="d-none d-lg-inline-block">COPPY</span>
+                  </a>
+                  <div class="item-action__item -action js-dropdown">
+                    <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span class="d-none d-lg-inline-block">SHARE</span></a>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="item-action__item -arrow js-toggle-btn is-active"><i class="icon-arrow-down"></i></a>
+                </div>
+                <!-- end item-action -->
+              </div>
+              <!-- end ad__item__head -->
+              <div class="ad__item__content js-toggle-show is-active" style="display: block;">
+                <div class="adt__head d-none d-md-grid">
+                  <div class="adt__head__item">AUDITOR</div>
+                  <div class="adt__head__item">ISSUES</div>
+                  <div class="adt__head__item">CHAIN</div>
+                  <div class="adt__head__item">REVISION DATE</div>
+                  <div class="adt__head__item">DOWNLOAD</div>
+                </div>
+                <!-- end adt__head -->
+                <div class="adt__content">
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Tech Audit</a>
+                      </div>
+                      <div class="adt__content__item -issues low" data-title="- ISSUES:">0</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                        <div class="-item">ETH</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Chainsulting</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-hacken.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Hacken</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                </div>
+                <!-- end adt__content -->
+              </div>
+              <!-- end ad__item__content -->
+            </div>
+            <!-- end ad__item -->
+            <div class="ad__item js-toggle">
+              <div class="ad__item__head">
+                <div class="item-icon"><img src="./assets/img/pages/logo-1inch.png" alt=""></div>
+                <div class="item-name">1inch Exchange</div>
+                <div class="item-info d-flex flex-wrap">
+                  <ul class="item-info__item item-info__list list-unstyled d-flex align-items-center">
+                    <li>ETH</li>
+                    <li>BSC</li>
+                  </ul>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__token d-flex align-items-center">
+                    <div class="-ticker d-flex align-items-center">
+                      <span class="me-2">TSHP</span>
+                      <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="explore on Etherscan">
+                        <img src="./assets/img/pages/icon-chart-circle.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__auditors d-flex align-items-center">
+                    <div class="auditor-item">
+                      <span class="-name">Certik:</span>
+                      <span class="-numb -highlight">8</span>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                </div>
+                <!-- end item-info -->
+                <div class="item-action d-flex align-items-center justify-content-end">
+                  <a href="#" class="item-action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied">
+                    <i class="icon-copy"></i><span class="d-none d-lg-inline-block">COPPY</span>
+                  </a>
+                  <div class="item-action__item -action js-dropdown">
+                    <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span class="d-none d-lg-inline-block">SHARE</span></a>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="item-action__item -arrow js-toggle-btn is-active"><i class="icon-arrow-down"></i></a>
+                </div>
+                <!-- end item-action -->
+              </div>
+              <!-- end ad__item__head -->
+              <div class="ad__item__content js-toggle-show is-active" style="display: block;">
+                <div class="adt__head d-none d-md-grid">
+                  <div class="adt__head__item">AUDITOR</div>
+                  <div class="adt__head__item">ISSUES</div>
+                  <div class="adt__head__item">CHAIN</div>
+                  <div class="adt__head__item">REVISION DATE</div>
+                  <div class="adt__head__item">DOWNLOAD</div>
+                </div>
+                <!-- end adt__head -->
+                <div class="adt__content">
+                  <div class="adt__item js-toggle">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-certik.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Certik</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">8</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                        <div class="-item">ETH</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank" class="-report js-toggle-btn">2 reports<i class="icon-arrow-down"></i></a>
+                      </div>
+                    </div>
+                    <div class="adt__item__child js-toggle-show">
+                      <div class="adt__item__wrap">
+                        <div class="adt__content__item -auditor">
+                          <div class="-icon -docs"><i class="icon-document"></i></div>
+                          <span class="-name">1Inch Mooniswap V2 & 1INCH Token</span>
+                        </div>
+                        <div class="adt__content__item -issues" data-title="- ISSUES:">4</div>
+                        <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                          <div class="-item">BSC</div>
+                        </div>
+                        <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                        <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                          <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                        </div>
+                      </div>
+                      <!-- end adt__item__wrap -->
+                      <div class="adt__item__wrap">
+                        <div class="adt__content__item -auditor">
+                          <div class="-icon -docs"><i class="icon-document"></i></div>
+                          <span class="-name">1Inch Mooniswap V2 & 1INCH Token</span>
+                        </div>
+                        <div class="adt__content__item -issues" data-title="- ISSUES:">4</div>
+                        <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                          <div class="-item">BSC</div>
+                        </div>
+                        <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                        <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                          <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                        </div>
+                      </div>
+                      <!-- end adt__item__wrap -->
+                    </div>
+                    <!-- end adt__item__child -->
+                  </div>
+                  <!-- end adt__item -->
+                </div>
+                <!-- end adt__content -->
+              </div>
+              <!-- end ad__item__content -->
+            </div>
+            <!-- end ad__item -->
+            <div class="ad__item js-toggle">
+              <div class="ad__item__head">
+                <div class="item-icon"><img src="./assets/img/pages/logo-2key.png" alt=""></div>
+                <div class="item-name">2key.network</div>
+                <div class="item-info d-flex flex-wrap">
+                  <ul class="item-info__item item-info__list list-unstyled d-flex align-items-center">
+                    <li>ETH</li>
+                    <li>BSC</li>
+                  </ul>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__token d-flex align-items-center">
+                    <div class="-ticker d-flex align-items-center">
+                      <span class="me-2">TSHP</span>
+                      <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="explore on Etherscan">
+                        <img src="./assets/img/pages/icon-chart-circle.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__auditors d-flex align-items-center">
+                    <div class="auditor-item">
+                      <span class="-name">Certik:</span>
+                      <span class="-numb -highlight">8</span>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                </div>
+                <!-- end item-info -->
+                <div class="item-action d-flex align-items-center justify-content-end">
+                  <a href="#" class="item-action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied">
+                    <i class="icon-copy"></i><span class="d-none d-lg-inline-block">COPPY</span>
+                  </a>
+                  <div class="item-action__item -action js-dropdown">
+                    <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span class="d-none d-lg-inline-block">SHARE</span></a>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="item-action__item -arrow js-toggle-btn is-active"><i class="icon-arrow-down"></i></a>
+                </div>
+                <!-- end item-action -->
+              </div>
+              <!-- end ad__item__head -->
+              <div class="ad__item__content js-toggle-show is-active" style="display: block;">
+                <div class="adt__head d-none d-md-grid">
+                  <div class="adt__head__item">AUDITOR</div>
+                  <div class="adt__head__item">ISSUES</div>
+                  <div class="adt__head__item">CHAIN</div>
+                  <div class="adt__head__item">REVISION DATE</div>
+                  <div class="adt__head__item">DOWNLOAD</div>
+                </div>
+                <!-- end adt__head -->
+                <div class="adt__content">
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Tech Audit</a>
+                      </div>
+                      <div class="adt__content__item -issues low" data-title="- ISSUES:">0</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                        <div class="-item">ETH</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Chainsulting</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-hacken.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Hacken</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                </div>
+                <!-- end adt__content -->
+              </div>
+              <!-- end ad__item__content -->
+            </div>
+            <!-- end ad__item -->
+            <div class="ad__item js-toggle">
+              <div class="ad__item__head">
+                <div class="item-icon"><img src="./assets/img/pages/logo-2local.png" alt=""></div>
+                <div class="item-name">2local</div>
+                <div class="item-info d-flex flex-wrap">
+                  <ul class="item-info__item item-info__list list-unstyled d-flex align-items-center">
+                    <li>ETH</li>
+                    <li>BSC</li>
+                  </ul>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__token d-flex align-items-center">
+                    <div class="-ticker d-flex align-items-center">
+                      <span class="me-2">TSHP</span>
+                      <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="explore on Etherscan">
+                        <img src="./assets/img/pages/icon-chart-circle.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                  <div class="item-info__item item-info__auditors d-flex align-items-center">
+                    <div class="auditor-item">
+                      <span class="-name">Certik:</span>
+                      <span class="-numb -highlight">8</span>
+                    </div>
+                  </div>
+                  <!-- end item-info__item -->
+                </div>
+                <!-- end item-info -->
+                <div class="item-action d-flex align-items-center justify-content-end">
+                  <a href="#" class="item-action__item -action js-copy" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Copied">
+                    <i class="icon-copy"></i><span class="d-none d-lg-inline-block">COPPY</span>
+                  </a>
+                  <div class="item-action__item -action js-dropdown">
+                    <a href="#" class="js-dropdown-selected"><i class="icon-share"></i><span class="d-none d-lg-inline-block">SHARE</span></a>
+                    <ul class="js-dropdown-list list-unstyled">
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-link"></i><span>Copy Direct Link</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+                      <li><a href="#" class="d-flex align-items-center"><i class="icon-telegram"></i><span>Share on Telegram</span></a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="item-action__item -arrow js-toggle-btn is-active"><i class="icon-arrow-down"></i></a>
+                </div>
+                <!-- end item-action -->
+              </div>
+              <!-- end ad__item__head -->
+              <div class="ad__item__content js-toggle-show is-active" style="display: block;">
+                <div class="adt__head d-none d-md-grid">
+                  <div class="adt__head__item">AUDITOR</div>
+                  <div class="adt__head__item">ISSUES</div>
+                  <div class="adt__head__item">CHAIN</div>
+                  <div class="adt__head__item">REVISION DATE</div>
+                  <div class="adt__head__item">DOWNLOAD</div>
+                </div>
+                <!-- end adt__head -->
+                <div class="adt__content">
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-tech-audit.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Tech Audit</a>
+                      </div>
+                      <div class="adt__content__item -issues low" data-title="- ISSUES:">0</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                        <div class="-item">ETH</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-chainsulting.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Chainsulting</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                  <div class="adt__item">
+                    <div class="adt__item__wrap">
+                      <div class="adt__content__item -auditor">
+                        <div class="-icon"><img src="./assets/img/pages/logo-hacken.png" alt=""></div>
+                        <a href="#" class="-name" target="_blank">Hacken</a>
+                      </div>
+                      <div class="adt__content__item -issues" data-title="- ISSUES:">6</div>
+                      <div class="adt__content__item -chain d-flex flex-wrap" data-title="- CHAIN:">
+                        <div class="-item">BSC</div>
+                      </div>
+                      <div class="adt__content__item -revision" data-title="- REVISION DATE:">05.05.2021</div>
+                      <div class="adt__content__item -download" data-title="- DOWNLOAD:">
+                        <a href="#" target="_blank"><i class="icon-pdf"></i><span>Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end adt__item -->
+                </div>
+                <!-- end adt__content -->
+              </div>
+              <!-- end ad__item__content -->
+            </div>
+            <!-- end ad__item -->
+          </div>
+          <!-- end audit-detail__list -->
+
+          <div class="audit-detail__pagination d-flex justify-content-between align-items-center">
+            <div class="show-with-numb d-flex align-items-center me-4">
+              <div class="-txt me-2">Show</div>
+              <div class="js-dropdown">
+                <div class="js-dropdown-selected">
+                  <a href="#" class="d-flex align-items-center"><span>10</span></a>
+                  <i class="-arrow icon-arrow-down"></i>
+                </div>
+                <ul class="js-dropdown-list list-unstyled">
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">20</a></li>
+                  <li><a href="#">50</a></li>
+                  <li><a href="#">100</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- end show-with-numb -->
+            <div class="pagination d-flex align-items-center">
+              <div class="-txt me-2">Page</div>
+              <div class="pagination__wrap d-flex align-items-center">
+                <a href="#" class="-arrow -left me-2"><i class="icon-arrow-left"></i></a>
+                <div class="-count d-flex align-items-center">
+                  <input type="number" class="-count__input" value="1">
+                  <span class="-count__numb ms-1">/ 100</span>
+                </div>
+                <a href="#" class="-arrow -right ms-2"><i class="icon-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- end audit-detail__pagination -->
+        </div>
+      </section>
+
+      <!-- modal connect wallet -->
+      <div class="modal fade wl__modal -connect" id="connectWallet" tabindex="-1" aria-labelledby="connectWalletTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header -border -border__bottom">
+              <h3 class="modal-title" id="connectWalletTitle">Connect wallet</h3>
+              <button type="button" class="-close" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="wl__form js-attr-disable">
+                <div class="form-group scroll__wrap">
+                  <ul class="wallet-list scroll__wrap__content d-flex flex-wrap justify-content-between">
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__metamask" class="-check js-attr-checkbox">
+                      <label for="wl__metamask" class="-name order-last order-md-first"><span>Metamask</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-metamask.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__bnb" class="-check js-attr-checkbox">
+                      <label for="wl__bnb" class="-name order-last order-md-first"><span>Binance Smart Chain</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-bnb-light.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__eth" class="-check js-attr-checkbox">
+                      <label for="wl__eth" class="-name order-last order-md-first"><span>Ethereum</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-eth.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                    <li class="tk__item d-flex flex-column flex-md-row align-items-between align-items-md-center justify-content-between">
+                      <input type="radio" name="token" id="wl__usdt" class="-check js-attr-checkbox">
+                      <label for="wl__usdt" class="-name order-last order-md-first"><span>Deff</span></label>
+                      <div class="-logo d-flex align-items-center justify-content-start justify-content-md-center mb-3 mb-md-0"><img src="./assets/img/pages/logo-deffzone.png" alt=""></div>
+                    </li><!-- end tk__item -->
+                  </ul>
+                </div><!-- end form-group -->
+                <button class="btn -wallet -submit -disabled js-attr-button" disabled type="submit"><span>Connect wallet</span></button>
+                <div class="-note text-center">No wallet found. Make sure extension is installed.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal connect wallet -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <div class="footer__item">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="images/footer-logo.png" alt="Logo">
+                  </a>
+                  <div class="languages -top ms-lg-4">
+                    <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+                    <div class="languages__content">
+                      <p class="languages__text">Select language</p>
+                      <ul class="">
+                        <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                        <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- .languages -->
+                </div>
+                <div class="footer__text">Create sustainable values for partners to ensure fair revenue sharing through a diverse ecosystem. Not only meeting the trend of the times but also satisfying the needs of users.</div>
+              </div><!-- .footer__item -->
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">CONTACT US</div>
+                    <div><a href="mailto:support@deffZone.com">Support@deffZone.com.</a></div>
+                    <div><a href="tel:+447458149855">+447458149855</a></div>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="footer__item">
+                    <div class="footer__title">ABOUT US</div>
+                    <a href="https://docs.deffzone.com/" target="_blank">Document</a>
+                  </div>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-12">
+                  <div class="footer__item">
+                    <hr>
+                    <div class="copyright__wrap">
+                      <div class="copyright">
+                          <p>Copyright © 2021 deffZone, All Rights Reserved</p>
+                      </div>
+
+                      <div class="footer__socical ms-auto">
+                        <ul class="">
+                          <li><a href="https://twitter.com/DeffZone" target="_blank"><img src="assets/img/twitter.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/DeffZoneAnn" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://t.me/deffzonecommunity" target="_blank"><img src="assets/img/telegram.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://medium.com/@deffzone.com" target="_blank"><img src="assets/img/medium.svg" width="24" height="24" alt=""></a></li>
+                          <li><a href="https://www.youtube.com/c/DeffZone" target="_blank"><img src="assets/img/youtube.svg" width="24" height="24" alt=""></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- .footer__item -->
+                </div> <!-- .col-md-12 -->
+              </div> <!-- .row -->
+            </div> <!-- .col-md-5 -->
+          </div> <!-- .row -->
+        </div>
+      </footer>
+
+      <nav id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__content">
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="staking.html">Staking</a></li>
+            <li class="menu-item"><a href="farming.html">Farming</a></li>
+            <li class="menu-item js-toggle">
+              <a href="javascript: void(0);" class="js-toggle-btn">Swap</a>
+              <ul class="sub-menu js-toggle-show">
+                <li><a href="swap.html">Exchange</a></li>
+                <li><a href="liquidity.html">Liquidity</a></li>
+              </ul>
+            </li>
+            <li class="menu-item active"><a href="community-secure.html">Community Secure</a></li>
+          </ul>
+          <div class="languages ms-0 mt-3 mb-3">
+            <div class="languages__label"><img src="./assets/flag/en.png" width="24" height="12" alt=""></div>
+            <div class="languages__content">
+              <p class="languages__text">Select language</p>
+              <ul class="">
+                <li class="active"><a href=""><img src="./assets/flag/en.png" width="24" height="12" alt=""><span>English</span></a></li>
+                <li><a href=""><img src="./assets/flag/vi.png" width="24" height="12" alt=""><span>Vietnamese</span></a></li>
+              </ul>
+            </div>
+          </div> <!-- .languages -->
+
+          <a href="#" class="btn -wallet w-100" type="button" class="show-modal" data-bs-toggle="modal" data-bs-target="#connectWallet"><span>Connect wallet</span></a>
+        </div>
+      </nav>
+    </div> <!-- .wrapper -->
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
