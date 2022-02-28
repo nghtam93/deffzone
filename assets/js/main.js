@@ -457,6 +457,7 @@ if ($(".-date__slider").length) {
   });
 }
 
+// modal show popup connect important
 if($('body').find('#connectWalletImportant')) {
   var myModal = new bootstrap.Modal(document.getElementById('connectWalletImportant'), {
     keyboard: false
