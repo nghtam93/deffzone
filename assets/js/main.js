@@ -456,3 +456,19 @@ if ($(".-date__slider").length) {
     console.log(walk);
   });
 }
+
+if($('body').find('#connectWalletImportant')) {
+  var myModal = new bootstrap.Modal(document.getElementById('connectWalletImportant'), {
+    keyboard: false
+  })
+  $(window).on('load resize', function() {
+    let windowWidth = $(window).width();
+    console.log(windowWidth);
+    if(windowWidth < 1280) {
+      myModal.show()
+      console.log('true');
+    } else {
+      myModal.hide()
+    }
+  })
+}
